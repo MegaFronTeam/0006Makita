@@ -1,0 +1,139 @@
+// start .sNewsBox
+@use "sass:math";
+
+.sNewsBox {
+	&__box{
+
+	}
+	&__head{
+		color: $white;
+		background-color: $primary;
+
+		padding: 11px 20px;
+		@include media-breakpoint-up(md){
+			padding: 11px 24px;
+		}
+
+		h2{
+			font-size: 16px;
+			@include media-breakpoint-up(md){
+				font-size: 20px;
+			}
+		}
+	}
+	&__all-links{
+		display: flex;
+		align-items: center;
+		color: $white;
+		&:hover{
+			color: rgba($white, .8);
+		}
+
+		font-size: 14px;
+		line-height: math.div(17, 14);
+
+		.icon{
+			font-size: 12px;
+			margin-left: 12px;
+			color: transparent;
+			stroke: $white;
+		}
+	}
+	//
+	&__items{
+		padding: 24px 18px 25px;
+		@include media-breakpoint-up(md){
+			padding: 24px 25px 35px 28px;
+		}
+		@include media-breakpoint-up(xl){
+			padding: 36px 51px 36px 28px;
+		}
+		border: 1px solid $gray-310;
+	}
+	&__item{
+		margin-bottom: 24px;
+		padding-bottom: 24px;
+		border-bottom: 1px solid $gray-310;
+		display: block;
+		@include media-breakpoint-up(md){
+			display: flex;
+			align-items: center;
+			margin-bottom: 25px;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+		&:last-child{
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+
+
+		&:hover{
+			& > *{
+				color: $primary!important;
+			}
+		}
+	}
+	&__date{
+		display: block;
+		@include mt();
+		flex-shrink: 0;
+		width: 137px;
+
+		font-size: 14px;
+		line-height: math.div(17, 14);
+		color: var(--date-col, #{$gray-310});
+
+		margin-bottom: 12px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 0;
+		}
+	}
+	&__txt{
+		@include mt();
+		display: flex;
+		font-size: 14px;
+
+		color: var(--txt-col, #{$body-color});
+
+		&:before{
+			@include media-breakpoint-up(md){
+				content: '';
+			}
+			width: 1px;
+			background-color: $gray-310;
+			margin-right: 30px;
+		}
+
+		margin-bottom: 12px;
+		line-height: 1.37;
+		@include media-breakpoint-up(md){
+			line-height: math.div(17, 14);
+			margin-bottom: 0;
+		}
+	}
+	&__ball{
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: $primary;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon{
+			font-size: 8px;
+			color: transparent;
+			stroke: $white;
+			stroke-width: 2px;
+		}
+
+		@include media-breakpoint-up(md){
+			margin-left: auto;
+			margin-bottom: 0;
+		}
+	}
+	&__{}
+} // end.sNewsBox
