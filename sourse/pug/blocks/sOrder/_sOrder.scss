@@ -4,12 +4,11 @@
 .sOrder {
 	--title-w: 100px;
 
-	--sTPB: 24px;
+	// --sTPB: 24px;
 
-	--sPT: 12px;
+	--sPT: 0;
 	--sPB: 60px;
 	@include media-breakpoint-up(md){
-		--sPT: 24px;
 		--sPB: 72px;
 	}
 	@include media-breakpoint-up(xl){
