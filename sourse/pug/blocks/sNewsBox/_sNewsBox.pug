@@ -4,8 +4,9 @@ mixin sNewsBox(data)
 		.container
 			+e.box
 				.row
-					+e.title-col.col-2
-						h2.mb-0 Новости
+					.col-12.col-lg-2
+						+e.title-col
+							h2.mb-0 Новости
 					+e.content-col.col
 						+e.items
 							+NewsBoxItem('01 Января, 2020', 'Варианты подарков на Новый Год? Конечно же инструмент и аксессуары от HiKOKI!')

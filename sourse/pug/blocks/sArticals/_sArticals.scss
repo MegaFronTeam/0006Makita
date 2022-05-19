@@ -40,9 +40,8 @@
 		&__all-links{
 			display: flex;
 			align-items: center;
-
-			font-size: 14px;
 			line-height: math.div(17, 14);
+			padding-right: 20px;
 
 			.icon{
 				font-size: 12px;
@@ -106,14 +105,28 @@
 		}
 	}
 	&__tag {
+		margin-bottom: 15px;
 		font-size: 14px;
 		color: #949494;
 	}
 	&__descr {
+		margin-bottom: 15px;
 		color: #4E4E4E;
+		line-height: 137%;
 	}
 	&__more {
 		color: $blue;
+		&:hover {
+			.icon {
+				stroke: #19697f;
+			}
+		}
+		.icon {
+			margin-left: 5px;
+			fill: none;
+			stroke: $blue;
+			font-size: 10px;
+		}
 	}
 	p{
 		font-weight: 300;

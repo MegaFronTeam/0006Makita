@@ -55,7 +55,7 @@
 	}
 	
 	&__item{
-		margin: 0 15px;
+		margin: 0 19px;
 		&:last-child{
 			margin-right: 0;
 		}
@@ -73,7 +73,7 @@
 		}
 	}
 	&__link{
-		padding: 24px 0;
+		padding: 19px 0;
 		color: $black;
 		font-family: $header-font;
 
@@ -209,7 +209,7 @@
 		min-height: 100%;
 		display: flex;
 		align-items: center;
-		padding: 10px 12px;
+		padding: 14.5px 12px;
 		@include mt();
 
 		font-size: 12px;
@@ -222,7 +222,7 @@
 		& > .icon:first-child{
 			margin-right: 5px;
 			color: var(--fc-icon, #{$gray-310});
-			font-size: 16px;
+			font-size: 21px;
 		}
 		.icon-chevron-down{
 			margin-left: 12px;
@@ -251,6 +251,8 @@
 		position: relative;
 		&--loc{
 			position: static;
+			margin-right: 15px;
+			padding-left: 0;
 			span {
 				font-family: $header-font;
 			}
@@ -347,6 +349,7 @@
 	//cart
 	&__cart{
 		//padding: 6px 0;
+		margin-right: 23px;
 		display: flex;
 		align-items: center;
 		color: $white;
@@ -361,8 +364,8 @@
 		align-items: center;
 		justify-content: center;
 
-		width: 24px;
-		height: 20px;
+		// width: 24px;
+		// height: 20px;
 		.icon{
 			font-size: 24px;
 			//color: $white;
@@ -972,6 +975,7 @@
 		&--loc{
 
 			.icon{
+				font-size: 21px;
 				color: $primary;
 			}
 		}

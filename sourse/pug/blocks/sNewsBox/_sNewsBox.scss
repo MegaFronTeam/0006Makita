@@ -3,12 +3,13 @@
 
 .sNewsBox {
 	&__box{
+		padding-top: 28px;
 
 	}
 
 	h2{
 		position: relative;
-		padding: 3px 7px;
+		padding: 10px 7px 0;
 		color: $white;
 		font-size: 16px;
 		z-index: 2;
@@ -18,8 +19,8 @@
 			background-color:$red;
 			content: '';
 			width: 100%;
-			height: 100%;;
-			bottom: 6px;
+			height: 77%;;
+			bottom: 2px;
 			left: 0;
 			z-index: -1;
 		}
@@ -27,12 +28,20 @@
 			font-size: 24px;
 		}
 	}
+	.row {
+		--bs-gutter-y: 15px;
+	}
 	
 	&__title-col {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: $primary;
+		margin-bottom: 0;
+		height: 100%;
+		background: linear-gradient(135deg, #20A5B6 0%, #00869A 100%);
+		@include media-breakpoint-up(lg){
+      margin-bottom: 0;
+    }
 	}
 	&__content-col {
 		display: flex;
@@ -45,27 +54,32 @@
 		color: #4E4E4E;
 		&:hover{
 			color: $primary;
+			.icon {
+			color: $primary;
+			}
 		}
 
 		font-size: 16px;
 		line-height: math.div(17, 14);
 
 		.icon{
-			font-size: 6px;
+			font-size: 10px;
 			margin-left: 12px;
 			stroke: #4E4E4E;
+			fill: none;
 		}
 	}
 	//
 	&__items{
-		padding: 24px 18px 25px;
-		@include media-breakpoint-up(md){
-			padding: 24px 25px 35px 28px;
-		}
-		@include media-breakpoint-up(xl){
-			padding: 36px 51px 36px 28px;
-		}
-		border: 1px solid $gray-310;
+		margin-bottom: 47px;
+		// padding: 24px 18px 25px;
+		// @include media-breakpoint-up(md){
+		// 	padding: 24px 25px 35px 28px;
+		// }
+		// @include media-breakpoint-up(xl){
+		// 	padding: 36px 51px 36px 28px;
+		// }
+	
 	}
 	&__item{
 		margin-bottom: 24px;
@@ -75,7 +89,7 @@
 		@include media-breakpoint-up(md){
 			display: flex;
 			align-items: center;
-			margin-bottom: 25px;
+			margin-bottom: 19px;
 			padding-bottom: 0;
 			border-bottom: none;
 		}
@@ -97,10 +111,10 @@
 		@include mt();
 		flex-shrink: 0;
 		width: 137px;
+		margin-right: 12px;
 
-		font-size: 14px;
 		line-height: math.div(17, 14);
-		color: var(--date-col, #{$gray-310});
+		color: #949494;
 
 		margin-bottom: 12px;
 		@include media-breakpoint-up(md){
@@ -112,7 +126,7 @@
 		display: flex;
 		font-size: 14px;
 
-		color: var(--txt-col, #{$body-color});
+		color: #4E4E4E;
 
 		&:before{
 			@include media-breakpoint-up(md){
