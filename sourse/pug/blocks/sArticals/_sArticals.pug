@@ -11,16 +11,20 @@ mixin sArticals()
 							span Все статьи
 							+icon('chevron-right')
 			+e.row.row
-				+itemNews("1", undefined, 'col-md-4')
-				+itemNews("2", undefined, 'col-md-4')
-				+itemNews("3", undefined, 'col-md-4')
+				+itemNews("1",'Заголовок SEO текста', descr, 'col-md-4')
+				+itemNews("2",'Заголовок SEO текста', descr, 'col-md-4')
+				+itemNews("3",'Заголовок SEO текста', descr, 'col-md-4')
 	// end sArticals
 
-mixin itemNews(i ,t="Позаботьтесь о тепле и безопасности с принадлежностями для работы  с цепной пилой", bootClasses='col-sm-6 col-lg-4')
+mixin itemNews(i ,t,descr="Позаботьтесь о тепле и безопасности с принадлежностями для работы  с цепной пилой", bootClasses='col-sm-6 col-lg-4')
 	+e.col(class=bootClasses)&attributes(attributes)
 		+e.img-wrap(href="#")
 			img(loading="lazy" src=`img/@2x/artical-${i}.jpg` alt="")
-		+e.title(href="#")=t
+		+e.text-wrap
+			+e.title(href="#")=t
+			+e.tag Событие
+			+e.descr!= descr
+			+e.more(href='#') Читать дальше
 
 mixin sArticalsPage()
 	// start sArticals

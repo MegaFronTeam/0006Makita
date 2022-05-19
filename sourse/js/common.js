@@ -279,7 +279,10 @@ function eventHandler() {
 		let sliderCatalog = new Swiper($(this).find(".sCatalog__slider--js"), {
 			...defaultSl,
 			spaceBetween: 30,
+			preloadImages: false,
+			lazy: true,
 			slidesPerView: 'auto',
+			watchSlidesProgress: true,
 			navigation: {
 				nextEl: $(this).find('.swiper-next'),
 				prevEl: $(this).find('.swiper-prev'),

@@ -16,14 +16,14 @@ mixin sCatalogHit()
 				+e.slider--js.swiper
 					.swiper-wrapper
 						+e.slide.swiper-slide
-							+item-prod('1', 'slider', 'VB3616DA')
+							+item-prod('1', 'slider', 'JR3050T','Молоток отбойный легкий')
+						+e.slide.swiper-slide
+							+item-prod('2', 'slider', 'FS2700', 'Шуруповерт с 6 положениями регулировки')
 								+e.badge.bg-red Новинка
 						+e.slide.swiper-slide
-							+item-prod('2', 'slider', 'CB18DBL', 'Cordless Band Saw')
+							+item-prod('3', 'slider', 'JR3050T', 'Сабельная пила')
 						+e.slide.swiper-slide
-							+item-prod('2', 'slider', 'CD3605DA')
-						+e.slide.swiper-slide
-							+item-prod('2', 'slider', 'CD3605DA')
+							+item-prod('3', 'slider', 'JR3050T', 'Сабельная пила')
 						+e.slide.swiper-slide
 							+item-prod('2', 'slider')
 				+arrow('d-none d-sm-flex')
@@ -38,7 +38,7 @@ mixin sCatalogNew()
 				+e.slider--js.swiper
 					.swiper-wrapper
 						+e.slide.swiper-slide
-							+item-prod('1', 'slider', 'VB3616DA')
+							+item-prod('1', 'slider', 'JR3050T','Молоток отбойный легкий')
 								+e.badge.bg-red Новинка
 						+e.slide.swiper-slide
 							+item-prod('2', 'slider', 'CB18DBL', 'Cordless Band Saw')
@@ -53,6 +53,12 @@ mixin sCatalogNew()
 mixin item-prod(i, slider, code='VB3616DA', t="MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender", hasOldPrice=true)
 	+b.prod-item&attributes(attributes)
 		+e.DIV.img-wrap
+			+e.links
+				+e.compare(href="#")
+					+icon('bars')
+				+e.bookmarks(href="#")
+					+icon('heart')
+
 			block
 			+e.A.img-link(href="#")
 				if !slider
@@ -60,11 +66,12 @@ mixin item-prod(i, slider, code='VB3616DA', t="MULTI VOLT (36V) Cordless Portabl
 				else
 					img.swiper-lazy(src="#" data-src=`img/@2x/hit-${i}.jpg`, alt="")
 		+e.box
-			+e.code=code
 			+e.title(href="#")= t
+			+e.code=code
 			if hasOldPrice
-				+e.price--old 18 500 ₽
-				+e.price--new 16 500 ₽
+				+e.price-wrap
+					+e.price--old 18 500 ₽
+					+e.price--new 16 500 ₽
 			else
 				+e.price--new 22 600 ₽
 		+e.btn(href="#") Купить

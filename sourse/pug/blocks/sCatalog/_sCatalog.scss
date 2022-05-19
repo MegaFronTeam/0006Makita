@@ -123,7 +123,6 @@
 .prod-item {
 	background-color: $light;
 	min-height: 100%;
-	text-align: center;
 	line-height: math.div(22, 18);
 	@include mt;
 	border: 1px solid $gray-310;
@@ -137,9 +136,25 @@
 		padding: 20px;
 		background-color: $white;
 	}
+	&__links {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		.icon {
+			stroke: #949494;
+			font-size: 18px;
+			color: transparent;
+		}
+		.icon-bars {
+			margin-right: 15px;
+			fill: #949494;
+		}
+	}
 	&__box{
 		flex-grow: 1;
 		padding: 12px 16px;
+		background-color: $gray-100;
+		color: #4e4e4e;
 
 		display: flex;
 		flex-direction: column;
@@ -162,42 +177,57 @@
 
 	//
 	&__code{
-		font-size: 12px;
-		line-height: math.div(14, 12);
+		font-size: 20px;
+		line-height: math.div(14, 20);
 		color: $gray-570;
 		margin-bottom: 8px;
+		font-family: $header-font;
+		color: #4e4e4e;
 	}
 	&__title {
 		display: block;
 		margin-bottom: rem(12);
-
-		font-size: 14px;
+		font-size: 18px;
+		color: #4e4e4e;
 		line-height: 1.4;
 	}
 
-	&__price--old {
+	&__price-wrap {
+		display: flex;
+		align-items: center;
 		margin-top: auto;
-		text-decoration-line: line-through;
-		text-transform: uppercase;
-
-		color: $red;
-		font-size: 12px;
-		line-height: math.div(14, 12);
-	}
-
-	&__price--new {
-		font-size: 16px;
-		text-transform: uppercase;
 		@include media-breakpoint-up(sm){
 			margin-bottom: rem(12);
 		}
 	}
 
+	&__price--old {
+		margin-right: 7px;
+		text-decoration-line: line-through;
+		text-transform: uppercase;
+		
+		color: $red;
+		font-size: 12px;
+		line-height: math.div(14, 12);
+	}
+	
+	&__price--new {
+		font-size: 24px;
+		font-weight: bold;
+		font-family: $header-font;
+		text-transform: uppercase;
+	}
+
 	&__btn {
 		@extend .btn;
 		@extend .btn-primary;
+		color: $white;
 		display: block;
 		width: 100%;
+		&:hover {
+			color: $white;
+			background-color: #037292;
+		}
 	}
 
 	&__labels {
@@ -231,9 +261,8 @@
 
 	&__badge {
 		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-		bottom: 12px;
+		left: 0;
+		top:0;
 
 		text-transform: uppercase;
 		color: $white;
@@ -241,7 +270,6 @@
 		font-size: 10px;
 		line-height: 1.2;
 		letter-spacing: 0.1em;
-		border-radius: 20px;
 		padding: 4px 7px;
 
 		&.bg-red{
