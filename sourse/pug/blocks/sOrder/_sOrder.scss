@@ -12,7 +12,7 @@
 		--sPB: 72px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPB: 96px;
+		--sPB: 120px;
 	}
 
 	&__row{
@@ -41,26 +41,26 @@
 	&__login-sm{
 		font-size: 14px;
 		line-height: math.div(24, 14);
-		margin-bottom: 24px;
+		margin-bottom: rem(14);
 	}
 	&__login-btn{
-		@extend .btn;
-		@extend .btn-outline-primary;
-
-		min-width: 263px;
-		margin-bottom: 60px;
+		// @extend .btn;
+		// @extend .btn-outline-primary;
+		width: 100%;
+		max-width: rem(263);
+		margin-bottom: rem(60);
 	}
 	&__big-title{
 		font-weight: bold;
-		font-size: 20px;
+		font-size: rem(20);
 		line-height: 1.2;
 
 		margin-bottom: 24px;
 	}
 	&__content{
-		margin-bottom: 24px;
+		margin-bottom: 42px;
 		@include media-breakpoint-up(xl){
-			margin-bottom: 60px;
+			margin-bottom: 82px;
 		}
 	}
 	.form-wrap{
@@ -75,6 +75,26 @@
 
 			textarea{
 				height: 100px;
+			}
+			position: relative;
+			.icon {
+				content: '';
+				position: absolute;
+				font-size: rem(24);
+				right: 15px;
+				width: 24px;
+				height: 24px;
+				top: 50%;
+				transform: translateY(-50%);
+				@include media-breakpoint-down(md) {
+					transform: translateY(calc(-50% + 11px));
+				}
+				&.icon-icon-check-ok {
+					fill: #30BA57;
+				}
+				&.icon-icon-check-not-ok {
+					fill: $red;
+				}
 			}
 		}
 		&__input-title{
@@ -95,7 +115,6 @@
 			}
 		}
 		&__input{
-
 		}
 		//
 		.custom-input{
@@ -236,6 +255,7 @@
 			width: 100%;
 
 			color: $primary!important;
+			font-weight: 700;
 			&:hover{
 				color: $body-color!important;
 			}
@@ -334,7 +354,7 @@
 		margin-bottom: -24px;
 	}
 	&__polite{
-		font-size: 14px;
+		font-size: 12px;
 		line-height: math.div(20, 14);
 	}
 	&__f-btn{
@@ -383,10 +403,16 @@
 }
 
 .order-content{
-
+	&:not(:last-child) {
+		margin-bottom: rem(33);
+	}
 	&__box{
 		border-top: 4px solid $primary;
 		background-color: $light;
+
+		border-right: 1px solid #D2D2D2;
+		border-bottom: 1px solid #D2D2D2;
+		border-left: 1px solid #D2D2D2;
 
 		padding: 30px 15px;
 		@include media-breakpoint-up(xsm){
@@ -464,12 +490,12 @@
 			margin-bottom: 10px;
 		}
 		margin-bottom: -10px;
-
+		
 		font-size: 14px;
 		line-height: math.div(24, 14);
-
+		
 		&.huge-row{
-			font-weight: 300;
+			font-weight: 700;
 			font-size: 24px;
 			line-height: math.div(38, 24);
 		}
@@ -525,10 +551,10 @@
 	}
 	&__tag{
 		display: inline-flex;
-		font-weight: bold;
+		font-weight: 700;
 		color: $white;
 		background-color: $danger;
-		border-radius: 20px;
+		// border-radius: 20px;
 
 		font-size: 8px;
 		line-height: (12*0.125);
@@ -547,11 +573,12 @@
 	&__code{
 		font-size: 10px;
 		line-height: (14*0.1);
-		margin-bottom: 6px;
+		// margin-bottom: 6px;
+		font-weight: 700;
 		@include media-breakpoint-up(sm){
 			font-size: 12px;
 			line-height: math.div(14, 12);
-			margin-bottom: 8px;
+			// margin-bottom: 8px;
 		}
 
 		color: $gray-570;
@@ -561,6 +588,9 @@
 
 		font-size: 12px;
 		line-height: math.div(20, 14);
+		&:not(:hover) {
+			color: #282828;
+		}
 		@include media-breakpoint-up(sm){
 			font-size: 14px;
 			line-height: math.div(20, 14);
@@ -574,16 +604,19 @@
 		color: $primary;
 	}
 	&__price--old{
-		font-size: 12px;
+		font-size: 14px;
 		line-height: math.div(14, 12);
 		text-decoration-line: line-through;
 
 		color: $danger;
-		margin-bottom: 4px;
+		// margin-bottom: 4px;
+		margin-right: rem(7);
 	}
 	&__price--new{
-		font-size: 16px;
+		font-size: 20px;
+		font-weight: 700;
 		line-height: math.div(19, 16);
+		font-family: "HelveticaNeue";
 	}
 	&__amount-col{
 		text-align: right;
@@ -597,7 +630,9 @@
 		font-size: 16px;
 		line-height: math.div(19, 16);
 	}
-	&__{}
+	&__col-price{
+		align-items: center;
+	}
 	&__{}
 	&__{}
 }
