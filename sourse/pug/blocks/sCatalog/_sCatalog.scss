@@ -2,6 +2,10 @@
 @use "sass:math";
 
 .sCatalog {
+	padding-top: 64px;
+	.section-title {
+		padding-bottom: 29px;
+	}
 	&.sCatalog--also{
 		.sCatalog__slide{
 			@include media-breakpoint-up(lg){
@@ -73,7 +77,7 @@
 
 
 	.section-title {
-		padding-bottom: rem(20);
+		padding-bottom: rem(29);
 	}
 
 	.swiper{
@@ -125,7 +129,7 @@
 	min-height: 100%;
 	line-height: math.div(22, 18);
 	@include mt;
-	border: 1px solid $gray-310;
+	border: 1px solid $gray-100;
 
 	//
 	display: flex;

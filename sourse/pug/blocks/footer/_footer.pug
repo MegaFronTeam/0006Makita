@@ -5,12 +5,11 @@ mixin footer()
         +e.head-row.row.align-items-center
           .col-md-4
             +e.logo(href="#")
-              img(loading="lazy" src="img/svg/logo.svg" alt="")
+              img(loading="lazy" src="img/logo.png" alt="")
           .col-md-auto
-            +e.green-row.row.align-items-center
-              +greenItem(1, 'Глобальная сеть')
-              +greenItem(2, 'Карта сайта ')
-              +greenItem(3, 'Контакты')
+            +e.blue-row.row.align-items-center
+              +blueItem(1, 'Глобальная сеть')
+              +blueItem(2, 'Карта сайта ')
       //-
     +e.body.footer-dd-group-js
       .container
@@ -18,12 +17,23 @@ mixin footer()
           .col-sm-6.col-md-4.col-lg-3
             +footerBodyItem('Каталог продукции', ['Новинки','Аккумуляторный инструмент','Электроинструмент','Садовая техника','Аксессуары'])
           .col-sm-6.col-md-4.col-lg-3
-            +footerBodyItem('Hikoki', ['О компании','Где мы находимся','Общая информация','Контакты','Сертификаты','Новости'])
+            +footerBodyItem('Makita', ['О компании','Где мы находимся','Общая информация','Контакты','Сертификаты','Новости'])
           .col-sm-6.col-md-4.col-lg-3
             +footerBodyItem('Где купить?', ['Где купить?','Интернет магазины'])
             +footerBodyItem('Сервис', ['Сервисы по ремонту инструмента'], 'd-none d-md-block d-lg-none')
+            //- +footerBodyItem('Контакты', ['#[span 8 495 215-50-63]','#[span 8 495 215-50-63]'])
           .col-sm-6.col-md-4.col-lg-3.d-md-none.d-lg-block
             +footerBodyItem('Сервис', ['Сервисы по ремонту инструмента'])
+            //- .col-sm-6.col-md-4.col-lg-3.d-md-none.d-lg-block
+            +e.footer-contacts
+              +e.c-head Контакты
+              +e.c-content
+                  +e.c-link(href="#") 
+                    +icon('tel')
+                    span 8 495 215-50-63
+                  +e.c-link(href="#") 
+                    +icon('tel')
+                    span 8 495 215-50-63
     +e.bot
       .container
         +e.bot-row.row.align-items-center
@@ -34,10 +44,10 @@ mixin footer()
               +e.bot-link(href='#') История обновлений
               +e.bot-link(href='#') Информация о файлах cookie
           .col-lg-auto.d-none.d-lg-block
-            +e.all-rights © Koki Holdings Co., Ltd. All rights reserved.
+            +e.all-rights © Makita Co., Ltd. All rights reserved.
     +e.sm-all-r.d-lg-none
       .container.text-center
-        +e.all-rights © Koki Holdings Co., Ltd. All rights reserved.
+        +e.all-rights © Makita Co., Ltd. All rights reserved.
 
 
 mixin footerBodyItem(title, items, addClasses="")
@@ -48,9 +58,9 @@ mixin footerBodyItem(title, items, addClasses="")
         +e.b-link(href="#")=item
 
 
-mixin greenItem(imgNum, txt)
+mixin blueItem(imgNum, txt)
   .col-sm-auto
     +e.g-item(href='#')
       +e.g-icon
-        img(loading="lazy" src=`img/svg/green-item-${imgNum}.svg` alt="")
+        img(loading="lazy" src=`img/svg/blue-item-${imgNum}.svg` alt="")
       +e.g-txt=txt

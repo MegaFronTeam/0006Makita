@@ -109,12 +109,12 @@ body {
 		display: block;
 		height: 12px;
 		transform: skewX(-50deg);
-		width: 99px;
+		width: 95px;
 		background-color: $gray-310;
 
 		margin-bottom: 12px;
 		@include media-breakpoint-up(md){
-			margin-bottom: 14px;
+			margin-bottom: 19px;
 		}
 	}
 	&::after{
@@ -345,11 +345,11 @@ ul {
 		background-color: $secondary!important;
 		outline: none !important;
 		@include mt;
-		margin: 0 2px !important;
+		margin: 0 4px !important;
 
 		&-active,
 		&:hover {
-			background-color: var(--bs-primary) !important;
+			background-color: $red !important;
 		}
 	}
 }
@@ -585,27 +585,27 @@ a{
 	.swiper-pagination-bullet{
 		position: relative;
 		z-index: 1;
-		&:before{
-			content: '' !important;
-			z-index: -1;
-			height: 40px;
-			width: 60px;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-			position: absolute;
-		}
+		// &:before{
+		// 	content: '' !important;
+		// 	z-index: -1;
+		// 	height: 40px;
+		// 	width: 60px;
+		// 	top: 50%;
+		// 	left: 0;
+		// 	transform: translateY(-50%);
+		// 	position: absolute;
+		// }
 
 
-		border-radius: 0;
-		width: 60px;
-		height: 2px;
-		@include media-breakpoint-up(sm){
-			height: 4px;
-		}
+		border-radius: 50%;
+		width: 14px;
+		height: 14px;
+		// @include media-breakpoint-up(sm){
+		// 	height: 4px;
+		// }
 		background-color: $white;
 		&-active{
-			background-color: $primary;
+			background-color: $red;
 		}
 		&:hover{
 			background-color: lighten($primary, 10);

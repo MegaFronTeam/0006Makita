@@ -7,9 +7,7 @@ mixin sArticals()
 					.col
 						h2.mb-0 Это интересно
 					.col-auto
-						+e.all-links(href='#')
-							span Все статьи
-							+icon('chevron-right')
+						+e.all-links(href='#') Все статьи
 			+e.row.row
 				+itemNews("1",'Заголовок SEO текста', descr, 'col-md-4')
 				+itemNews("2",'Заголовок SEO текста', descr, 'col-md-4')
@@ -25,6 +23,7 @@ mixin itemNews(i ,t,descr="Позаботьтесь о тепле и безоп�
 			+e.tag Событие
 			+e.descr!= descr
 			+e.more(href='#') Читать дальше
+				+icon('chevron-right')
 
 mixin sArticalsPage()
 	// start sArticals

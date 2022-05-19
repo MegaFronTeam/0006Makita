@@ -264,17 +264,32 @@ function eventHandler() {
 
 		//
 		navigation: {
-			nextEl: $(this).find('.swiper-next'),
-			prevEl: $(this).find('.swiper-prev'),
+			nextEl: '.headerBlock .swiper-next',
+			prevEl: '.headerBlock .swiper-prev',
 		},
 		//
 		pagination: {
-			el: $(this).find('.swiper-pagination'),
+			el: '.headerBlock .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
 		},
 	});
 	//
+	const catalogSection = document.querySelectorAll('.sCatalog');
+	for (let sCatalog of catalogSection) {
+		const sliderCatalog = new Swiper(sCatalog.querySelector('.sCatalog__slider--js'), {
+			...defaultSl,
+			spaceBetween: 30,
+			preloadImages: false,
+			lazy: true,
+			slidesPerView: 'auto',
+			watchSlidesProgress: true,
+			navigation: {
+				nextEl: sCatalog.querySelector('.swiper-next'),
+				prevEl: sCatalog.querySelector('.swiper-prev'),
+			},
+		});
+	}
 	$(".sCatalog").each(function () {
 		let sliderCatalog = new Swiper($(this).find(".sCatalog__slider--js"), {
 			...defaultSl,
@@ -288,8 +303,9 @@ function eventHandler() {
 				prevEl: $(this).find('.swiper-prev'),
 			},
 		});
-
 	});
+	
+
 	function makeDDGroup(qSelecorts){
 		for (let parentSelect of qSelecorts){
 			let parent = document.querySelector(parentSelect);
