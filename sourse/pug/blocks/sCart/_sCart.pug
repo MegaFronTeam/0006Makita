@@ -12,9 +12,9 @@ mixin sCart(data)
 					+cartItem()
 				.col-lg-4
 					+e.box
-						+e.order-txt Ваш заказ
+						+e.order-txt.h2 Ваш заказ
 						+e.o-rows
-							+orderRow('Товары', '99')
+							+orderRow('Товары', '3')
 							+orderRow('Вес', '30 кг')
 							+orderRow('Скидка', '-11 890 ₽', 'text-primary')
 						+e.o-row--result.row
@@ -25,7 +25,7 @@ mixin sCart(data)
 							+e.p-btn(type='button')
 								+icon('enter')
 						+e.btns-box
-							+e.bb-btn--green(href="#") Оформить
+							+e.bb-btn--green(href="#") Купить
 							+e.bb-btn--white(href='#') Запросить счёт
 						+e.sm.text-center Доступные способы и время доставки можно выбрать при оформлении заказа
 	// end sCart
@@ -35,24 +35,43 @@ mixin orderRow(name,val,addClasses='')
 		.col-auto(class=addClasses)=val
 
 mixin cartItem()
+	//- +e.item
+	//- 	+e.tag Новинка
+	//- 	+e.cross(href='#')
+	//- 		+icon('cross')
+	//- 	+e.row.row
+	//- 		.col-auto
+	//- 			+e.img
+	//- 				img(loading="lazy" src='img/@2x/category-7.png' alt="")
+	//- 		.col
+	//- 			+e.inner-row.row
+	//- 				+e.txt-col.col-md
+	//- 					+e.title(href="#") Шуруповерт с 6 положениями регулировки
+	//- 					+e.code FS2700
+	//- 				+e.inp-col.col-md-auto
+	//- 					+e.inputs
+	//- 						+e.i-btn--min -
+	//- 						+e.INPUT.amount-input.form-control(type="number" value="1")
+	//- 						+e.i-btn--plus +
+	//- 				+e.price-col.col-md-auto
+	//- 					+e.price--old 18 500 ₽
+	//- 					+e.price--new 16 500 ₽
 	+e.item
+		+e.tag Новинка
 		+e.cross(href='#')
-			+icon('cross')
-		+e.row.row
-			.col-auto
-				+e.img
-					img(loading="lazy" src='img/@2x/cart-img.jpg' alt="")
-			.col
-				+e.inner-row.row
-					+e.txt-col.col-md
-						+e.tag Новинка
-						+e.code VB3616DA
-						+e.title(href="#") MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
-					+e.inp-col.col-md-auto
-						+e.inputs
-							+e.i-btn--min -
-							+e.INPUT.amount-input.form-control(type="number" value="1")
-							+e.i-btn--plus +
-					+e.price-col.col-md-auto
-						+e.price--old 18 500 ₽
-						+e.price--new 16 500 ₽
+			+icon('delete')
+		+e.wrap
+			+e.img
+				img(loading="lazy" src='img/@2x/category-7.png' alt="")
+			+e.content
+				+e.txt-col
+					+e.title(href="#") Шуруповерт с 6 положениями регулировки
+					+e.code FS2700
+				+e.inp-col
+					+e.inputs
+						+e.i-btn--min -
+						+e.INPUT.amount-input.form-control(type="number" value="1")
+						+e.i-btn--plus +
+				+e.price-col
+					+e.price--old 18 500 ₽
+					+e.price--new 16 500 ₽

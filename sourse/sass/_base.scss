@@ -140,7 +140,7 @@ body {
 
 	&.long{
 		&:before{
-			width: 168px;
+			width: 99px;
 		}
 	}
 	&.light{
@@ -165,12 +165,12 @@ body {
 		}
 
 		h2, h1{
-			padding: 0 20px 20px 20px;
+			padding: 0 20px 20px 0;
 			@include media-breakpoint-up(md){
-				padding: 0 20px 20px 20px;
+				padding: 0 20px 20px 0;
 			}
 			@include media-breakpoint-up(xl){
-				padding: 0 20px 20px 20px;
+				padding: 0 20px 20px 0;
 			}
 		}
 	}
