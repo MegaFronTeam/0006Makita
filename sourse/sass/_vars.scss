@@ -454,7 +454,7 @@ $line-height-lg: 2 !default;
 
 $h1-font-size: 30px !default;//??
 $h2-font-size: 24px !default;
-$h3-font-size: $font-size-base * 1.75 !default;
+$h3-font-size: rem(20) !default;
 $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
@@ -469,7 +469,7 @@ $font-sizes: (1: $h1-font-size,
 // scss-docs-end font-sizes
 
 $headings-margin-bottom: $spacer * 0.5 !default;
-$headings-font-family: null !default;
+$headings-font-family: $header-font !default;
 $headings-font-style: null !default;
 $headings-font-weight: 400 !default;
 $headings-line-height: 1.4 !default;

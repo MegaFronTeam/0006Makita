@@ -2,16 +2,6 @@ mixin sPAcc(data)
 	// start sPAcc
 	+b.SECTION.sPAcc.section#sPAcc&attributes(attributes)
 		+e.container.container
-			block
-			+b.section-title.light.long
-				+e.row.row
-					.col
-						h2.p-0.m-0 Личный кабинет
-					.col-auto
-						+e.log-out(href='#')
-							+e.icon
-								img(loading="lazy" src="img/svg/exit2.svg" alt="")
-							span Выйти
 			+e.row.row.tabs
 				.col-lg-3.tabs__caption
 					+e.tab-btn.tabs__btn Профиль
