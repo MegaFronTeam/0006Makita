@@ -40,5 +40,19 @@
 		margin-bottom: 0 !important;
 		display: flex;
 		justify-content: space-between;
+		&__log-out {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: rem(3) rem(20);
+			.icon {
+				font-size: rem(15);
+				margin-right: 6px;
+			}
+			span {
+				font-size: rem(12);
+				letter-spacing: 0.03em;
+			}
+		}
 	}
 }

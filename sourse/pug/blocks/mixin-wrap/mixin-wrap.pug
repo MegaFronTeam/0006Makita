@@ -34,7 +34,7 @@ mixin page-head(title, logout, ...items)
 			+b.section-title.light.long
 				h1.h2!= title
 				if logout 
-					+e.log-out(href='#')
-						+e.icon
-							img(loading="lazy" src="img/svg/exit2.svg" alt="")
+					+e.log-out(href='#').btn-primary
+						+icon('exit')
+						//- img(loading="lazy" src="img/svg/exit2.svg" alt="")
 						span Выйти

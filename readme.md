@@ -5,3 +5,4 @@
 7. <https://megafronteam.github.io/0006Makita/public/05-order-3.html>
 8. <https://megafronteam.github.io/0006Makita/public/05-order-4.html>
 9. <https://megafronteam.github.io/0006Makita/public/05-order-5.html>
+10. <https://megafronteam.github.io/0006Makita/public/06-personal-account.html>
