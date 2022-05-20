@@ -487,20 +487,21 @@ a{
 .swiper-next{
 	outline: none!important;
 	position: absolute;
-	top: 50%;
+	top: 47.5%;
 
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background-color: $white;
-	// background-color: $gray-100;
-
+	
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
+	
 	position: absolute;
 	z-index: 2;
+	&:hover {
+		background-color: $gray-100;
+	}
 	.icon{
 		@include mt();
 		font-size: 18px;
@@ -519,21 +520,27 @@ a{
 }
 
 .swiper-prev{
-	left: 0;
+	left: -2%;
 	transform: translateX(-50%) translateY(-50%);
 }
 .swiper-next{
-	right: 0;
+	right: -2%;
 	transform: translateX(50%) translateY(-50%);
 }
 //
 .headerBlock {
+	.swiper-pagination-bullet {
+		@include media-breakpoint-down(sm){
+			width: 7px;
+			height: 7px;
+		}
+	}
 	.swiper-prev,
 	.swiper-next{
 		outline: none!important;
 		position: absolute;
 		top: auto;
-		bottom: 0;
+		bottom: 29px;
 
 		width: 36px;
 		height: 36px;
