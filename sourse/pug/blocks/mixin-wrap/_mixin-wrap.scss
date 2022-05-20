@@ -38,5 +38,7 @@
 	padding-bottom: rem(30);
 	.section-title {
 		margin-bottom: 0 !important;
+		display: flex;
+		justify-content: space-between;
 	}
 }

@@ -17,6 +17,7 @@
 	&__box{
 		border: 1px solid $gray-310;
 		position: relative;
+		overflow: hidden;
 		z-index: 1;
 		background-image: linear-gradient(135deg, #20A5B6 0%, #00869A 100%);
 
@@ -37,6 +38,18 @@
 		// 	background-color: $primary;
 		// 	border-color: $primary;
 		// }
+
+		.logo {
+			position: absolute;
+			left: 50%;
+			bottom: -70px;
+			transform: translateX(-50%);
+		}
+		&--2 {
+			@include media-breakpoint-up(sm) {
+				padding-bottom: rem(110);
+			}
+		}
 	}
 	&__logo{
 		position: absolute;

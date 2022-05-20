@@ -104,6 +104,7 @@ body {
 	position: relative;
 	// padding-bottom: var(--sTPB);
 	// border-top: 1px solid $gray-310;
+	padding-top: rem(18) !important;
 	&:before{
 		content: '';
 		display: block;
@@ -113,6 +114,10 @@ body {
 		background-color: $gray-310;
 
 		margin-bottom: 12px;
+
+		position: absolute;
+		left: 0;
+		top: 0;
 		@include media-breakpoint-up(md){
 			margin-bottom: 19px;
 		}
