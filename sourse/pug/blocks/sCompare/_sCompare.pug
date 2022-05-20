@@ -2,48 +2,49 @@ mixin sCompare(data)
 	// start sCompare
 	+b.SECTION.sCompare.section#sCompare&attributes(attributes)
 		.container
-			block
-			+b.section-title.light.long
-				h2 Результаты сравнения
 			+e.row.row
 				+e.title-col
-					+e.t-header Товары
+					//- +e.t-header
 					+e.t-slide-spacer
-					+e.t-header Двигатель
-					+e.t-table
+						img(src="img/@2x/order-logo.png")
+					+in-c('checkbox', 'Показать только различия')
+					+e.t-header--indent.h3 Двигатель
+					+e.t-table--center
 						+e.t-item HUS Usage
 						+e.t-item Рабочий объем двигателя
 						+e.t-item Рабочий объем цилиндра
 						+e.t-item Номинальная мощность
-					+e.t-header Трансмиссия
+					+e.t-header.h3 Трансмиссия
 					+e.t-table
 						+e.t-item HUS Usage
 						+e.t-item Рабочий объем двигателя
 						+e.t-item Рабочий объем цилиндра
 						+e.t-item Номинальная мощность
 				+e.slider-col.col-md-8.col-lg-9.ms-auto
+					h3 Товары
 					+e.slider-wrap
 						.swiper.sCompare-slider-js
 							.swiper-wrapper
-								+sCompareSlide(1, true, 'VB3616DA', 'MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender')
+								+sCompareSlide()
 								+sCompareSlide()
 								+sCompareSlide()
 								+sCompareSlide()
 						+arrow('d-none d-md-flex')
 	// end sCompare
 
-mixin sCompareSlide(imgNum='2', tag=false, code='CB18DBL',name='Cordless Band Saw')
+mixin sCompareSlide(tag=false, code='JR3050T',name='Молоток отбойный легкий')
 	.swiper-slide
 		+e.item
 			+e.img(href="#")
-				img(loading="lazy" src=`img/@2x/compare-${imgNum}.jpg` alt="")
+				img(loading="lazy" src=`img/@2x/hit-1.jpg` alt="")
 				if tag
 					+e.tag Новинка
-			+e.code=code
-			+e.name(href='#')=name
-			+e.price-bl
-				+e.price--old 18 500 ₽
-				+e.price--new 16 500 ₽
+			+e.wrap
+				+e.name(href='#')=name
+				+e.code=code
+				+e.price-bl
+					+e.price--old 18 500 ₽
+					+e.price--new 16 500 ₽
 			+e.btn(href='#') Купить
 		+e.content
 			if block

@@ -18,21 +18,25 @@
 	 .form-check-input {
 		 margin-left: 0;
 	 }
-	 .custom-input {
-		 &__input {
-			border: 2px solid $blue;
-			&:disabled {
-				border-color: #D2D2D2;
-			}
-			&:checked[type=checkbox] {
-				background-size: 130%;
-			}
+	}
+	.custom-input {
+		&__input {
+		 border: 2px solid $blue;
+		 margin-left: 0 !important;
+		 &:disabled {
+			 border-color: #D2D2D2;
 		 }
-		 &__text {
-			 padding-left: 1.5rem;
+		 &[type=checkbox] {
+			 border: 2px solid #1f839f;
 		 }
-	 }
-}
+		 &:checked[type=checkbox] {
+			 background-size: 130%;
+		 }
+		}
+		&__text {
+			padding-left: 1.5rem;
+		}
+	}
 
 
 .parsley-error{
