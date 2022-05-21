@@ -1,4 +1,8 @@
 1. <https://megafronteam.github.io/0006Makita/public/>
+1. <https://megafronteam.github.io/0006Makita/public/00-modal.html>
+1. <https://megafronteam.github.io/0006Makita/public/02-catalog-01.html>
+1. <https://megafronteam.github.io/0006Makita/public/02-catalog-03.html>
+1. <https://megafronteam.github.io/0006Makita/public/02-catalog-04.html>
 4. <https://megafronteam.github.io/0006Makita/public/04-cart.html>
 5. <https://megafronteam.github.io/0006Makita/public/05-order-1.html>
 6. <https://megafronteam.github.io/0006Makita/public/05-order-2.html>

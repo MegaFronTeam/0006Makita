@@ -34,8 +34,11 @@ mixin modal()
 				+input("","password",'Пароль*')(required)
 				.text-center
 					+e.forgot.d-block.mb-24(href="#") Забыли пароль?
-					+e.BUTTON.btn-enter.disabled(type="submit") Войти
-					+e.BUTTON.btn-reg.disabled(type="submit") Регистрация
+					.row
+						.col-6
+							.modal-win__btn(type="button") Войти
+						.col-6
+							.modal-win__btn-outline(type="button") Регистрация
 		// #modal-inner
 		+b.modal-win(id="modal-reg")
 			+form-wrap()

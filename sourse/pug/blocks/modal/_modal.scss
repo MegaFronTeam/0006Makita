@@ -7,8 +7,10 @@
 	padding: 36px 0 48px 0;
 
 	&__title{
-		margin-bottom: 48px;
-		font-size: 20px;
+		font-family: $header-font;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		font-size: 24px;
 		line-height: 1.2;
 	}
 	&__btn{
@@ -20,6 +22,10 @@
 		@extend .btn;
 		@extend .btn-outline-primary;
 		width: 100%;
+	}
+	.disabled {
+		border: none;
+		background-color: $gray-100 !important;
 	}
 	//
 	.form-wrap{
@@ -66,6 +72,7 @@
 			width: 165px;
 			margin: 0 auto;
 		}
+		
 		//
 		&__{}
 		&__{}

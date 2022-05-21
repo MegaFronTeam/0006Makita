@@ -760,9 +760,11 @@ body{
 //
 .pagination{
 	&__row{
+		justify-content: center;
 		@include roww(12px);
 	}
 	&__btn{
+		font-size: rem(20);
 		&--controll{
 			@extend .btn;
 			@extend .btn-light;
@@ -772,6 +774,7 @@ body{
 				font-size: 18px;
 				color: transparent;
 				stroke: $primary;
+				stroke-width: 2px;
 			}
 		}
 		&--link{
@@ -787,6 +790,8 @@ body{
 
 			&.current{
 				@extend .active;
+				color: $white;
+				font-weight: 700;
 				border: 1px solid $primary;
 			}
 		}
@@ -798,13 +803,13 @@ body{
 
 		width: 28px;
 		height: 28px;
-		@include media-breakpoint-up(xsm){
+		// @include media-breakpoint-up(xsm){
+		// 	width: 36px;
+		// 	height: 36px;
+		// }
+		@include media-breakpoint-up(sm){
 			width: 36px;
 			height: 36px;
-		}
-		@include media-breakpoint-up(sm){
-			width: 50px;
-			height: 50px;
 		}
 	}
 }

@@ -713,22 +713,36 @@
 
 	}
 	&__c-item{
+		position: relative;
 		margin-bottom: -1px;
-		border: 1px solid $secondary;
-		background-color: $light;
+		background: $gray-100;
+		border: 1px solid #D2D2D2;
 		padding: 15px 18px 15px 21px;
+		color: #333333;
 
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 
-
 		.icon{
 			margin-left: 10px;
 			font-size: 12px;
 			color: transparent;
-			stroke: $primary;
+			stroke: $white;
+			fill: none;
+			stroke-width: 2px;
 		}
+	}
+	&__icon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 46px;
+		background-color: $primary;
 	}
 	&__c-txt{
 		font-size: 14px;

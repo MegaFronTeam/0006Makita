@@ -271,25 +271,27 @@ mixin searchDD()
 				+e.categories.mb-30
 					+e.c-item(href='#')
 						+e.c-txt Дрели-шуруповерты
-						+icon('chevron-right')
+						+e.icon
+							+icon('chevron-right')
 					+e.c-item(href='#')
 						+e.c-txt Ударные дрели-шуруповерты
-						+icon('chevron-right')
-				+e.items-row.row
-					.col-sm-6.col-lg-3
-						+item-prod('1', false, 'VB3616DA')
-							+e.badge.bg-red Новинка
-					.col-sm-6.col-lg-3
-						+item-prod('1', false, 'VB3616DA')
-							+e.badge.bg-red Новинка
-					.col-sm-6.col-lg-3
-						+item-prod('1', false, 'VB3616DA')
-							+e.badge.bg-red Новинка
-					.col-sm-6.col-lg-3
-						+item-prod('1', false, 'VB3616DA')
-							+e.badge.bg-red Новинка
+						+e.icon
+							+icon('chevron-right')
 			.col-auto
 				+e.BUTTON.btn(type="button") Найти
+			+e.items-row.row
+				.col-sm-6.col-lg-3
+					+item-prod('1', false, 'VB3616DA')
+						+e.badge.bg-red Новинка
+				.col-sm-6.col-lg-3
+					+item-prod('1', false, 'VB3616DA')
+						+e.badge.bg-red Новинка
+				.col-sm-6.col-lg-3
+					+item-prod('1', false, 'VB3616DA')
+						+e.badge.bg-red Новинка
+				.col-sm-6.col-lg-3
+					+item-prod('1', false, 'VB3616DA')
+						+e.badge.bg-red Новинка
 
 
 mixin catalogMobMenu()

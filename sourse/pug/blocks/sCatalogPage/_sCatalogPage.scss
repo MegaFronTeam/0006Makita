@@ -11,30 +11,41 @@
 		--sPB: 72px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPB: 96px;
+		--sPB: 119px;
+	}
+	.breadcrumb {
+		padding-bottom: 20px;
+	}
+	h2 {
+		margin-bottom: 24px;
+		margin-left: -12px;
 	}
 
 	.section-title{
 		h2{
+
 			@include media-breakpoint-down(sm){
 				font-size: 18px;
 			}
 		}
 	}
 	&__row{
-		@include roww(20px);
-		& > *{
-			margin-bottom: 20px;
-		}
-		margin-bottom: -20px;
+		margin-bottom: 53px;
+		--bs-gutter-y: #{20px};
+		// @include roww(20px);
+		// & > *{
+		// 	margin-bottom: 20px;
+		// }
+		// margin-bottom: -20px;
 
-		@include media-breakpoint-up(lg){
-			@include roww(30px);
-			& > *{
-				margin-bottom: 30px;
-			}
-			margin-bottom: -30px;
-		}
+		// @include media-breakpoint-up(lg){
+		// 	@include roww(30px);
+
+		// 	& > *{
+		// 		margin-bottom: 0px;
+		// 	}
+		// 	margin-bottom: -30px;
+		// }
 
 		//
 		.prod-item__box{
@@ -46,24 +57,29 @@
 	}
 	&__item{
 		min-height: 100%;
+		padding: 20px 20px 28px;
 		display: flex;
 		flex-direction: column;
+		border: 1px solid $gray-100;
+		&:hover {
+			.sCatalogPage__i-name {
+				color: $primary;
+			}
+		}
 	}
-	&__i-img{
-		display: block;
-		width: 100%;
-		height: 0;
-		position: relative;
+	&__img-wrap{
+		@include block(223,210);
+		margin-bottom: 20px;
 		overflow: hidden;
 		background-color: $light;
 
-		padding-top: math.div(231, 320) * 100%;
-		@include media-breakpoint-up(md){
-			padding-top: math.div(255, 344) * 100%;
-		}
-		@include media-breakpoint-up(xl){
-			padding-top: math.div(180, 263) * 100%;
-		}
+		// padding-top: math.div(231, 320) * 100%;
+		// @include media-breakpoint-up(md){
+		// 	padding-top: math.div(255, 344) * 100%;
+		// }
+		// @include media-breakpoint-up(xl){
+		// 	padding-top: math.div(180, 263) * 100%;
+		// }
 
 		img{
 			position: absolute;
@@ -71,50 +87,32 @@
 			top: 0;
 			width: 100%;
 			height: 100%;
-			object-fit: contain;
+			// object-fit: contain;
 		}
 	}
 	&__i-name{
 		flex-grow: 1;
-		@extend .btn;
-		@extend .btn-primary;
-
-		min-height: 60px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-		font-size: 14px;
-		line-height: math.div(17, 14);
-		padding: 10px 20px;
-		text-align: left;
-
-		&:after{
-			flex-shrink: 0;
-			margin-left: 3px;
-			content: '';
-			display: inline-block;
-			width: 8px;
-			height: 16px;
-
-			background-image: url(../img/svg/white-chevron-right.svg);
-			background-repeat: no-repeat;
-			background-position: center;
-		}
+		color: #4E4E4E;
+			
+		font-size: 20px;
+		font-weight: 700;		
+		text-align: center;
+		@include mt;
 	}
 	//options
 	&__options{
-		margin-bottom: 30px;
+		// margin-bottom: 30px;
 	}
 	&__o-row{
-		@include roww(24px);
+		// @include roww(24px);
 		margin: 0;
-		border-bottom: 1px solid $gray-310;
-		padding-bottom: 5px;
-		padding-top: 5px;
+		// border-bottom: 1px solid $gray-310;
+		// padding-bottom: 5px;
+		// padding-top: 5px;
 	}
 	&__select{
 		select{
+			margin-right: 16px;
 			width: auto;
 			border: none!important;
 			box-shadow: none!important;
@@ -126,7 +124,9 @@
 		}
 	}
 	&__o-sub-row{
-		@include roww(24px);
+		@include roww(16px);
+		align-items: center;
+		margin-right: -26px;
 	}
 	&__icon-btn{
 		&.active{
@@ -137,8 +137,8 @@
 
 		.icon{
 			@include mt();
-			font-size: 19px;
-			color: $gray-310;
+			font-size: 22px;
+			color: #C4C4C4;
 		}
 	}
 	&__{}
@@ -154,24 +154,34 @@
 		}
 	}
 	&__header{
-		background-color: $body-color;
+		background-color: $primary;
 		color: $white;
 
 		padding: 14.5px 20px;
 		font-size: 14px;
+		font-weight: 700;
 		line-height: math.div(17, 14);
 	}
 	&__items{
+		padding-bottom: 15px;
 		border: 1px solid $gray-310;
 	}
 	&__item{
 		@include mt();
-		padding: 0 19px;
-
-		border-bottom: 1px solid $gray-310;
-		&:last-child{
-			border-none: 1px solid $gray-310;
+		padding: 0 14px 0 19px;
+		.icon {
+			font-size: 7px;
+			margin-left: auto;
+			fill: none;
+			stroke: $primary;
+			@include mt;
 		}
+		&.active {
+			.icon {
+				transform: rotate(180deg);
+			}
+		}
+		
 
 		background-color: $light;
 		--plus-aft-o: 1;
@@ -191,7 +201,7 @@
 	}
 	&__i-head{
 		cursor: pointer;
-		padding: 13px 0;
+		padding: 13px 0 0;
 		display: flex;
 		align-items: center;
 
@@ -201,7 +211,7 @@
 		line-height: 17/14;
 	}
 	&__name{
-
+		margin-right: 10px;
 	}
 	&__plus{
 		width: 14px;
@@ -255,6 +265,9 @@
 		}
 	}
 	&__{}
+}
+.sSeo {
+	padding-left: 30px;
 }
 .green-seo{
 	background-color: $primary;
@@ -396,26 +409,41 @@
 		&__headline{
 			margin-top: rem(30px);
 			margin-bottom: rem(10px);
-			color: $dark;
+			color: #282828;
+			font-weight: 700;
+			font-size: 14px;
 		}
 		//checkboxes style
 		.filter-checkbox{
 			margin-bottom: rem(5px);
 			.custom-input__input:checked + .custom-input__lab{
 				background-color: $primary;
+				color: $white;
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					left: 0px;
+					top: -2px;
+					width: 6px;
+					height: 11px;
+					border: solid #fff;
+					border-width: 0 2px 2px 0;
+					transform: rotate(45deg);
+				}
 			}
 			.custom-input__lab{
-				position: static;
+				position: relative;
 				background-color: transparent;
-				border: 1px solid $primary;
-				box-shadow: inset 0px 0px 0px 2px white;
+				border: 2px solid $primary;
+				// box-shadow: inset 0px 0px 0px 2px white;
 				&:after{
 					display: none;
 				}
 			}
 			.custom-input__text{
 				color: $dark;
-				font-size: rem(16px);
+				font-size: rem(14px);
 			}
 			&:hover{
 				.custom-input__text{
@@ -426,10 +454,10 @@
 			&.disabled{
 				pointer-events: none;
 				.custom-input__lab{
-					border: 1px solid $light;
+					border: 1px solid  rgba(51, 51, 51, 0.3);;
 				}
 				.custom-input__text{
-					color: $gray-310;
+					color:  rgba(51, 51, 51, 0.3);;
 				}
 			}
 		}
@@ -494,7 +522,7 @@
 						display: block;
 						padding-left: rem(10px);
 						color: $dark;
-						font-size: rem(18px);
+						font-size: rem(14px);
 						text-align: left;
 					}
 				}
@@ -519,15 +547,16 @@
 			.range-result{
 				width: 100%;
 				border: 1px solid $light;
-				font-size: rem(18px);
-				color: $dark;
+				font-size: rem(14px);
+				color: $primary;
 				outline: none;
 				padding: 0 rem(8px);
 				transition: transform .2s ease-in-out, border .35s ease-in-out, box-shadow .35s ease-in-out;
 
-				text-align: center;
+				// text-align: center;
 				line-height: rem(30px);
 				height: rem(30px);
+				border: 1px solid #D2D2D2;
 				@include media-breakpoint-up(sm) {
 					line-height: rem(50px);
 					height: rem(50px);
@@ -546,18 +575,23 @@
 			.irs{
 			}
 			.irs-line{
-				background-color: $light;
+				background-color: $gray-310;
 				border-radius: 0;
+				top: 29px;
+				height: 2px;
 			}
 			.irs-bar{
+				top: 29px;
+				height: 2px;
 				background-color: $primary;
 			}
 			.irs-handle{
 				background-color: $primary;
-				height: rem(24px);
-				width: rem(12px);
+				height: rem(10px);
+				width: rem(10px);
+				top: 25px;
 				border: none;
-				border-radius: 0;
+				border-radius: 50%;
 				cursor: pointer;
 			}
 		}
@@ -623,12 +657,12 @@
 			&.disabled{
 				pointer-events: none;
 				.custom-input__text{
-					color: $gray-310;
+					color:  rgba(51, 51, 51, 0.3);;
 				}
 				.custom-input__lab{
-					border: 1px solid $light;
+					border: 2px solid  rgba(51, 51, 51, 0.3);;
 					&:after{
-						background-color: $light;
+						background-color:  rgba(51, 51, 51, 0.3);;
 					}
 				}
 			}
@@ -674,20 +708,20 @@
 
 	&__input {
 		position: absolute;
-		// opacity: 0;
-		// width: 1px;
-		// height: 1px;
+		opacity: 0;
+		width: 1px;
+		height: 1px;
 		margin: -1px;
 		border: 0;
 		padding: 0;
-		// clip: rect(0 0 0 0);
+		clip: rect(0 0 0 0);
 		overflow: hidden;
 	}
 
 	&__lab {
 		left: 0;
 		display: block;
-		top: rem(3);
+		// top: rem(3);
 		width: rem(20px);
 		height: rem(20px);
 		background-color: $primary;
@@ -738,8 +772,8 @@
 	}
 	.custom-input__lab{
 		background-color: transparent;
-		border: 1px solid $primary;
-		box-shadow: inset 0px 0px 0px 2px white;
+		border: 2px solid $primary;
+		border-radius: 3px;
 		&:after{
 			display: none;
 		}
@@ -781,7 +815,7 @@
 		min-width: rem(40px);
 		height: rem(20px);
 		border-radius: rem(10px);
-		border: 1px solid $primary;
+		border: 2px solid $primary;
 		background-color: white;
 		position: relative;
 		transition: background-color .2s ease-in-out;

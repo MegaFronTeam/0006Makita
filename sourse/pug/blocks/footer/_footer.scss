@@ -186,6 +186,9 @@
     &:last-child{
       margin-bottom: 0;
     }
+    &:hover {
+      color: $gray-300;
+    }
   }
   &__c-head {
     font-family: $header-font;

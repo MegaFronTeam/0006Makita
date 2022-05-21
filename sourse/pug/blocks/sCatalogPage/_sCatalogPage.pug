@@ -26,7 +26,7 @@ mixin sCatalogPage(data)
 mixin catalogPageItem(imgNum, name, bootClasses="")
 	.col-md-6.col-lg-4(class=bootClasses)
 		+e.item(href='#')
-			+e.i-img
+			+e.img-wrap
 				img(loading="lazy" src=`img/@2x/catalog-${imgNum}.jpg` alt="")
 			+e.i-name=name
 
@@ -35,43 +35,39 @@ mixin sCatalogPage2(data)
 	+b.SECTION.sCatalogPage.section#sCatalogPage&attributes(attributes)
 		+e.container.container
 			block
-			+b.section-title.light.long
-				h2 AC Brushless
 			+e.main-row.row
 				.col-lg-3
 					+b.cat-aside.cat-aside-dd-js
 						+e.box
-							+e.header AC Brushless
+							+e.header Инструменты
 							+e.items
 								+asideItem('Дрели-шуруповерты')
 								+asideItem('Ударные дрели-шуруповерты')
 								+asideItem('Ударные шуруповерты')
 				.col-lg-9
-					+b.green-seo
-						h2 Заголовок SEO текста
-						p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+					h2 Каталог
 					+e.row.row.pb-48.pb-md-60
-						+catalogPageItem(1, 'AC Brushless')
-						+catalogPageItem(2, 'MultiVolt')
-						+catalogPageItem(3, 'Сетевой электроинструмент')
-						+catalogPageItem(4, 'Аккумуляторный инструмент')
-						+catalogPageItem(1, 'AC Brushless')
-						+catalogPageItem(2, 'MultiVolt')
-						+catalogPageItem(3, 'Сетевой электроинструмент')
-						+catalogPageItem(4, 'Аккумуляторный инструмент')
-						+catalogPageItem(1, 'AC Brushless')
+						+catalogPageItem(1, 'Цепные пилы')
+						+catalogPageItem(2, 'Пылесосы')
+						+catalogPageItem(3, 'Кусторезы')
+						+catalogPageItem(4, 'Триммеры и травокосилки')
+						+catalogPageItem(5, 'Рубанки')
+						+catalogPageItem(6, 'Рубанки')
+						+catalogPageItem(7, 'Рубанки')
+						+catalogPageItem(8, 'Рубанки')
+						+catalogPageItem(9, 'Строительные фены')
 						//-+catalogPageItem(2, 'MultiVolt')
 						//-+catalogPageItem(3, 'Сетевой электроинструмент')
 						//-+catalogPageItem(4, 'Аккумуляторный инструмент')
-					+b.sSeo#sSeo
-						h2 Заголовок SEO текста
-						p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+			+b.sSeo#sSeo
+				h2 Заголовок SEO текста
+				p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
 
 mixin asideItem(name, activeClass='')
 	+e.item(class=activeClass)
 		+e.i-head.dd-head-js
 			+e.name=name
-			+e.plus
+			+icon('chevron-down')
 		+e.content.dd-content-js(class=activeClass)
 			if block
 				block
@@ -94,13 +90,11 @@ mixin sCatalogPage3(data)
 	+b.SECTION.sCatalogPage.section#sCatalogPage&attributes(attributes)
 		+e.container.container
 			block
-			+b.section-title.light.long
-				h2 Ударные дрели-шуруповерты
 			+e.main-row.row
 				.col-lg-3
 					+b.cat-aside.cat-aside-dd-js
 						+e.box
-							+e.header AC Brushless
+							+e.header Инструменты
 							+e.items
 								+asideItem('Дрели-шуруповерты')
 								+asideItem('Ударные дрели-шуруповерты')
@@ -109,18 +103,20 @@ mixin sCatalogPage3(data)
 						+filterBtnsBar()
 				.col-lg-9
 					+e.options
-						+e.o-row.row.align-items-center
+						+e.o-row.row.align-items-start
 							.col
-								+e.select
-									+input('Цена по возрастанию', 'select')
+								h2 Инструменты
 							.col-auto
 								+e.o-sub-row.row
 									.col-auto
+										+e.select
+											+input('Цена по возрастанию', 'select')
+									.col-auto
 										+e.icon-btn
-											+icon('6-dots')
+											+icon('square')
 									.col-auto
 										+e.icon-btn.active
-											+icon('9-dots')
+											+icon('lines')
 					+sqprodItemsRow()
 					+pugin('pb-48 pb-md-60')
 					+b.sSeo#sSeo
@@ -132,15 +128,12 @@ mixin sCatalogPage4(data)
 	+b.SECTION.sCatalogPage.section#sCatalogPage&attributes(attributes)
 		+e.container.container
 			block
-			+b.section-title.light.long
-				h2 Ударные дрели-шуруповерты
 			+e.main-row.row
 				.col-lg-3
 					+b.cat-aside.cat-aside-dd-js
 						+e.box
-							//+e.header AC Brushless
+							+e.header Инструменты
 							+e.items
-								+asideItem('Дрели-шуруповерты', 'current')
 								+asideItem('Дрели-шуруповерты')
 								+asideItem('Ударные дрели-шуруповерты')
 								+asideItem('Ударные шуруповерты')
@@ -148,26 +141,25 @@ mixin sCatalogPage4(data)
 						+filterBtnsBar()
 				.col-lg-9
 					+e.options
-						+e.o-row.row.align-items-center
+						+e.o-row.row.align-items-start
 							.col
-								+e.select
-									+input('Цена по возрастанию', 'select')
+								h2 Инструменты
 							.col-auto
 								+e.o-sub-row.row
 									.col-auto
-										+e.icon-btn.active.d-none.d-lg-block
-											+icon('6-dots')
-									.col-auto.d-none.d-lg-block
+										+e.select
+											+input('Цена по возрастанию', 'select')
+									.col-auto
 										+e.icon-btn
-											+icon('9-dots')
-									.col-auto.d-lg-none
+											+icon('square')
+									.col-auto
 										+e.icon-btn.active
-											+icon('9-dots')
+											+icon('lines')
 					+longProdItemsRow()
 					+pugin('pb-48 pb-md-60')
-					+b.sSeo#sSeo
-						h2 Заголовок SEO текста
-						p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+			+b.sSeo#sSeo
+				h2 Заголовок SEO текста
+				p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
 
 mixin sqprodItemsRow(addClasses)
 	+e.row.row.pb-48.pb-md-60(class=addClasses)
@@ -185,22 +177,30 @@ mixin sqprodItemsRow(addClasses)
 			+item-prod('2', false, 'CB18DBL', 'Cordless Band Saw')
 		.col-xsm-6.col-md-4
 			+item-prod('2', false, 'CB18DBL', 'MULTI VOLT(36V) Cordless Metal Cutting Saw', false)
+		.col-xsm-6.col-md-4
+			+item-prod('1', false, 'VB3616DA')
+				+e.badge.bg-red Новинка
+		.col-xsm-6.col-md-4
+			+item-prod('2', false, 'CB18DBL', 'Cordless Band Saw')
+		.col-xsm-6.col-md-4
+			+item-prod('2', false, 'CB18DBL', 'MULTI VOLT(36V) Cordless Metal Cutting Saw', false)
+
 		block
 
 mixin longProdItemsRow(addClasses)
-	+e.row.row.pb-48.pb-md-60(class=addClasses)
-		.col-xsm-6.col-md-12
-			+itemProdLong()
-		.col-xsm-6.col-md-12
-			+itemProdLong()
-		.col-xsm-6.col-md-12
-			+itemProdLong('asdasd')
-		.col-xsm-6.col-md-12
-			+itemProdLong()
-		.col-xsm-6.col-md-12
-			+itemProdLong()
-		.col-xsm-6.col-md-12
-			+itemProdLong()
+	+e.row.row(class=addClasses)
+		.col-sm-6.col-md-12
+			+itemProdLong('Шуруповерт с 6 положениями регулировки', '1','new')
+		.col-sm-6.col-md-12
+			+itemProdLong('Шуруповерт с 6 положениями регулировки и с проводом длинной 5 м', '2')
+		.col-sm-6.col-md-12
+			+itemProdLong('Шуруповерт с 6 положениями регулировки', '3','new')
+		.col-sm-6.col-md-12
+			+itemProdLong('Шуруповерт с 6 положениями регулировки', '3','new')
+		//- .col-xsm-6.col-md-12
+		//- 	+itemProdLong('5')
+		//- .col-xsm-6.col-md-12
+		//- 	+itemProdLong('6')
 
 mixin filterBtnsBar()
 	+b.filter-bar-btns.d-flex.d-lg-none.pb-60
@@ -226,28 +226,28 @@ mixin FiltersBlock()
 				+in-c06("checkbox", 'Самоходные', 'no-my-city')(class="filter-checkbox disabled")
 				+in-c06("checkbox", 'Аккумуляторные', 'no-my-city')(class="filter-checkbox ")
 				+in-c06("checkbox", 'Бензольные', 'no-my-city')(class="filter-checkbox ")
-			.radio-filter-group
-				+e.headline Фильтр
-				+in-r('type-radio-group')(class="filter-radio disabled")
-					span.check-box-cont
-						span.circle
-						span.txt-cont Самоходные
-				+in-r('type-radio-group')(class="filter-radio")
-					span.check-box-cont
-						span.circle
-						span.txt-cont Аккумуляторные
-				+in-r('type-radio-group', true)(class="filter-radio")
-					span.check-box-cont
-						span.circle
-						span.txt-cont Бензольные
+			//- .radio-filter-group
+			//- 	+e.headline Фильтр
+			//- 	+in-r('type-radio-group')(class="filter-radio disabled")
+			//- 		span.check-box-cont
+			//- 			span.circle
+			//- 			span.txt-cont Самоходные
+			//- 	+in-r('type-radio-group')(class="filter-radio")
+			//- 		span.check-box-cont
+			//- 			span.circle
+			//- 			span.txt-cont Аккумуляторные
+			//- 	+in-r('type-radio-group', true)(class="filter-radio")
+			//- 		span.check-box-cont
+			//- 			span.circle
+			//- 			span.txt-cont Бензольные
 			.price-filter-group
 				+e.headline Цена
 				+range("1", "999999")
-			.check-box-alt-filter-group
-				+e.headline Фильтр
-				+in-c06("checkbox", 'Самоходные', 'no-my-city')(class="filter-checkbox-alt disabled")
-				+in-c06("checkbox", 'Аккумуляторные', 'no-my-city')(class="filter-checkbox-alt ")
-				+in-c06("checkbox", 'Бензольные', 'no-my-city')(class="filter-checkbox-alt ")
+					//- .check-box-alt-filter-group
+					//- 	+e.headline Фильтр
+					//- 	+in-c06("checkbox", 'Самоходные', 'no-my-city')(class="filter-checkbox-alt disabled")
+					//- 	+in-c06("checkbox", 'Аккумуляторные', 'no-my-city')(class="filter-checkbox-alt ")
+					//- 	+in-c06("checkbox", 'Бензольные', 'no-my-city')(class="filter-checkbox-alt ")
 			.accept-filters-btn-cont.d-block.d-lg-none
 				.accept-filters-btn применить фильтры
 mixin range(c1, c2)
@@ -278,23 +278,29 @@ mixin in-r(name='radio-btn-group', checked=false)
 			+e.INPUT.radio-input(type="radio", name = name)
 			block
 
-mixin itemProdLong(title)
+mixin itemProdLong(title,img,tag)
 	+b.long-item.text-center.text-md-start
 		+e.row.row
 			+e.img-col.col-md-auto
+				if tag
+					+e.tag Новинка
+				else
 				+e.img(href="#")
-					+e.tag.d-md-none Новинка
-					img(loading='lazy' src=`img/@2x/lc-img.jpg` alt="")
+					img(loading='lazy' src=`img/@2x/lc-img-${img}.jpg` alt="")
 			+e.content-col.col-md
-				+e.tag.d-md-inline-flex.d-none Новинка
-				+e.code VB3616DA
+				+e.links
+					+e.compare(href="#")
+						+icon('bars')
+					+e.bookmarks(href="#")
+						+icon('heart')
 				if title
 					+e.title(href="#")=title
 				else
 					+e.title(href="#") MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
-				+e.lower-row.row.align-items-center
-					+e.price-col.col-md
-						+e.price--old 18 500 ₽
-						+e.price--new 16 500 ₽
-					+e.btn-col.col-md-auto
-						+e.btn(href='#') Купить
+				+e.code VB3616DA
+				//- +e.lower-row.row.align-items-center
+				+e.price-col
+					+e.price--old 18 500 ₽
+					+e.price--new 16 500 ₽
+					//- +e.btn-col.col-md-auto
+				+e.btn(href='#') Купить
