@@ -14,7 +14,7 @@ mixin sArticals()
 				+itemNews("3",'Заголовок SEO текста', descr, 'col-md-4')
 	// end sArticals
 
-mixin itemNews(i ,t,descr="Позаботьтесь о тепле и безопасности с принадлежностями для работы  с цепной пилой", bootClasses='col-sm-6 col-lg-4')
+mixin itemNews(i ,t="Заголовок SEO текста",descr="Позаботьтесь о тепле и безопасности с принадлежностями для работы  с цепной пилой", bootClasses='col-sm-6 col-lg-4')
 	+e.col(class=bootClasses)&attributes(attributes)
 		+e.img-wrap(href="#")
 			img(loading="lazy" src=`img/@2x/artical-${i}.jpg` alt="")
@@ -29,9 +29,9 @@ mixin sArticalsPage()
 	// start sArticals
 	+b.SECTION.sArticals--page.section#sArticals&attributes(attributes)
 		.container
-			block
-			+b.section-title.light
-				h1 Новости
+			+e.image-wrap
+				+pic('news-bg.jpg', 'bg', 0)
+				+e.head-title новости
 			+e.row.row
 				+itemNews("1")
 				+itemNews("2")
