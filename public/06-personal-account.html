@@ -833,7 +833,10 @@
 						</ol>
 					</nav>
 					<div class="section-title light long">
-						<h1 class="h2">личный кабинет</h1><a class="section-title__log-out" href="#"><span class="section-title__icon"><img loading="lazy" src="img/svg/exit2.svg" alt=""/></span><span>Выйти</span></a>
+						<h1 class="h2">личный кабинет</h1><a class="section-title__log-out btn-primary" href="#">
+						<svg class="icon icon-exit ">
+							<use xlink:href="img/svg/sprite.svg#exit"></use>
+						</svg><span>Выйти</span></a>
 					</div>
 				</div>
 			</div>
@@ -850,13 +853,13 @@
 						<div class="col-lg-9 tabs__wrap">
 							<div class="sPAcc__info-content tabs__content">
 								<div class="sPAcc__profile-txt">
-									<div class="sPAcc__p-title">Учётная запись
+									<div class="sPAcc__p-title h3">Учётная запись
 									</div>
 									<div class="sPAcc__p-data">
 										<div class="sPAcc__pd-row row">
 											<div class="sPAcc__pd-name col-auto">ФИО
 											</div>
-											<div class="sPAcc__pd-val col">Неретин Николай Игоревич
+											<div class="sPAcc__pd-val col">Иванов Инакентий Игоревич
 											</div>
 										</div>
 										<div class="sPAcc__pd-row row">
@@ -868,7 +871,7 @@
 										<div class="sPAcc__pd-row row">
 											<div class="sPAcc__pd-name col-auto">Почта
 											</div>
-											<div class="sPAcc__pd-val col">nicolomelodini@gmail.com
+											<div class="sPAcc__pd-val col">ivanov.i@gmail.com
 											</div>
 										</div>
 										<div class="sPAcc__pd-row row">
@@ -878,7 +881,7 @@
 											</div>
 										</div>
 									</div>
-									<button class="sPAcc__change-btn" type="button">Изменить
+									<button class="sPAcc__change-btn btn-primary" type="button">Изменить
 									</button>
 								</div>
 								<div class="sPAcc__change-box">
@@ -887,7 +890,7 @@
 											<div class="form-wrap__inputs">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__input-title">ФИО</span>
-														<div class="form-wrap__input-box"><input class="form-wrap__input form-control" name="name" type="text" placeholder="" value="Неретин Николай Игоревич"/>
+														<div class="form-wrap__input-box"><input class="form-wrap__input form-control" name="name" type="text" placeholder="" value="Иванов Инакентий Игоревич"/>
 															<div class="form-wrap__cross-btn">
 																<svg class="icon icon-cross ">
 																	<use xlink:href="img/svg/sprite.svg#cross"></use>
@@ -911,7 +914,7 @@
 												<!-- +e.input-wrap-->
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__input-title">Почта</span>
-														<div class="form-wrap__input-box"><input class="form-wrap__input form-control" name="mail" type="email" placeholder="" value="nicolomelodini@gmail.com"/>
+														<div class="form-wrap__input-box"><input class="form-wrap__input form-control" name="mail" type="email" placeholder="" value="ivanov.i@gmail.com"/>
 															<div class="form-wrap__cross-btn">
 																<svg class="icon icon-cross ">
 																	<use xlink:href="img/svg/sprite.svg#cross"></use>
@@ -948,7 +951,7 @@
 											</div>
 											<div class="form-wrap__btns-row row">
 												<div class="col-sm-6 col-md-auto">
-													<button class="form-wrap__btn form-wrap__btn--save" type="submit">Сохранить
+													<button class="form-wrap__btn form-wrap__btn--save btn-primary" type="submit">Сохранить
 													</button>
 												</div>
 												<div class="col-sm-6 col-md-auto">
@@ -960,7 +963,7 @@
 									</div>
 								</div>
 								<div class="sPAcc__profile-txt">
-									<div class="sPAcc__p-title">Адрес доставки
+									<div class="sPAcc__p-title h3">Адрес доставки
 									</div>
 									<div class="sPAcc__p-data">
 										<div class="sPAcc__pd-row row">
@@ -976,13 +979,13 @@
 											</div>
 										</div>
 									</div>
-									<button class="sPAcc__change-btn" type="button">Изменить
+									<button class="sPAcc__change-btn btn-outline-primary" type="button">Изменить
 									</button>
 								</div>
 							</div>
 							<div class="tabs__content active">
 								<div class="pa-orders">
-									<div class="pa-orders__title">Заказы
+									<div class="pa-orders__title h3">Заказы
 									</div>
 									<div class="pa-orders__items pa-orders-dd-js">
 										<div class="pa-orders__item">
@@ -1019,43 +1022,43 @@
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Статус заказа
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">На доставке
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">На доставке
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Способ доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Почтой России
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">Почтой России
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Стоимость доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">500 ₽
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">500 ₽
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Адрес доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">1117463, Москва, Паустовского, 4
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">1117463, г.Москва,<br>улица Паустовского, 4
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">ФИО получателя
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Неретин Николай Игоревич
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">Иванов Инакентий Игоревич
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Телефон
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">+7 (916) 176-05-12
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">+7 (916) 176-05-12
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Телефон
+																	<div class="pa-orders__ti-key-col col-xl-auto">Почта
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">nicolomelodini@gmail.com
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">ivanov.i@gmail.com
 																	</div>
 																</div>
 															</div>
@@ -1066,7 +1069,7 @@
 															<div class="pa-orders__t-dates">
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball active">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Доставлен
@@ -1074,7 +1077,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball active">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Ждёт в магазине
@@ -1082,7 +1085,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">В пути
@@ -1090,7 +1093,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Отправляем
@@ -1098,7 +1101,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Собираем
@@ -1114,15 +1117,13 @@
 														<div class="pa-orders__g-items">
 															<div class="g-item">
 																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/cart-img.jpg" alt=""/></a>
+																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/></a>
 																	</div>
 																	<div class="g-item__col-with-row col">
 																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<div class="g-item__tag">Новинка
+																			<div class="g-item__txt-col col-md"><a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки</a>
+																				<div class="g-item__code">FS2700
 																				</div>
-																				<div class="g-item__code">VB3616DA
-																				</div><a class="g-item__title" href="#" target="_blank">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
 																			</div>
 																			<div class="col-md-auto">
 																				<div class="g-item__price g-item__price--old">18 500 ₽
@@ -1138,15 +1139,13 @@
 															</div>
 															<div class="g-item">
 																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/cart-img.jpg" alt=""/></a>
+																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/></a>
 																	</div>
 																	<div class="g-item__col-with-row col">
 																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<div class="g-item__tag">Новинка
+																			<div class="g-item__txt-col col-md"><a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки</a>
+																				<div class="g-item__code">FS2700
 																				</div>
-																				<div class="g-item__code">VB3616DA
-																				</div><a class="g-item__title" href="#" target="_blank">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
 																			</div>
 																			<div class="col-md-auto">
 																				<div class="g-item__price g-item__price--old">18 500 ₽
@@ -1162,15 +1161,13 @@
 															</div>
 															<div class="g-item">
 																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/cart-img.jpg" alt=""/></a>
+																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/></a>
 																	</div>
 																	<div class="g-item__col-with-row col">
 																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<div class="g-item__tag">Новинка
+																			<div class="g-item__txt-col col-md"><a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки</a>
+																				<div class="g-item__code">FS2700
 																				</div>
-																				<div class="g-item__code">VB3616DA
-																				</div><a class="g-item__title" href="#" target="_blank">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
 																			</div>
 																			<div class="col-md-auto">
 																				<div class="g-item__price g-item__price--old">18 500 ₽
@@ -1180,7 +1177,7 @@
 																			</div>
 																		</div>
 																	</div>
-																	<div class="g-item__amount-col col-auto">× 33
+																	<div class="g-item__amount-col col-auto">× 120
 																	</div>
 																</div>
 															</div>
@@ -1251,43 +1248,43 @@
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Статус заказа
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">На доставке
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">На доставке
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Способ доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Почтой России
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">Почтой России
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Стоимость доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">500 ₽
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">500 ₽
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Адрес доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">1117463, Москва, Паустовского, 4
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">1117463, г.Москва,<br>улица Паустовского, 4
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">ФИО получателя
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Неретин Николай Игоревич
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">Иванов Инакентий Игоревич
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Телефон
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">+7 (916) 176-05-12
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">+7 (916) 176-05-12
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Телефон
+																	<div class="pa-orders__ti-key-col col-xl-auto">Почта
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">nicolomelodini@gmail.com
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">ivanov.i@gmail.com
 																	</div>
 																</div>
 															</div>
@@ -1298,7 +1295,7 @@
 															<div class="pa-orders__t-dates">
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball active">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Доставлен
@@ -1306,7 +1303,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball active">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Ждёт в магазине
@@ -1314,7 +1311,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">В пути
@@ -1322,7 +1319,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Отправляем
@@ -1330,7 +1327,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Собираем
@@ -1346,15 +1343,13 @@
 														<div class="pa-orders__g-items">
 															<div class="g-item">
 																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/cart-img.jpg" alt=""/></a>
+																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/></a>
 																	</div>
 																	<div class="g-item__col-with-row col">
 																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<div class="g-item__tag">Новинка
+																			<div class="g-item__txt-col col-md"><a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки</a>
+																				<div class="g-item__code">FS2700
 																				</div>
-																				<div class="g-item__code">VB3616DA
-																				</div><a class="g-item__title" href="#" target="_blank">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
 																			</div>
 																			<div class="col-md-auto">
 																				<div class="g-item__price g-item__price--old">18 500 ₽
@@ -1370,15 +1365,13 @@
 															</div>
 															<div class="g-item">
 																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/cart-img.jpg" alt=""/></a>
+																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/></a>
 																	</div>
 																	<div class="g-item__col-with-row col">
 																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<div class="g-item__tag">Новинка
+																			<div class="g-item__txt-col col-md"><a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки</a>
+																				<div class="g-item__code">FS2700
 																				</div>
-																				<div class="g-item__code">VB3616DA
-																				</div><a class="g-item__title" href="#" target="_blank">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
 																			</div>
 																			<div class="col-md-auto">
 																				<div class="g-item__price g-item__price--old">18 500 ₽
@@ -1394,15 +1387,13 @@
 															</div>
 															<div class="g-item">
 																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/cart-img.jpg" alt=""/></a>
+																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/></a>
 																	</div>
 																	<div class="g-item__col-with-row col">
 																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<div class="g-item__tag">Новинка
+																			<div class="g-item__txt-col col-md"><a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки</a>
+																				<div class="g-item__code">FS2700
 																				</div>
-																				<div class="g-item__code">VB3616DA
-																				</div><a class="g-item__title" href="#" target="_blank">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
 																			</div>
 																			<div class="col-md-auto">
 																				<div class="g-item__price g-item__price--old">18 500 ₽
@@ -1412,7 +1403,7 @@
 																			</div>
 																		</div>
 																	</div>
-																	<div class="g-item__amount-col col-auto">× 33
+																	<div class="g-item__amount-col col-auto">× 120
 																	</div>
 																</div>
 															</div>
@@ -1483,43 +1474,43 @@
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Статус заказа
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">На доставке
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">На доставке
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Способ доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Почтой России
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">Почтой России
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Стоимость доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">500 ₽
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">500 ₽
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Адрес доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">1117463, Москва, Паустовского, 4
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">1117463, г.Москва,<br>улица Паустовского, 4
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">ФИО получателя
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Неретин Николай Игоревич
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">Иванов Инакентий Игоревич
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Телефон
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">+7 (916) 176-05-12
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">+7 (916) 176-05-12
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Телефон
+																	<div class="pa-orders__ti-key-col col-xl-auto">Почта
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">nicolomelodini@gmail.com
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">ivanov.i@gmail.com
 																	</div>
 																</div>
 															</div>
@@ -1530,7 +1521,7 @@
 															<div class="pa-orders__t-dates">
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball active">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Доставлен
@@ -1538,7 +1529,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball active">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Ждёт в магазине
@@ -1546,7 +1537,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">В пути
@@ -1554,7 +1545,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Отправляем
@@ -1562,7 +1553,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Собираем
@@ -1578,15 +1569,13 @@
 														<div class="pa-orders__g-items">
 															<div class="g-item">
 																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/cart-img.jpg" alt=""/></a>
+																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/></a>
 																	</div>
 																	<div class="g-item__col-with-row col">
 																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<div class="g-item__tag">Новинка
+																			<div class="g-item__txt-col col-md"><a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки</a>
+																				<div class="g-item__code">FS2700
 																				</div>
-																				<div class="g-item__code">VB3616DA
-																				</div><a class="g-item__title" href="#" target="_blank">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
 																			</div>
 																			<div class="col-md-auto">
 																				<div class="g-item__price g-item__price--old">18 500 ₽
@@ -1602,15 +1591,13 @@
 															</div>
 															<div class="g-item">
 																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/cart-img.jpg" alt=""/></a>
+																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/></a>
 																	</div>
 																	<div class="g-item__col-with-row col">
 																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<div class="g-item__tag">Новинка
+																			<div class="g-item__txt-col col-md"><a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки</a>
+																				<div class="g-item__code">FS2700
 																				</div>
-																				<div class="g-item__code">VB3616DA
-																				</div><a class="g-item__title" href="#" target="_blank">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
 																			</div>
 																			<div class="col-md-auto">
 																				<div class="g-item__price g-item__price--old">18 500 ₽
@@ -1626,15 +1613,13 @@
 															</div>
 															<div class="g-item">
 																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/cart-img.jpg" alt=""/></a>
+																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/></a>
 																	</div>
 																	<div class="g-item__col-with-row col">
 																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<div class="g-item__tag">Новинка
+																			<div class="g-item__txt-col col-md"><a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки</a>
+																				<div class="g-item__code">FS2700
 																				</div>
-																				<div class="g-item__code">VB3616DA
-																				</div><a class="g-item__title" href="#" target="_blank">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
 																			</div>
 																			<div class="col-md-auto">
 																				<div class="g-item__price g-item__price--old">18 500 ₽
@@ -1644,7 +1629,7 @@
 																			</div>
 																		</div>
 																	</div>
-																	<div class="g-item__amount-col col-auto">× 33
+																	<div class="g-item__amount-col col-auto">× 120
 																	</div>
 																</div>
 															</div>
@@ -1715,43 +1700,43 @@
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Статус заказа
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">На доставке
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">На доставке
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Способ доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Почтой России
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">Почтой России
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Стоимость доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">500 ₽
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">500 ₽
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Адрес доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">1117463, Москва, Паустовского, 4
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">1117463, г.Москва,<br>улица Паустовского, 4
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">ФИО получателя
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Неретин Николай Игоревич
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">Иванов Инакентий Игоревич
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
 																	<div class="pa-orders__ti-key-col col-xl-auto">Телефон
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">+7 (916) 176-05-12
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">+7 (916) 176-05-12
 																	</div>
 																</div>
 																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Телефон
+																	<div class="pa-orders__ti-key-col col-xl-auto">Почта
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">nicolomelodini@gmail.com
+																	<div class="pa-orders__ti-val-col col-xl" attributes="attributes">ivanov.i@gmail.com
 																	</div>
 																</div>
 															</div>
@@ -1762,7 +1747,7 @@
 															<div class="pa-orders__t-dates">
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball active">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Доставлен
@@ -1770,7 +1755,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball active">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Ждёт в магазине
@@ -1778,7 +1763,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">В пути
@@ -1786,7 +1771,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Отправляем
@@ -1794,7 +1779,7 @@
 																</div>
 																<div class="pa-orders__td-row row">
 																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball" style="border-color: #067147;">
+																		<div class="pa-orders__td-ball">
 																		</div><span>02.03.2020</span>
 																	</div>
 																	<div class="pa-orders__td-status-col col-xl">Собираем
@@ -1810,15 +1795,13 @@
 														<div class="pa-orders__g-items">
 															<div class="g-item">
 																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/cart-img.jpg" alt=""/></a>
+																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/></a>
 																	</div>
 																	<div class="g-item__col-with-row col">
 																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<div class="g-item__tag">Новинка
+																			<div class="g-item__txt-col col-md"><a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки</a>
+																				<div class="g-item__code">FS2700
 																				</div>
-																				<div class="g-item__code">VB3616DA
-																				</div><a class="g-item__title" href="#" target="_blank">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
 																			</div>
 																			<div class="col-md-auto">
 																				<div class="g-item__price g-item__price--old">18 500 ₽
@@ -1834,15 +1817,13 @@
 															</div>
 															<div class="g-item">
 																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/cart-img.jpg" alt=""/></a>
+																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/></a>
 																	</div>
 																	<div class="g-item__col-with-row col">
 																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<div class="g-item__tag">Новинка
+																			<div class="g-item__txt-col col-md"><a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки</a>
+																				<div class="g-item__code">FS2700
 																				</div>
-																				<div class="g-item__code">VB3616DA
-																				</div><a class="g-item__title" href="#" target="_blank">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
 																			</div>
 																			<div class="col-md-auto">
 																				<div class="g-item__price g-item__price--old">18 500 ₽
@@ -1858,15 +1839,13 @@
 															</div>
 															<div class="g-item">
 																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/cart-img.jpg" alt=""/></a>
+																	<div class="g-item__img-col col-auto"><a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/></a>
 																	</div>
 																	<div class="g-item__col-with-row col">
 																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<div class="g-item__tag">Новинка
+																			<div class="g-item__txt-col col-md"><a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки</a>
+																				<div class="g-item__code">FS2700
 																				</div>
-																				<div class="g-item__code">VB3616DA
-																				</div><a class="g-item__title" href="#" target="_blank">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
 																			</div>
 																			<div class="col-md-auto">
 																				<div class="g-item__price g-item__price--old">18 500 ₽
@@ -1876,7 +1855,7 @@
 																			</div>
 																		</div>
 																	</div>
-																	<div class="g-item__amount-col col-auto">× 33
+																	<div class="g-item__amount-col col-auto">× 120
 																	</div>
 																</div>
 															</div>

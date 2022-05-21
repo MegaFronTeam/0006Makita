@@ -9,32 +9,32 @@ mixin sPAcc(data)
 				.col-lg-9.tabs__wrap
 					+e.info-content.tabs__content
 						+e.profile-txt
-							+e.p-title Учётная запись
+							+e.p-title.h3 Учётная запись
 							+e.p-data
-								+pDataItem('ФИО', 'Неретин Николай Игоревич')
+								+pDataItem('ФИО', 'Иванов Инакентий Игоревич')
 								+pDataItem('Телефон', '+7 (916) 176-05-12')
-								+pDataItem('Почта', 'nicolomelodini@gmail.com')
+								+pDataItem('Почта', 'ivanov.i@gmail.com')
 								+pDataItem('Пароль', '•••••••••••••')
-							+e.change-btn(type="button") Изменить
+							+e.change-btn.btn-primary(type="button") Изменить
 						+e.change-box
 							+form-wrap()
 								+e.inputs
-									+input('', 'text', 'ФИО', 'name', true)(value="Неретин Николай Игоревич")
+									+input('', 'text', 'ФИО', 'name', true)(value="Иванов Инакентий Игоревич")
 									+input('', 'tel', 'Телефон', 'tel', true)(value="79161760512")
-									+input('', 'email', 'Почта', 'mail', true)(value="nicolomelodini@gmail.com")
+									+input('', 'email', 'Почта', 'mail', true)(value="ivanov.i@gmail.com")
 									+input('', 'password', 'Пароль', 'pass', true)(value="1234567890111")
 									+input('', 'password', 'Потвторить пароль', 'pass-repeat', true)(value="1234567890111")
 								+e.btns-row.row
 									.col-sm-6.col-md-auto
-										+e.btn--save(type="submit") Сохранить
+										+e.btn--save.btn-primary(type="submit") Сохранить
 									.col-sm-6.col-md-auto
 										+e.btn--cancel(type="button") Отмена
 						+e.profile-txt
-							+e.p-title Адрес доставки
+							+e.p-title.h3 Адрес доставки
 							+e.p-data
 								+pDataItem('Город', 'Москва')
 								+pDataItem('Адрес', '1117463, Паустовского, 4')
-							+e.change-btn(type="button") Изменить
+							+e.change-btn.btn-outline-primary(type="button") Изменить
 					.tabs__content.active
 						+pAccOrders()
 
@@ -47,7 +47,7 @@ mixin pDataItem(name,val)
 
 mixin pAccOrders()
 	+b.pa-orders
-		+e.title Заказы
+		+e.title.h3 Заказы
 		+e.items.pa-orders-dd-js
 			+pAccOrdersItem()
 			+pAccOrdersItem()
@@ -76,15 +76,15 @@ mixin pAccOrdersItem(activeClasses)
 							+tInfoItem('Статус заказа', 'На доставке')
 							+tInfoItem('Способ доставки', 'Почтой России')
 							+tInfoItem('Стоимость доставки', '500 ₽')
-							+tInfoItem('Адрес доставки', '1117463, Москва, Паустовского, 4')
-							+tInfoItem('ФИО получателя', 'Неретин Николай Игоревич')
+							+tInfoItem('Адрес доставки', '1117463, г.Москва,<br>улица Паустовского, 4')
+							+tInfoItem('ФИО получателя', 'Иванов Инакентий Игоревич')
 							+tInfoItem('Телефон', '+7 (916) 176-05-12')
-							+tInfoItem('Телефон', 'nicolomelodini@gmail.com')
+							+tInfoItem('Почта', 'ivanov.i@gmail.com')
 					+e.tr-col.col-md
 						+e.t-title Статус доставки
 						+e.t-dates
-							+tDateItem('02.03.2020', 'Доставлен')
-							+tDateItem('02.03.2020', 'Ждёт в магазине')
+							+tDateItem('02.03.2020', 'Доставлен').active
+							+tDateItem('02.03.2020', 'Ждёт в магазине').active
 							+tDateItem('02.03.2020', 'В пути')
 							+tDateItem('02.03.2020', 'Отправляем')
 							+tDateItem('02.03.2020', 'Собираем')
@@ -94,7 +94,7 @@ mixin pAccOrdersItem(activeClasses)
 					+e.g-items
 						+goodsItem(1)
 						+goodsItem(2)
-						+goodsItem(33)
+						+goodsItem(120)
 			+e.foot
 				+e.f-data.ms-auto
 					+fDataItem('Товары', '99')
@@ -107,13 +107,12 @@ mixin goodsItem(amount='1')
 		+e.row.row.align-items-center
 			+e.img-col.col-auto
 				+e.img(href='#' target="_blank")
-					img(loading="lazy" src="img/@2x/cart-img.jpg" alt="")
+					img(loading="lazy" src="img/@2x/category-7.png" alt="")
 			+e.col-with-row.col
 				+e.inner-row.row.align-items-center
 					+e.txt-col.col-md
-						+e.tag Новинка
-						+e.code VB3616DA
-						+e.title(href='#' target="_blank") MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
+						+e.title(href='#' target="_blank") Шуруповерт с 6 положениями регулировки
+						+e.code FS2700
 					.col-md-auto
 						+e.price--old 18 500 ₽
 						+e.price--new 16 500 ₽
@@ -121,13 +120,13 @@ mixin goodsItem(amount='1')
 
 mixin tInfoItem(key,val)
 	+e.ti-row.row
-		+e.ti-key-col.col-xl-auto=key
-		+e.ti-val-col.col-xl=val
+		+e.ti-key-col.col-xl-auto!= key
+		+e.ti-val-col.col-xl(attributes)!= val
 
 mixin tDateItem(date,status)
 	+e.td-row.row
 		+e.td-date-col.col-xl-auto
-			+e.td-ball(style="border-color: #067147;")
+			+e.td-ball&attributes(attributes)
 			span=date
 		+e.td-status-col.col-xl=status
 
