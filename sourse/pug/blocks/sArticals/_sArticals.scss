@@ -22,7 +22,7 @@
 			--sPB: 72px;
 		}
 		@include media-breakpoint-up(xl){
-			--sPB: 96px;
+			--sPB: 120px;
 		}
 
 		.section-title{
@@ -183,6 +183,7 @@
 		top: 50px;
 		left: 70px;
 		z-index: 2;
+		line-height: 1;
 		@include media-breakpoint-down(md) {
 			top: 0;
 			left: 20px;

@@ -290,7 +290,7 @@ function eventHandler() {
 			},
 		});
 	}
-	$(".sCatalog").each(function () {
+	$(".sCatalog--familiar").each(function () {
 		let sliderCatalog = new Swiper($(this).find(".sCatalog__slider--js"), {
 			...defaultSl,
 			spaceBetween: 30,

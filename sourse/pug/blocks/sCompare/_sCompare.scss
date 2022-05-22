@@ -13,7 +13,7 @@
 		--sPB: 72px;
 	}
 	@include media-breakpoint-up(xl){
-		--sPB: 96px;
+		--sPB: 120px;
 	}
 
 	&__row{
@@ -157,6 +157,9 @@
 		justify-content: center;
 		font-size: 14px;
 		line-height: math.div(17, 14);
+		.icon {
+			font-size: rem(24);
+		}
 	}
 	//
 	&__{}
@@ -267,8 +270,8 @@
 		height: 100px;
 		// margin-bottom: 20px;
 		@include media-breakpoint-up(md){
-			width: 184px;
-			height: 142px;
+			height: 216px;
+			width: 261px
 			// margin-bottom: 32px;
 		}
 		// @include media-breakpoint-up(md){
@@ -374,6 +377,15 @@
     padding-left: 0;
 		@include media-breakpoint-up(md) {
 			padding-top: 40px !important;
+		}
+		&__input {
+			clip: unset;
+			width: 18px;
+			height: 18px;
+			opacity: 1;
+		}
+		&__text {
+			padding-left: 1.8rem;
 		}
 	}
 

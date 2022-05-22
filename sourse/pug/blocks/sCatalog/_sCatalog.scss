@@ -116,7 +116,8 @@
 	&.sCatalog--familiar{
 		.sCatalog__slide{
 			@include media-breakpoint-up(lg){
-				width: calc((100% / 3) - (30px * 2 / 3))!important;
+				width: calc((100% / 4) - (30px * 2 / 4))!important;
+				max-width: rem(262);
 			}
 		}
 	}
