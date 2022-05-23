@@ -290,7 +290,6 @@
 		@include media-breakpoint-up(sm){
 			--side-padding: 30px;
 		}
-
 		--head-bg: #{$white};
 		&:not(.active):hover{
 			--head-bg: #{$light};
@@ -308,6 +307,11 @@
 			--date-col: #F1F1F1;
 			.pa-orders__chevron {
 				transform: rotate(180deg);
+			}
+		}
+		&:not(.active) {
+			.pa-orders__head:hover {
+				background-color: $gray-310;
 			}
 		}
 	}
