@@ -122,6 +122,15 @@
 			@include media-breakpoint-up(md){
 				margin-left: var(--title-w, 100px);
 			}
+			&__input {
+				clip: unset;
+				width: 18px;
+				height: 18px;
+				opacity: 1;
+			}
+			&__text {
+				padding-left: 1.8rem;
+			}
 		}
 		//delivery
 		&__delivery{

@@ -24,7 +24,7 @@
 		font-weight: 700;
 	}
 	.section-title{
-
+		margin-top: rem(71);
 	}
 	&__row{
 
@@ -164,6 +164,7 @@
 		flex-wrap: wrap;
 		align-items: baseline;
 		padding: rem(12) rem(14.8);
+		word-break: break-all;
 	}
 	&__name{
 		font-size: rem(14);

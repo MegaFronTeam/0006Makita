@@ -2,15 +2,15 @@
 @use "sass:math";
 
 .sArticle {
-	--sPT: 12px;
+	--sPT: 0;
 	--sPB: 60px;
 	@include media-breakpoint-up(md){
-		--sPT: 24px;
+		// --sPT: 24px;
 		--sPB: 72px;
 	}
 
 	@include media-breakpoint-up(xl){
-		--sPB: 96px;
+		--sPB: 120px;
 	}
 
 	&__row{
@@ -105,21 +105,29 @@
 	&__ball{
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		// justify-content: center;
 
-		width: 16px;
-		height: 16px;
-		border-radius: 50%;
-		background-color: $primary;
-
+		// width: 16px;
+		// height: 16px;
+		// border-radius: 50%;
+		// background-color: $primary;
+		
+		p {
+			margin-bottom: 0;
+			font-size: rem(14);
+		}
 		.icon{
-			font-size: 8px;
 			color: transparent;
-			stroke: $white;
+			stroke: $primary;
 			stroke-width: 2px;
+			font-size: 9px;
+			margin-left: 8px;
 		}
 	}
 	&__{}
 	&__{}
+	.sCatalog {
+		padding-top: rem(9);
+	}
 } // end.sArticle
 

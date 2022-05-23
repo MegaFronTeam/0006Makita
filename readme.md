@@ -12,3 +12,5 @@
 10. <https://megafronteam.github.io/0006Makita/public/06-personal-account.html>
 11. <https://megafronteam.github.io/0006Makita/public/07-compare.html>
 12. <https://megafronteam.github.io/0006Makita/public/09-contacts.html>
+12. <https://megafronteam.github.io/0006Makita/public/010-news.html>
+12. <https://megafronteam.github.io/0006Makita/public/011-article.html>
