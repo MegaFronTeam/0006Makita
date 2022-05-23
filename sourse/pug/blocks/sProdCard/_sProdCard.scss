@@ -867,6 +867,9 @@
 				stroke: $primary;
 			}
 		}
+		&__f-row {
+			--bs-gutter-y: 20px;
+		}
 		&__rate-label, &__input-title {
 			font-size: 14px;
 			color: #282828;
