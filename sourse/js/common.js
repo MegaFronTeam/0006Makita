@@ -376,10 +376,47 @@ function eventHandler() {
 	});
 
 	//prodCard
-	$('.pc-sliders--js').each(function (){
-		let self = this;
+	// $('.pc-sliders--js').each(function (){
+	// 	let self = this;
 
-		let prodCardThumb = new Swiper($(self).find('.sProdCard-thumb-js'), {
+	// 	let prodCardThumb = new Swiper($(self).find('.sProdCard-thumb-js'), {
+	// 		slidesPerView: 'auto',
+	// 		breakpoints: {
+	// 			0: {
+	// 				direction: 'horizontal',
+	// 				spaceBetween: 16,
+	// 			},
+	// 			768: {
+	// 				direction: 'vertical',
+	// 				spaceBetween: 20,
+	// 			},
+	// 		},
+
+	// 		//lazy
+	// 		lazy: {
+	// 			loadPrevNext: true,
+	// 			loadPrevNextAmount: 6,
+	// 		},
+	// 	});
+
+	// 	let prodCardSlider = new Swiper($(self).find('.sProdCard-slider-js'), {
+	// 		spaceBetween: 30,
+	// 		thumbs: {
+	// 			swiper: prodCardThumb,
+	// 		},
+	// 		lazy: {
+	// 			loadPrevNext: true,
+	// 			loadPrevNextAmount: 3,
+	// 		},
+	// 		loop: true,
+	// 	});
+	// });
+
+
+	let pcSliders = document.querySelectorAll('.pc-sliders--js');
+
+	for (let pcSlider of pcSliders) {
+		const prodCardThumb = new Swiper(pcSlider.querySelector('.sProdCard-thumb-js'), {
 			slidesPerView: 'auto',
 			breakpoints: {
 				0: {
@@ -391,15 +428,13 @@ function eventHandler() {
 					spaceBetween: 20,
 				},
 			},
-
 			//lazy
 			lazy: {
 				loadPrevNext: true,
 				loadPrevNextAmount: 6,
 			},
 		});
-
-		let prodCardSlider = new Swiper($(self).find('.sProdCard-slider-js'), {
+		let prodCardSlider = new Swiper(pcSlider.querySelector('.sProdCard-slider-js'), {
 			spaceBetween: 30,
 			thumbs: {
 				swiper: prodCardThumb,
@@ -410,7 +445,10 @@ function eventHandler() {
 			},
 			loop: true,
 		});
-	});
+	}
+
+	// for (let pcSlider of pcSliders) {
+	// }
 	//minislider
 	let miniSlider = new Swiper('.mini-slider-js', {
 		...defaultSl,
@@ -418,7 +456,7 @@ function eventHandler() {
 		slidesPerView: 1,
 		//
 		pagination: {
-			el: $(this).find('.swiper-pagination'),
+			el: ('.sProdCard .swiper-pagination'),
 			type: 'bullets',
 			clickable: true,
 		},

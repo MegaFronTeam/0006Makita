@@ -6,12 +6,12 @@ mixin sCatalog(data)
 				h2 Хиты продаж
 	// end sCatalog
 
-mixin sCatalogHit()
+mixin sCatalogHit(title='Хиты продаж')
 	// start sCatalog
 	+b.sCatalog.section#sCatalog&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Хиты продаж
+				h2!= title
 			+e.slider-wrappper
 				+e.slider--js.swiper
 					.swiper-wrapper
