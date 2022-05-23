@@ -349,7 +349,10 @@
 			line-height: math.div(17, 14);
 			color: var(--txt-col, black);
 		}
-		&__{}
+		&__caption{
+			font-size: rem(12);
+			color: $gray-570;
+		}
 	}
 	//foot
 	&__foot{
@@ -438,7 +441,7 @@
 		}
 	}
 	&__dd-item{
-		padding-bottom: 24px;
+		padding-bottom: 30px;
 		margin-bottom: 24px;
 		border-bottom: 1px solid $secondary;
 
@@ -510,7 +513,13 @@
 		}
 	}
 
-	&__{}
+	&--2{
+		.order-content__dd-item {
+			border: none;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
 	&__{}
 	&__{}
 }

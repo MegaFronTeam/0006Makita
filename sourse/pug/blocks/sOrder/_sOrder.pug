@@ -56,6 +56,14 @@ mixin sOrder(data)
 										})
 											| Самовывоз
 										+deliveryItem({
+											img: 'dpd',
+											price: 'от 250 ₽',
+											time: 'от 1-2 дней',
+										})
+											| Самовывоз
+											br
+											+e.SPAN.caption до пункта самовывоза
+										+deliveryItem({
 											addClasses: 'active',
 											img: 'dpd',
 											price: 'от 250 ₽',
@@ -147,7 +155,7 @@ mixin orderContent()
 				+fDataItem('ИТОГО', '33 294  ₽', 'huge-row')
 
 mixin orderContent2()
-	+b.order-content
+	+b.order-content--2
 		+e.box.order-content-dd-js
 			+e.dd-item
 				+e.dd-head.dd-head-js.h2 Состав заказа

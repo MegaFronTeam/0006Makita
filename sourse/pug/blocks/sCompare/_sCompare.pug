@@ -39,6 +39,11 @@ mixin sCompareSlide(tag=false, code='JR3050T',name='Молоток отбойн�
 				img(loading="lazy" src=`img/@2x/hit-1.jpg` alt="")
 				if tag
 					+e.tag Новинка
+			+e.links
+				+e.compare(href="#")
+					+icon('bars')
+				+e.bookmarks(href="#")
+					+icon('heart')
 			+e.wrap
 				+e.name(href='#')=name
 				+e.code=code

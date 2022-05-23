@@ -87,7 +87,7 @@
 
 	}
 	&__t-item{
-		color: $gray-570;
+		color: #949494;
 		align-items: flex-end;
 		@include media-breakpoint-up(md){
 			align-items: center;
@@ -142,7 +142,7 @@
 		}
 		@include media-breakpoint-down(md) {
 			&:not(:first-child) {
-				margin-top: 28.6px;
+				margin-top: 26.3px;
 			}
 		}
 		@include media-breakpoint-up(md){
@@ -365,10 +365,52 @@
 		@extend .btn;
 		@extend .btn-primary;
 	}
-	&__{}
-	&__{}
-	&__{}
-	&__{}
+	&__links {
+		position: absolute;
+		right: 10px;
+		top: -30px;
+		@include media-breakpoint-up(lg){
+			top: 14px;
+		}
+		@include media-breakpoint-up(md){
+			right: 23px;
+			top: 5px;
+		}
+		.icon {
+			font-size: 19px;
+			@include mt;
+			color: transparent;
+		}
+		.icon-bars {
+			// fill:#949494;
+		}
+		.icon-heart {
+			fill: none;
+			stroke: #949494;
+		}
+	}
+	
+	&__compare {
+		margin-right: 16px;
+		.icon {
+			fill: $red;
+			stroke: $red;
+		}
+		&:hover {
+			.icon {
+				fill: #949494;
+				stroke: #949494;
+			}
+		}
+	}
+	&__bookmarks {
+		&:hover {
+			.icon {
+				fill: $red;
+				stroke: $red;
+			}
+		}
+	}
 
 	.custom-input {
 		margin: unset;
