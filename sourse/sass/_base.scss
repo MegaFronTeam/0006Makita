@@ -842,8 +842,15 @@ body{
 
 .btn-primary {
 	color: $white;
+	&:hover {
+		color: $white;
+	}
 }
-
+.btn-outline-primary {
+	&:hover {
+		color: $white;
+	}
+}
 .btn-white {
 	color: $primary;
 }

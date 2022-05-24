@@ -215,6 +215,12 @@
 		font-size: 12px;
 		line-height: math.div(14, 12);
 
+		.tel-link {
+			color: $white;
+			&:hover {
+				color: $primary;
+			}
+		}
 
 		.icon{
 			@include mt();
@@ -246,6 +252,9 @@
 				stroke: $primary;
 				transform: rotate(180deg);
 			}
+			.tel-link {
+				color: $primary;
+			}
 		}
 
 		position: relative;
@@ -271,11 +280,13 @@
 		}
 	}
 	&__user{
+		display: flex;
+		align-items: center;
 		width: 24px;
 		height: 24px;
 		margin-right: 5px;
 		.icon{
-			font-size: 1.33333rem;
+			font-size: 28px;
 			color: $white;
 		}
 	}
@@ -1000,12 +1011,15 @@
 		color: $body-color;
 	}
 	&__icon-box{
-		width: 24px;
+		width: 28px;
 		margin-right: 8px;
 		
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		.icon-user {
+			font-size: 28px;
+		}
 	}
 	&__loc-menu{
 		list-style: none;

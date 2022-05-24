@@ -25,6 +25,7 @@ mixin sProdCard(data)
 										+icon('share')
 										| Поделиться
 						.col-12.col-lg
+							+prodCardSliders('d-lg-none')
 							h2.p-0 Шуруповерт с 6 положениями регулировки
 							+e.subtitle DF332DWME
 							+e.property
@@ -41,13 +42,12 @@ mixin sProdCard(data)
 									span 12В
 									span 35 Нм
 									span 1500 об/мин
-					+prodCardSliders('d-lg-none')
 					+buyBlock()
 					+miniSlider()
 			+sCatalogHit('с этим товаром покупают')
 			+sCatalogHit('похожие товары')
 			.text-center
-				.sCategory__btn-more(type="button")
+				.sCategory__btn-more.BUTTON(type="button")
 					+icon("plus")
 					//- +tableDescr('Наличие в магазинах')
 					//- 	+tableDescrItem('Магазин Дмитровка', 'В наличии')
@@ -144,7 +144,7 @@ mixin productTabs()
 							+icon('star','icon-star--empty')
 						+e.text.P Какие 6&nbsp;квт? Максимум&nbsp;4,96квт, смотрите инструксию. Врете вместе с&nbsp;фирмой производителя...
 					+e.show-more
-						+btn('Показать ещё','btn')
+						+btn('Показать ещё','button')
 					+e.form
 						+e.form-title Оставить отзыв
 						+form-wrap

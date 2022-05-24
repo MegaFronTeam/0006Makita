@@ -3,21 +3,33 @@ mixin sCatalogPage(data)
 	+b.SECTION.sCatalogPage.section#sCatalogPage&attributes(attributes)
 		+e.container.container
 			block
-			+b.section-title
-				h2 Каталог
-			+e.row.row.pb-48.pb-md-60
-				+catalogPageItem(1, 'AC Brushless', 'col-xl-3')
-				+catalogPageItem(2, 'MultiVolt', 'col-xl-3')
-				+catalogPageItem(3, 'Сетевой электроинструмент', 'col-xl-3')
-				+catalogPageItem(4, 'Аккумуляторный инструмент', 'col-xl-3')
-				+catalogPageItem(1, 'AC Brushless', 'col-xl-3')
-				+catalogPageItem(2, 'MultiVolt', 'col-xl-3')
-				+catalogPageItem(3, 'Сетевой электроинструмент', 'col-xl-3')
-				+catalogPageItem(4, 'Аккумуляторный инструмент', 'col-xl-3')
-				+catalogPageItem(1, 'AC Brushless', 'col-xl-3')
-				+catalogPageItem(2, 'MultiVolt', 'col-xl-3')
-				+catalogPageItem(3, 'Сетевой электроинструмент', 'col-xl-3')
-				+catalogPageItem(4, 'Аккумуляторный инструмент', 'col-xl-3')
+			+e.main-row.row
+				.col-lg-3
+					+b.cat-aside.cat-aside-dd-js
+						+e.box
+							+e.header Инструменты
+							+e.items
+								+asideItem('Цепные пилы')
+								+asideItem('Пылесосы')
+								+asideItem('Кусторезы')
+								+asideItem('Триммеры и травокосилки')
+								+asideItem('Рубанки')
+								+asideItem('Строительные фены')
+				.col-lg-9
+					h2 Каталог
+					+e.row.row.pb-48.pb-md-60
+						+catalogPageItem(1, 'Цепные пилы')
+						+catalogPageItem(2, 'Пылесосы')
+						+catalogPageItem(3, 'Кусторезы')
+						+catalogPageItem(4, 'Триммеры и травокосилки')
+						+catalogPageItem(5, 'Рубанки')
+						+catalogPageItem(6, 'Рубанки')
+						+catalogPageItem(7, 'Рубанки')
+						+catalogPageItem(8, 'Рубанки')
+						+catalogPageItem(9, 'Строительные фены')
+						//-+catalogPageItem(2, 'MultiVolt')
+						//-+catalogPageItem(3, 'Сетевой электроинструмент')
+						//-+catalogPageItem(4, 'Аккумуляторный инструмент')
 			+b.sSeo#sSeo
 				h2 Заголовок SEO текста
 				p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
@@ -45,7 +57,7 @@ mixin sCatalogPage2(data)
 								+asideItem('Ударные дрели-шуруповерты')
 								+asideItem('Ударные шуруповерты')
 				.col-lg-9
-					h2 Каталог
+					h2 Инструменты
 					+e.row.row.pb-48.pb-md-60
 						+catalogPageItem(1, 'Цепные пилы')
 						+catalogPageItem(2, 'Пылесосы')
@@ -189,13 +201,13 @@ mixin sqprodItemsRow(addClasses)
 
 mixin longProdItemsRow(addClasses)
 	+e.row.row(class=addClasses)
-		.col-sm-6.col-md-12
+		.col-xsm-6.col-md-12
 			+itemProdLong('Шуруповерт с 6 положениями регулировки', '1','new')
-		.col-sm-6.col-md-12
+		.col-xsm-6.col-md-12
 			+itemProdLong('Шуруповерт с 6 положениями регулировки и с проводом длинной 5 м', '2')
-		.col-sm-6.col-md-12
+		.col-xsm-6.col-md-12
 			+itemProdLong('Шуруповерт с 6 положениями регулировки', '3','new')
-		.col-sm-6.col-md-12
+		.col-xsm-6.col-md-12
 			+itemProdLong('Шуруповерт с 6 положениями регулировки', '3','new')
 		//- .col-xsm-6.col-md-12
 		//- 	+itemProdLong('5')

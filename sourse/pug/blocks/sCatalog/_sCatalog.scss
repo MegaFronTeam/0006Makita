@@ -148,6 +148,9 @@
 		top: 10px;
 		right: 10px;
 		z-index: 10;
+		@include media-breakpoint-down(sm) {
+			top: 5px;
+		}
 		.icon {
 			stroke: #949494;
 			font-size: 18px;
@@ -165,6 +168,18 @@
 			}
 		}
 	}
+	&__compare--active {
+		.icon {
+			stroke: $red;
+			fill: $red;
+		}
+	}
+	&__bookmarks--active {
+		.icon {
+			stroke: $red;
+			fill: $red;
+		}
+	}
 	&__box{
 		flex-grow: 1;
 		padding: 19px 24px 8px;
@@ -178,7 +193,6 @@
 	//
 	&__img-link {
 		@include block(222,180);
-
 		max-width: 222px;
 		img {
 			position: absolute;
@@ -218,6 +232,7 @@
 		margin-right: 7px;
 		text-decoration-line: line-through;
 		text-transform: uppercase;
+		white-space: nowrap;
 		
 		color: $red;
 		font-size: 14px;
@@ -229,6 +244,7 @@
 		font-weight: bold;
 		font-family: $header-font;
 		text-transform: uppercase;
+		white-space: nowrap;
 	}
 
 	&__btn {
@@ -457,6 +473,7 @@
 		line-height: math.div(14, 12);
 		text-decoration-line: line-through;
 		color: $danger;
+		white-space: nowrap;
 		margin-right: 7px;
 	}
 	&__price-col{
@@ -477,12 +494,16 @@
 	&__btn{
 		@extend .btn;
 		@extend .btn-primary;
+		margin-right: -15px;
+		margin-left: -15px;
 		// min-width: 100%;
 		@include media-breakpoint-up(md){
 			position: absolute;
 			bottom: 0;
 			right: 0;
 			min-width: 184px;
+			margin-right: 0;
+			margin-left: 0;
 		}
 	}
 	&__btn-col{

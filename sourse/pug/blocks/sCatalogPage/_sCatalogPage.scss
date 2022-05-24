@@ -18,7 +18,9 @@
 	}
 	h2 {
 		margin-bottom: 24px;
-		margin-left: -12px;
+		@include media-breakpoint-up(lg) {
+			margin-left: -12px;
+		}
 	}
 
 	.section-title{
@@ -62,6 +64,7 @@
 		flex-direction: column;
 		border: 1px solid $gray-100;
 		&:hover {
+			box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 			.sCatalogPage__i-name {
 				color: $primary;
 			}
@@ -127,6 +130,9 @@
 		@include roww(16px);
 		align-items: center;
 		margin-right: -26px;
+		@include media-breakpoint-down(sm){
+			margin-bottom: 18px;
+		}
 	}
 	&__icon-btn{
 		&.active{
