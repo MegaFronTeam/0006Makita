@@ -6,7 +6,7 @@ mixin sCompare(data)
 				+e.title-col
 					//- +e.t-header
 					+e.t-slide-spacer
-						img(src="img/@2x/order-logo.png")
+						img(src="img/@2x/order-logo.png" alt="logo")
 					+in-c('checkbox', 'Показать только различия')
 					+e.t-header--indent.h3 Двигатель
 					+e.t-table--center
@@ -25,25 +25,32 @@ mixin sCompare(data)
 					+e.slider-wrap
 						.swiper.sCompare-slider-js
 							.swiper-wrapper
-								+sCompareSlide()
+								+sCompareSlide('true')
 								+sCompareSlide()
 								+sCompareSlide()
 								+sCompareSlide()
 						+arrow('d-none d-md-flex')
 	// end sCompare
 
-mixin sCompareSlide(tag=false, code='JR3050T',name='Молоток отбойный легкий')
+mixin sCompareSlide(active, tag=false, code='JR3050T',name='Молоток отбойный легкий')
 	.swiper-slide
 		+e.item
 			+e.img(href="#")
 				img(loading="lazy" src=`img/@2x/hit-1.jpg` alt="")
 				if tag
 					+e.tag Новинка
-			+e.links
-				+e.compare(href="#")
-					+icon('bars')
-				+e.bookmarks(href="#")
-					+icon('heart')
+			if active
+				+e.links
+					+e.compare.active(href="#")
+						+icon('bars')
+					+e.bookmarks.active(href="#")
+						+icon('heart')
+			else
+				+e.links
+					+e.compare(href="#")
+						+icon('bars')
+					+e.bookmarks(href="#")
+						+icon('heart')
 			+e.wrap
 				+e.name(href='#')=name
 				+e.code=code

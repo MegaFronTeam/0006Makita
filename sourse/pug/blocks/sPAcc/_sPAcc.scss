@@ -586,13 +586,13 @@
 		position: absolute;
 		display: block;
 		height: 100%;
-		width: calc(100% - 48px - 6px);
+		width: calc(100% - 72px);
 		right: 0;
 		top: 0;
 		background-color: $gray-100;
 		z-index: -1;
 		@include media-breakpoint-up(sm) {
-			width: calc(100% - 120px - 15px);
+			width: calc(100% - 134px);
 		}
 		@include media-breakpoint-up(md) {
 			width: calc(100% - 120px - 30px);
@@ -608,10 +608,13 @@
 		@include media-breakpoint-down(sm){
 			align-self: flex-start;
 		}
+		@include media-breakpoint-down(sm) {
+			width: 80px;
+		}
 	}
 	&__img{
-		width: 48px;
-		height: 48px;
+		// width: 48px;
+		// height: 48px;
 		@include media-breakpoint-up(sm){
 			width: 120px;
 			height: 120px;
@@ -708,9 +711,9 @@
 	&__amount-col{
 		text-align: right;
 		margin-right: rem(30);
-		@include media-breakpoint-up(xsm){
-			min-width: 87px;
-		}
+		// @include media-breakpoint-up(sm){
+		// 	min-width: 87px;
+		// }
 		@include media-breakpoint-up(md){
 			min-width: 110px;
 		}

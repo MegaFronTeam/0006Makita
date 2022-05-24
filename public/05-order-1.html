@@ -828,9 +828,9 @@
 				<div class="container">
 					<nav>
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="/"><span itemprop="name">Главная</span></a></li>
-							<li class="breadcrumb-item"><a href="#"><span itemprop="name">Корзина</span></a></li>
-							<li class="breadcrumb-item active"><a href="#"><span itemprop="name">Оформление</span></a></li>
+							<li class="breadcrumb-item"><a href="/"><span>Главная</span></a></li>
+							<li class="breadcrumb-item"><a href="#"><span>Корзина</span></a></li>
+							<li class="breadcrumb-item active"><a href="#"><span>Оформление</span></a></li>
 						</ol>
 					</nav>
 					<div class="section-title light long">
@@ -839,7 +839,7 @@
 				</div>
 			</div>
 			<!-- start sOrder-->
-			<section class="sOrder section" id="sOrder">
+			<div class="sOrder section" id="sOrder">
 				<div class="container">
 					<div class="sOrder__row row">
 						<div class="col-lg-7">
@@ -871,7 +871,7 @@
 										</div>
 										<!-- +e.input-wrap-->
 										<div class="form-wrap__input-wrap form-group">
-											<label><span class="form-wrap__input-title">E-mail*</span><input class="form-wrap__input form-control" name="" type="email" placeholder=""/>
+											<label><span class="form-wrap__input-title">E-mail*</span><input class="form-wrap__input form-control" name="email" type="email" placeholder=""/>
 												<svg class="icon icon-icon-check-not-ok ">
 													<use xlink:href="img/svg/sprite.svg#icon-check-not-ok"></use>
 												</svg>
@@ -902,50 +902,28 @@
 												</div>
 												<div class="col">
 													<label class="form-wrap__d-label">
-														<input class="d-none" type="radio" name="delivery" value="value1"/><span class="form-wrap__d-item"><span class="form-wrap__d-head"><span class="form-wrap__d-row row align-items-center">
-														<div class="col-auto d-block"><span class="form-wrap__logo">
+														<input class="d-none" type="radio" name="delivery" value="value1"/><span class="form-wrap__d-item"><span class="form-wrap__d-head"><span class="form-wrap__d-row row align-items-center"><span class="col-auto d-block"><span class="form-wrap__logo">
 															<svg class="icon icon-car ">
 																<use xlink:href="img/svg/sprite.svg#car"></use>
-															</svg></span>
-														</div><span class="form-wrap__name-col col d-block">Курьерская доставка по Москве</span>
-														<div class="col col-sm-auto d-block"><span class="form-wrap__d-sub-row row align-items-center"><span class="form-wrap__d-price col-sm-auto">500 ₽</span><span class="form-wrap__d-time col-sm-auto">1-2 дня</span></span>
-														</div></span></span></span>
+															</svg></span></span><span class="form-wrap__name-col col d-block">Курьерская доставка по Москве</span><span class="col col-sm-auto d-block"><span class="form-wrap__d-sub-row row align-items-center"><span class="form-wrap__d-price col-sm-auto">500 ₽</span><span class="form-wrap__d-time col-sm-auto">1-2 дня</span></span></span></span></span></span>
 													</label>
 													<label class="form-wrap__d-label">
-														<input class="d-none" type="radio" name="delivery" value="value2"/><span class="form-wrap__d-item"><span class="form-wrap__d-head"><span class="form-wrap__d-row row align-items-center">
-														<div class="col-auto d-block"><span class="form-wrap__logo">
+														<input class="d-none" type="radio" name="delivery" value="value2"/><span class="form-wrap__d-item"><span class="form-wrap__d-head"><span class="form-wrap__d-row row align-items-center"><span class="col-auto d-block"><span class="form-wrap__logo">
 															<svg class="icon icon-plane ">
 																<use xlink:href="img/svg/sprite.svg#plane"></use>
-															</svg></span>
-														</div><span class="form-wrap__name-col col d-block">Доставка по России</span>
-														<div class="col col-sm-auto d-block"><span class="form-wrap__d-sub-row row align-items-center"><span class="form-wrap__d-price col-sm-auto">500 ₽</span><span class="form-wrap__d-time col-sm-auto">от 1-2 дней</span></span>
-														</div></span></span></span>
+															</svg></span></span><span class="form-wrap__name-col col d-block">Доставка по России</span><span class="col col-sm-auto d-block"><span class="form-wrap__d-sub-row row align-items-center"><span class="form-wrap__d-price col-sm-auto">500 ₽</span><span class="form-wrap__d-time col-sm-auto">от 1-2 дней</span></span></span></span></span></span>
 													</label>
 													<label class="form-wrap__d-label">
-														<input class="d-none" type="radio" name="delivery" value="value3"/><span class="form-wrap__d-item"><span class="form-wrap__d-head"><span class="form-wrap__d-row row align-items-center">
-														<div class="col-auto d-block"><span class="form-wrap__logo">
+														<input class="d-none" type="radio" name="delivery" value="value3"/><span class="form-wrap__d-item"><span class="form-wrap__d-head"><span class="form-wrap__d-row row align-items-center"><span class="col-auto d-block"><span class="form-wrap__logo">
 															<svg class="icon icon-house ">
 																<use xlink:href="img/svg/sprite.svg#house"></use>
-															</svg></span>
-														</div><span class="form-wrap__name-col col d-block">Самовывоз</span>
-														<div class="col col-sm-auto d-block"><span class="form-wrap__d-sub-row row align-items-center"><span class="form-wrap__d-price col-sm-auto">0 ₽</span><span class="form-wrap__d-time col-sm-auto"></span></span>
-														</div></span></span></span>
+															</svg></span></span><span class="form-wrap__name-col col d-block">Самовывоз</span><span class="col col-sm-auto d-block"><span class="form-wrap__d-sub-row row align-items-center"><span class="form-wrap__d-price col-sm-auto">0 ₽</span><span class="form-wrap__d-time col-sm-auto"></span></span></span></span></span></span>
 													</label>
 													<label class="form-wrap__d-label">
-														<input class="d-none" type="radio" name="delivery"/><span class="form-wrap__d-item"><span class="form-wrap__d-head"><span class="form-wrap__d-row row align-items-center">
-														<div class="col-auto d-block"><span class="form-wrap__logo"><img loading="lazy" src="img/svg/dpd.svg"/></span>
-														</div><span class="form-wrap__name-col col d-block">Самовывоз<br/><span class="form-wrap__caption">до пункта самовывоза</span></span>
-														<div class="col col-sm-auto d-block"><span class="form-wrap__d-sub-row row align-items-center"><span class="form-wrap__d-price col-sm-auto">от 250 ₽</span><span class="form-wrap__d-time col-sm-auto">от 1-2 дней</span></span>
-														</div></span></span></span>
+														<input class="d-none" type="radio" name="delivery"/><span class="form-wrap__d-item"><span class="form-wrap__d-head"><span class="form-wrap__d-row row align-items-center"><span class="col-auto d-block"><span class="form-wrap__logo"><img loading="lazy" alt="" src="img/svg/dpd.svg"/></span></span><span class="form-wrap__name-col col d-block">Самовывоз<br/><span class="form-wrap__caption">до пункта самовывоза</span></span><span class="col col-sm-auto d-block"><span class="form-wrap__d-sub-row row align-items-center"><span class="form-wrap__d-price col-sm-auto">от 250 ₽</span><span class="form-wrap__d-time col-sm-auto">от 1-2 дней</span></span></span></span></span></span>
 													</label>
 													<label class="form-wrap__d-label">
-														<input class="d-none" type="radio" name="delivery" value="value4" checked="checked"/><span class="form-wrap__d-item active"><span class="form-wrap__d-head"><span class="form-wrap__d-row row align-items-center">
-														<div class="col-auto d-block"><span class="form-wrap__logo"><img loading="lazy" src="img/svg/dpd.svg"/></span>
-														</div><span class="form-wrap__name-col col d-block">Доставка DPD<br/>до пункта самовывоза</span>
-														<div class="col col-sm-auto d-block"><span class="form-wrap__d-sub-row row align-items-center"><span class="form-wrap__d-price col-sm-auto">от 250 ₽</span><span class="form-wrap__d-time col-sm-auto">от 1-2 дней</span></span>
-														</div></span></span><span class="form-wrap__d-content active">
-														<button class="form-wrap__d-btn" type="button">Выбрать ПВЗ
-														</button></span></span>
+														<input class="d-none" type="radio" name="delivery" value="value4" checked="checked"/><span class="form-wrap__d-item active"><span class="form-wrap__d-head"><span class="form-wrap__d-row row align-items-center"><span class="col-auto d-block"><span class="form-wrap__logo"><img loading="lazy" alt="" src="img/svg/dpd.svg"/></span></span><span class="form-wrap__name-col col d-block">Доставка DPD<br/>до пункта самовывоза</span><span class="col col-sm-auto d-block"><span class="form-wrap__d-sub-row row align-items-center"><span class="form-wrap__d-price col-sm-auto">от 250 ₽</span><span class="form-wrap__d-time col-sm-auto">от 1-2 дней</span></span></span></span></span><span class="form-wrap__d-content active"><span class="form-wrap__d-btn">Выбрать ПВЗ</span></span></span>
 													</label>
 												</div>
 											</div>
@@ -1142,7 +1120,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 			<!-- end sOrder-->
 			<footer class="footer">
 				<div class="footer__head">
@@ -1404,10 +1382,10 @@
 						<div class="text-center"><a class="form-wrap__forgot d-block mb-24" href="#">Забыли пароль?</a>
 							<div class="row">
 								<div class="col-6">
-									<div class="modal-win__btn" type="button">Войти</div>
+									<button class="modal-win__btn" type="button">Войти</button>
 								</div>
 								<div class="col-6">
-									<div class="modal-win__btn-outline" type="button">Регистрация</div>
+									<button class="modal-win__btn-outline" type="button">Регистрация</button>
 								</div>
 							</div>
 						</div>

@@ -121,7 +121,7 @@ mixin goodsItem(amount='1')
 mixin tInfoItem(key,val)
 	+e.ti-row.row
 		+e.ti-key-col.col-xl-auto!= key
-		+e.ti-val-col.col-xl(attributes)!= val
+		+e.ti-val-col.col-xl!= val
 
 mixin tDateItem(date,status)
 	+e.td-row.row

@@ -49,6 +49,15 @@
 			@include media-breakpoint-up(sm) {
 				padding-bottom: rem(110);
 			}
+			.logo {
+				@include media-breakpoint-down(lg) {
+					bottom: -40px;
+					width: 100%;
+				}
+				@include media-breakpoint-down(sm) {
+					bottom: -20px;
+				}
+			}
 		}
 	}
 	&__logo{
