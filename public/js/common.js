@@ -480,7 +480,7 @@ function eventHandler() {
 	});
 	//comparation
 	let compareSlider = new Swiper('.sCompare-slider-js', {
-		slidesPerView: 1,
+		slidesPerView: 'auto',
 		navigation: {
 			nextEl: document.querySelector('.swiper-next'),
 			prevEl: document.querySelector('.swiper-prev'),

@@ -34,7 +34,7 @@ mixin sPAcc(data)
 							+e.p-data
 								+pDataItem('Город', 'Москва')
 								+pDataItem('Адрес', '1117463, Паустовского, 4')
-							+e.change-btn.btn-outline-primary(type="button") Изменить
+							+e.change-btn.btn-outline-primary(type="button") Отмена
 					.tabs__content.active
 						+pAccOrders()
 
@@ -121,7 +121,7 @@ mixin goodsItem(amount='1')
 mixin tInfoItem(key,val)
 	+e.ti-row.row
 		+e.ti-key-col.col-xl-auto!= key
-		+e.ti-val-col.col-xl(attributes)!= val
+		+e.ti-val-col.col-xl!= val
 
 mixin tDateItem(date,status)
 	+e.td-row.row

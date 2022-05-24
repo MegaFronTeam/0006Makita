@@ -23,7 +23,7 @@ mixin input(placeholder,  t='text', label, name= t, crossBtn=false)
 			label
 				+e.SPAN.input-title= label
 				if crossBtn
-					+e.input-box
+					+e.SPAN.input-box
 						+t(t,placeholder, name)&attributes(attributes)
 						+e.cross-btn
 							+icon('cross')

@@ -1,6 +1,6 @@
 mixin sOrder(data)
 	// start sOrder
-	+b.SECTION.sOrder.section#sOrder&attributes(attributes)
+	+b.sOrder.section#sOrder&attributes(attributes)
 		.container
 			//- block
 			//- +b.section-title.light.long
@@ -20,9 +20,9 @@ mixin sOrder(data)
 					+e.content
 						+form-wrap
 							+input('', 'text', 'ФИО*', 'name')
-							+input('', 'tel', 'Телефон*')
+							+input('', 'tel', 'Телефон*', 'tel')
 								+icon('icon-check-ok')
-							+input('', 'email', 'E-mail*', '')
+							+input('', 'email', 'E-mail*', 'email')
 								+icon('icon-check-not-ok')
 					//-2
 					+e.big-title.h3 Способ получения
@@ -55,6 +55,14 @@ mixin sOrder(data)
 											value: 'value3',
 										})
 											| Самовывоз
+										+deliveryItem({
+											img: 'dpd',
+											price: 'от 250 ₽',
+											time: 'от 1-2 дней',
+										})
+											| Самовывоз
+											br
+											+e.SPAN.caption до пункта самовывоза
 										+deliveryItem({
 											addClasses: 'active',
 											img: 'dpd',
@@ -103,21 +111,21 @@ mixin deliveryItem(data)
 		+e.d-item(class=`${data.addClasses || ''}`)
 			+e.d-head
 				+e.d-row.row.align-items-center
-					.col-auto.d-block
+					span.col-auto.d-block
 						+e.logo
 							if data.icon
 								+icon(data.icon)
 							if data.img
-								img(loading="lazy" src=`img/svg/${data.img}.svg`)
+								img(loading="lazy" alt="" src=`img/svg/${data.img}.svg`)
 					+e.name-col.col.d-block
 						block
-					.col.col-sm-auto.d-block
+					span.col.col-sm-auto.d-block
 						+e.d-sub-row.row.align-items-center
 							+e.d-price.col-sm-auto=data.price
 							+e.d-time.col-sm-auto=data.time
 			if data.ddContent
 				+e.d-content.active
-					+e.d-btn(type="button") Выбрать ПВЗ
+					+e.d-btn Выбрать ПВЗ
 
 mixin wayToPay(icon,val)
 	+e.way-col.col-md-4
@@ -147,7 +155,7 @@ mixin orderContent()
 				+fDataItem('ИТОГО', '33 294  ₽', 'huge-row')
 
 mixin orderContent2()
-	+b.order-content
+	+b.order-content--2
 		+e.box.order-content-dd-js
 			+e.dd-item
 				+e.dd-head.dd-head-js.h2 Состав заказа

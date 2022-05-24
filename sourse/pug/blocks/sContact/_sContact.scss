@@ -13,15 +13,20 @@
 		margin-bottom: rem(48);
 	}
 	&__title {
+		@include rfs(65px);
 		position: absolute;
 		right: rem(70);
 		bottom: rem(50);
-		font-size: rem(65);
+		// font-size: rem(65);
 		text-transform: uppercase;
 		color: $white;
 		line-height: 1.21em;
 		font-family: $header-font;
 		font-weight: 700;
+		@include media-breakpoint-down(md) {
+			right: rem(18);
+			bottom: rem(13);
+		}
 	}
 	.section-title{
 		margin-top: rem(71);
@@ -128,7 +133,14 @@
 		flex-direction: column;
 		row-gap: 5px;
 		justify-content: space-between;
+		width: 100%;
 		&--first {
+			@include media-breakpoint-up(md) {
+				width: calc(50% - 5px);
+			}
+			@include media-breakpoint-up(xl) {
+				width: auto;
+			}
 			.sContact__name {
 				@include media-breakpoint-up(lg) {
 					width: rem(67);
@@ -137,6 +149,12 @@
 			}
 		}
 		&--second {
+			@include media-breakpoint-up(md) {
+				width: calc(50% - 5px);
+			}
+			@include media-breakpoint-up(xl) {
+				width: auto;
+			}
 			.sContact__name {
 				@include media-breakpoint-up(lg) {
 					width: rem(75);
@@ -145,6 +163,12 @@
 			}
 		}
 		&--third {
+			@include media-breakpoint-up(md) {
+				width: 100%;
+			}
+			@include media-breakpoint-up(xl) {
+				width: auto;
+			}
 			.sContact__props-item {
 				@include media-breakpoint-up(lg) {
 					flex-grow: 1;
@@ -165,6 +189,9 @@
 		align-items: baseline;
 		padding: rem(12) rem(14.8);
 		word-break: break-all;
+		@include media-breakpoint-down(xl) {
+			justify-content: space-between;
+		}
 	}
 	&__name{
 		font-size: rem(14);
