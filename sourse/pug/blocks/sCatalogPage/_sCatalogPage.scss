@@ -4,27 +4,28 @@
 .sCatalogPage {
 	--sTPB: 24px;
 
-	--sPT: 12px;
+	// --sPT: 12px;
+	--sPT: 0;
 	--sPB: 60px;
 	@include media-breakpoint-up(md){
-		--sPT: 24px;
+		// --sPT: 24px;
 		--sPB: 72px;
 	}
 	@include media-breakpoint-up(xl){
 		--sPB: 119px;
 	}
-	.breadcrumb {
-		padding-bottom: 20px;
-	}
-	h2 {
+
+	h1 {
+		font-size: rem(24);
 		margin-bottom: 24px;
+		text-transform: uppercase;
 		@include media-breakpoint-up(lg) {
 			margin-left: -12px;
 		}
 	}
 
 	.section-title{
-		h2{
+		h1{
 
 			@include media-breakpoint-down(sm){
 				font-size: 18px;
@@ -159,6 +160,13 @@
 			margin-bottom: 18px;
 		}
 	}
+	&.active {
+		.cat-aside__header {
+			.icon {
+				transform: rotate(180deg);
+			}
+		}
+	}
 	&__header{
 		background-color: $primary;
 		color: $white;
@@ -167,6 +175,17 @@
 		font-size: 14px;
 		font-weight: 700;
 		line-height: math.div(17, 14);
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.icon {
+			@include mt;
+			font-size: rem(8);
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 2px;
+		}
 	}
 	&__items{
 		padding-bottom: 15px;

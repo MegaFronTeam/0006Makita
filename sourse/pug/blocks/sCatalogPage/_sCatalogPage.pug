@@ -16,7 +16,7 @@ mixin sCatalogPage(data)
 								+asideItem('Рубанки')
 								+asideItem('Строительные фены')
 				.col-lg-9
-					h2 Каталог
+					h1 Каталог
 					+e.row.row.pb-48.pb-md-60
 						+catalogPageItem(1, 'Цепные пилы')
 						+catalogPageItem(2, 'Пылесосы')
@@ -49,9 +49,10 @@ mixin sCatalogPage2(data)
 			block
 			+e.main-row.row
 				.col-lg-3
-					+b.cat-aside.cat-aside-dd-js
+					+b.cat-aside.active.cat-aside-dd-js
 						+e.box
 							+e.header Инструменты
+								+icon('chevron-down')
 							+e.items
 								+asideItem('Дрели-шуруповерты')
 								+asideItem('Ударные дрели-шуруповерты')

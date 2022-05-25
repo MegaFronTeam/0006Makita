@@ -526,6 +526,19 @@ function eventHandler() {
 
 	//end luckyone js
 
+	var allPanels = $('.cat-aside__items');
+    
+  // $('.cat-aside__header').click(function() {
+		// 	if (allPanels.slideUp() ) {
+			// 		allPanels.slideDown();
+			// 	}
+			// });
+			
+	$('.cat-aside__header').click(function() {
+		$('.cat-aside').toggleClass('active');
+		allPanels.slideToggle();
+  });
+
 
 };
 if (document.readyState !== 'loading') {

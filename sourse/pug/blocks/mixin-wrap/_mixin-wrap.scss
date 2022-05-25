@@ -55,4 +55,12 @@
 			}
 		}
 	}
+	&--catalog {
+		.breadcrumb {
+			padding-bottom: 0;
+			li {
+				margin-bottom: 0;
+			}
+		}
+	}
 }
