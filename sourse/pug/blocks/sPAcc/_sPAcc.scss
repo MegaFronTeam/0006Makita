@@ -493,6 +493,7 @@
 		border: 1px solid;
 		margin-right: 13px;
 		border: 1px solid $primary;
+		flex: 0 0 auto;
 		&.active {
 			background-color: $primary;
 		}
