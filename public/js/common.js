@@ -526,19 +526,19 @@ function eventHandler() {
 
 	//end luckyone js
 
-	const mediaQuery = window.matchMedia('(max-width: 992px)');
-	// Check if the media query is true
-	if (mediaQuery.matches) {
-		// Then trigger an alert
-		var allPanels = $('.cat-aside__items');
-		allPanels.hide();
-		$('.cat-aside__header').click(function() {
-			$('.cat-aside').toggleClass('active');
-			allPanels.slideToggle();
-		});
+	// const mediaQuery = window.matchMedia('(max-width: 992px)');
+	// // Check if the media query is true
+	// if (mediaQuery.matches) {
+	// 	// Then trigger an alert
 		
-	}
-
+	// }
+	
+	var allPanels = $('.cat-aside__items');
+	allPanels.hide();
+	$('.cat-aside__header').click(function() {
+		$('.cat-aside').toggleClass('active');
+		allPanels.slideToggle();
+	});
 
 
 };

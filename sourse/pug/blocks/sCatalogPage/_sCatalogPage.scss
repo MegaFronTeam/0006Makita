@@ -179,8 +179,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		cursor: pointer;
 		@include media-breakpoint-up(lg) {
 			pointer-events: none;
+			cursor: auto;
 		}
 		.icon {
 			@include mt;
@@ -196,6 +198,9 @@
 	&__items{
 		padding-bottom: 15px;
 		border: 1px solid $gray-310;
+		@include media-breakpoint-up(lg) {
+			display: block !important;
+		}
 	}
 	&__item{
 		@include mt();
