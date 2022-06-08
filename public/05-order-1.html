@@ -890,10 +890,44 @@
 								<div class="form-wrap">
 									<form>
 										<div class="form-wrap__input-wrap form-group">
-											<label><span class="form-wrap__input-title">Город*</span><input class="form-wrap__input form-control" name="city" type="text" placeholder="Gorod"/>
+											<label><span class="form-wrap__input-title">Город*</span>
+												<div class="bx-sls" id="sls-78775">
+													<div class="dropdown-block bx-ui-sls-input-block form-control"><span class="dropdown-icon"></span>
+														<input class="dropdown-field" type="text" autocomplete="off" name="ORDER_PROP_7" value="" placeholder="Введите название ..." style="display: none;"/>
+														<div class="bx-ui-sls-container" style="margin: 0px; padding: 0px; border: none; position: relative;">
+															<input class="bx-ui-sls-route" type="text" disabled="disabled" autocomplete="off" style="padding: 0px; margin: 0px;"/>
+															<input class="bx-ui-sls-fake" type="text" autocomplete="off" value="" placeholder="Введите название ..."/>
+														</div>
+														<div class="dropdown-fade2white"></div>
+														<div class="bx-ui-sls-loader"></div>
+														<div class="bx-ui-sls-clear" title="Отменить выбор" style="display: none;"></div>
+														<div class="bx-ui-sls-pane" style="overflow: hidden auto; display: block; bottom: auto;">
+															<div class="bx-ui-sls-variants">
+																<div class="dropdown-item bx-ui-sls-variant"><span class="dropdown-item-text"><span>Мос</span>альск, Мосальский район, Калужская область, Россия</span></div>
+																<div class="dropdown-item bx-ui-sls-variant"><span class="dropdown-item-text"><span>Мос</span>ква, Россия</span></div>
+																<div class="dropdown-item bx-ui-sls-variant"><span class="dropdown-item-text"><span>Мос</span>ковский, Москва, Россия</span></div>
+																<div class="dropdown-item bx-ui-sls-variant"><span class="dropdown-item-text">Зеленоград, <span>Мос</span>ква, Россия</span></div>
+																<div class="dropdown-item bx-ui-sls-variant"><span class="dropdown-item-text">Троицк, <span>Мос</span>ква, Россия</span></div>
+																<div class="dropdown-item bx-ui-sls-variant"><span class="dropdown-item-text">Щербинка, <span>Мос</span>ква, Россия</span></div>
+																<div class="dropdown-item bx-ui-sls-variant"><span class="dropdown-item-text">Климовск, <span>Мос</span>ковская область, Россия</span></div>
+																<div class="dropdown-item bx-ui-sls-variant"><span class="dropdown-item-text">Долгопрудный, <span>Мос</span>ковская область, Россия</span></div>
+																<div class="dropdown-item bx-ui-sls-variant"><span class="dropdown-item-text">Королев, <span>Мос</span>ковская область, Россия</span></div>
+																<div class="dropdown-item bx-ui-sls-variant"><span class="dropdown-item-text">Дзержинский, <span>Мос</span>ковская область, Россия</span></div>
+															</div>
+														</div>
+													</div>
+													<div class="bx-ui-sls-error-message" style="display: none;"></div>
+												</div>
+												<script>
+													if (!window.BX && top.BX)
+													window.BX = top.BX;
+													new BX.Sale.component.location.selector.search({'scope':'sls-78775','source':'/bitrix/components/bitrix/sale.location.selector.search/get.php','query':{'FILTER':{'EXCLUDE_ID':0,'SITE_ID':''},'BEHAVIOUR':{'SEARCH_BY_PRIMARY':'0','LANGUAGE_ID':'ru'}},'selectedItem':false,'knownItems':[],'provideLinkBy':'code','messages':{'nothingFound':'К сожалению, ничего не найдено','error':'К сожалению, произошла внутренняя ошибка'},'callback':'locationUpdated','useSpawn':false,'usePopup':false,'initializeByGlobalEvent':'','globalEventScope':'','pathNames':[],'types':{'1':{'CODE':'COUNTRY'},'2':{'CODE':'COUNTRY_DISTRICT'},'3':{'CODE':'REGION'},'4':{'CODE':'SUBREGION'},'5':{'CODE':'CITY'},'6':{'CODE':'VILLAGE'},'7':{'CODE':'STREET'}}});
+													
+													
+													
+												</script>
 											</label>
 										</div>
-										<!-- +e.input-wrap-->
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Моего города нет в списке</span>
 										</label>
 										<div class="form-wrap__delivery delivery-group-dd-js">
