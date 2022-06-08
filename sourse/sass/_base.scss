@@ -854,3 +854,11 @@ body{
 .btn-white {
 	color: $primary;
 }
+
+.bx-sls {
+	flex-grow: 1;
+}
+
+.bx-sls .dropdown-block{
+	min-height: rem(41);
+}
