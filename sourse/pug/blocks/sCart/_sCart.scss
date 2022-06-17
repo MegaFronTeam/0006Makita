@@ -149,6 +149,7 @@
 		margin-bottom: 10px;
 		@include media-breakpoint-up(md){
 			margin-bottom: 0;
+			flex-grow: 1;
 		}
 	}
 	&__tag{
@@ -219,7 +220,7 @@
 			margin-right: 21px;
 		}
 		@include media-breakpoint-up(lg){
-			margin-right: 0;
+			// margin-right: 0;
 		}
 		@include media-breakpoint-up(xl){
 			margin-right: 40px;
@@ -448,6 +449,7 @@
 		background: #F1F1F1;
 		display: flex;
 		align-items: center;
+		width: 100%;
 		@include media-breakpoint-up(md){
 			// margin-bottom: 20px;
 			padding: 10px 24px 16px;

@@ -622,23 +622,33 @@
 
 		& > li{
 			@include mt();
-			padding: 16px 20px;
-
+			// padding: 16px 20px;
+			
 			color: $body-color;
 			border-bottom:  1px solid #F1F1F1;
-			background-color: transparent;
-			&:hover{
-				color: $white;
-				background-color: $primary;
-			}
+			// background-color: transparent;
+			// &:hover{
+				// 	color: $white;
+			// 	background-color: $primary;
+			// }
 
 			font-size: 14px;
 			line-height: math.div(17, 14);
-
+			
 			--sub-list-scale: 0;
 			&:hover{
 				--sub-list-scale: 1;
 			}
+		}
+	}
+	&__link {
+		padding: 16px 20px;
+		color: $body-color;
+		background-color: transparent;
+		display: block;
+		&:hover{
+			color: $white;
+			background-color: $primary;
 		}
 	}
 	&__sub-dd{

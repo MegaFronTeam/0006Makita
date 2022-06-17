@@ -36,7 +36,6 @@
 		}
 	}
 
-
 	.section-title{
 		&__all-links{
 			display: flex;
@@ -97,6 +96,10 @@
 		padding: 20px;
 		border: 1px solid $gray-100;
 		border-top: none;
+
+		flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 	}
 	&__title{
 		font-family: $header-font;
@@ -118,6 +121,8 @@
 		margin-bottom: 13px;
 		color: #4E4E4E;
 		line-height: 137%;
+
+		flex-grow: 1;
 	}
 	&__more {
 		color: $blue;
@@ -188,5 +193,10 @@
 			top: 0;
 			left: 20px;
 		}
+	}
+	&__wrap {
+		height: 100%;
+    display: flex;
+    flex-direction: column;
 	}
 } // end.sArticals

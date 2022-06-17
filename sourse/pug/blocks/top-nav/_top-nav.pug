@@ -109,7 +109,7 @@ mixin top-nav()
 				.col.align-self-stretch.d-none.d-lg-block
 					+e.UL.menu
 						+e.LI.item
-							+e.link
+							+e.link(href="#")
 								+b.burger
 									span
 								.ms-10 Каталог
@@ -215,22 +215,22 @@ mixin catalogDD()
 	+b.catalog-dd
 		ul.catalog-dd__list
 			li
-				span Аккумуляторный инструмент
+				+e.link(href="#") Аккумуляторный инструмент
 				+catalogSubDD()
 			li
-				span Сетевой электроинструмент
+				+e.link(href="#") Сетевой электроинструмент
 				+catalogSubDD('11')
 			li
-				span Садовая техника
+				+e.link(href="#") Садовая техника
 				+catalogSubDD('22')
 			li
-				span Алмазная резка
+				+e.link(href="#") Алмазная резка
 				+catalogSubDD('33')
 			li
-				span Ручной инструмент
+				+e.link(href="#") Ручной инструмент
 				+catalogSubDD('44')
 			li
-				span Аксессуары
+				+e.link(href="#") Аксессуары
 				+catalogSubDD('55')
 
 mixin catalogSubDD(diff="")

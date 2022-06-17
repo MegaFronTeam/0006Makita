@@ -10,7 +10,7 @@ mixin sCatalogPage(data)
 							+e.header Инструменты
 								+icon('chevron-down')
 							+e.items
-								+asideItem('Цепные пилы')
+								+asideItem('Цепные пилы', 'active').current
 								+asideItem('Пылесосы')
 								+asideItem('Кусторезы')
 								+asideItem('Триммеры и травокосилки')
@@ -78,7 +78,7 @@ mixin sCatalogPage2(data)
 				p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
 
 mixin asideItem(name, activeClass='')
-	+e.item(class=activeClass)
+	+e.item(class=activeClass)&attributes(attributes)
 		+e.i-head.dd-head-js
 			+e.name=name
 			+icon('chevron-down')
