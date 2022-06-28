@@ -10,7 +10,7 @@ $file-format: woff2;
 @include font-face ($default-font, $addr + "OpenSans-Regular", 400, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "OpenSans-Bold", 700, $file-formats: $file-format);
 // @include font-face ($header-font, $addr + "HelveticaNeueBoldCondensed", 700, $file-formats: $file-format);
-@include font-face ($header-font, $addr + "hnB", 700, $file-formats: $file-format);
+@include font-face ($header-font, $addr + "9bc087dd-4331-46a8-bb8e-1936a2c769f9", 700, $file-formats: $file-format);
 
 // font-weight helper:
 // 100 Thin
