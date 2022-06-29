@@ -5,7 +5,8 @@ mixin sArticle(data)
 			+e.row.row
 				.col-lg-8
 					+e.baner
-						img(loading="lazy" src="img/@2x/article-img.jpg" alt="")
+						+e.img-wrap-center
+							img(loading="lazy" src="img/@2x/article-img.jpg" alt="")
 					+e.date 11 Декабря, 2019
 					+e.content
 						h2 Позаботьтесь о тепле и безопасности с принадлежностями для работы с цепной пилой
