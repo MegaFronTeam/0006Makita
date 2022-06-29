@@ -67,10 +67,10 @@ mixin item-prod(i, slider, code='VB3616DA', t="MULTI VOLT (36V) Cordless Portabl
 			block
 			+e.A.img-link(href="#")
 				if !slider
-					+e.img-wrap-center
+					.img-wrap-center
 						img(loading="lazy" src=`img/@2x/hit-${i}.jpg`, alt="")
 				else
-					+e.img-wrap-center
+					.img-wrap-center
 						img.swiper-lazy(src="#" data-src=`img/@2x/hit-${i}.jpg`, alt="")
 		+e.box
 			+e.title(href="#")= t

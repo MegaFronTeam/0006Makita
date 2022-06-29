@@ -198,7 +198,7 @@ mixin miniSlider()
 mixin miniSlide()
 	.swiper-slide
 		+e.img(href='#')
-			+e.img-wrap-center
+			.img-wrap-center
 				img.swiper-lazy(src="#" data-src="img/@2x/mini-slide.jpg" alt="")
 
 mixin tableDescr(title)
@@ -265,12 +265,12 @@ mixin prodCardSliders(addClasses='')
 mixin prodCardThumb(imgNum)
 	.swiper-slide
 		+e.th-item
-			+e.img-wrap-center
+			.img-wrap-center
 				img.swiper-lazy(src="#" data-src=`img/@2x/thumb.jpg` alt="")
 
 mixin prodCardSlide(imgNum)
 	.swiper-slide
 		+e.slide-img
-			+e.img-wrap-center
+			.img-wrap-center
 				img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-img.jpg` alt="")
 
