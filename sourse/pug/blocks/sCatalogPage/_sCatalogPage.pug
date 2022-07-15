@@ -40,7 +40,8 @@ mixin catalogPageItem(imgNum, name, bootClasses="")
 	.col-md-6.col-lg-4(class=bootClasses)
 		+e.item(href='#')
 			+e.img-wrap
-				img(loading="lazy" src=`img/@2x/catalog-${imgNum}.jpg` alt="")
+				.img-wrap-center
+					img(loading="lazy" src=`img/@2x/catalog-${imgNum}.jpg` alt="")
 			+e.i-name=name
 
 mixin sCatalogPage2(data)
@@ -302,7 +303,8 @@ mixin itemProdLong(title,img,tag)
 					+e.tag Новинка
 				else
 				+e.img(href="#")
-					img(loading='lazy' src=`img/@2x/lc-img-${img}.jpg` alt="")
+					.img-wrap-center
+						img(loading='lazy' src=`img/@2x/lc-img-${img}.jpg` alt="")
 			+e.content-col.col-md
 				+e.links
 					+e.compare(href="#")

@@ -198,7 +198,8 @@ mixin miniSlider()
 mixin miniSlide()
 	.swiper-slide
 		+e.img(href='#')
-			img.swiper-lazy(src="#" data-src="img/@2x/mini-slide.jpg" alt="")
+			.img-wrap-center
+				img.swiper-lazy(src="#" data-src="img/@2x/mini-slide.jpg" alt="")
 
 mixin tableDescr(title)
 	+e.table-descr&attributes(attributes)
@@ -248,26 +249,24 @@ mixin prodCardSliders(addClasses='')
 				+e.thumb-slider
 					.swiper.sProdCard-thumb-js
 						.swiper-wrapper
-							+prodCardThumb(1)
-							+prodCardThumb(1)
-							+prodCardThumb(1)
-							+prodCardThumb(1)
+							- for (var x = 0; x < 10; x++)
+								+prodCardThumb(1) 
 			+e.slider-col.col-md
 				+e.slider
 					.swiper.sProdCard-slider-js
 						.swiper-wrapper
-							+prodCardSlide(1)
-							+prodCardSlide(1)
-							+prodCardSlide(1)
-							+prodCardSlide(1)
+							- for (var x = 0; x < 10; x++)
+								+prodCardSlide(1)
 
 mixin prodCardThumb(imgNum)
 	.swiper-slide
 		+e.th-item
-			img.swiper-lazy(src="#" data-src=`img/@2x/thumb.jpg` alt="")
+			.img-wrap-center
+				img.swiper-lazy(src="#" data-src=`img/@2x/thumb.jpg` alt="")
 
 mixin prodCardSlide(imgNum)
 	.swiper-slide
 		+e.slide-img
-			img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-img.jpg` alt="")
+			.img-wrap-center
+				img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-img.jpg` alt="")
 
