@@ -417,7 +417,8 @@ function eventHandler() {
 
 	for (let pcSlider of pcSliders) {
 		const prodCardThumb = new Swiper(pcSlider.querySelector('.sProdCard-thumb-js'), {
-			slidesPerView: 'auto',
+			slidesPerView: 'auto', 
+			slideToClickedSlide: true,
 			breakpoints: {
 				0: {
 					direction: 'horizontal',
@@ -436,6 +437,7 @@ function eventHandler() {
 		});
 		let prodCardSlider = new Swiper(pcSlider.querySelector('.sProdCard-slider-js'), {
 			spaceBetween: 30,
+			slideToClickedSlide: true,
 			thumbs: {
 				swiper: prodCardThumb,
 			},
@@ -443,8 +445,11 @@ function eventHandler() {
 				loadPrevNext: true,
 				loadPrevNextAmount: 3,
 			},
-			loop: true,
+			// loop: true,
 		});
+
+		prodCardSlider.controller.control = prodCardThumb;
+		// prodCardThumb.controller.control = prodCardSlider;
 	}
 
 	// for (let pcSlider of pcSliders) {
