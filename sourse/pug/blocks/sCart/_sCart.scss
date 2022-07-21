@@ -196,7 +196,7 @@
 	&__code{
 		font-size: 10px;
 		// margin-bottom: 10px;
-		font-family: "HelveticaNeue";
+		font-family:$header-font;
 		font-weight: 700;
 		@include media-breakpoint-up(md){
 			font-size: 16px;
@@ -329,7 +329,7 @@
 	&__price--new{
 		font-size: 14px;
 		line-height: math.div(19, 16);
-		font-family: "HelveticaNeue";
+		font-family:$header-font;
 		font-weight: 700;
 		@include media-breakpoint-up(sm){
 			font-size: 20px;

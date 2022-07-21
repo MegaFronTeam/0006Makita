@@ -634,7 +634,7 @@
 		font-size: 20px;
 		font-weight: 700;
 		line-height: math.div(19, 16);
-		font-family: "HelveticaNeue";
+		font-family:$header-font;
 	}
 	&__amount-col{
 		text-align: right;
