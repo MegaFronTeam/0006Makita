@@ -129,7 +129,11 @@
 		width: 100%;
 	}
 	&__wrap{
-		padding: rem(28) rem(40) rem(30) rem(40);
+		@include media-breakpoint-up(md) {
+
+			padding: rem(28) rem(40) rem(30) rem(40);
+		}
+		padding: rem(28) rem(20) rem(30) rem(20);
 		background-color: $gray-100;
 		h3 {
 			margin-bottom: rem(15);
@@ -138,43 +142,60 @@
 		}
 	}
 	&__items {
-		display: flex;
-		flex-wrap: wrap;
+		@include media-breakpoint-up(xl){
+			display: flex; 
+		} 
 		column-gap: rem(10);
 		row-gap: rem(5);
 		margin-bottom: rem(30);
 	}
 	&__column {
+		@include media-breakpoint-up(xl){ 
+			margin-bottom: 0;
+			// flex-wrap: wrap;
+		}
+		margin-bottom: 10px;
 		display: flex;
 		flex-direction: column;
-		row-gap: 5px;
+		row-gap: 10px;
 		justify-content: space-between;
 		width: 100%;
+		flex-grow: 1;
 		&--first {
 			@include media-breakpoint-up(md) {
-				width: calc(50% - 5px);
+				// width: calc(100% - 5px);
+				flex: 0 0 auto;
 			}
 			@include media-breakpoint-up(xl) {
-				width: auto;
+				width: rem(264);
 			}
 			.sContact__name {
 				@include media-breakpoint-up(lg) {
-					width: rem(67);
-					margin-right: rem(48);
+					width: rem(107);
+					margin-right: rem(8);
 				}
 			}
 		}
 		&--second {
+			.sContact__props-item {
+				display: block;
+				.sContact__name{
+					margin-bottom: 1rem;
+				}
+				@include media-breakpoint-up(lg) {
+					flex-grow: 1;
+				}
+			}
 			@include media-breakpoint-up(md) {
-				width: calc(50% - 5px);
+				// width: calc(50% - 5px);
 			}
 			@include media-breakpoint-up(xl) {
 				width: auto;
 			}
 			.sContact__name {
 				@include media-breakpoint-up(lg) {
-					width: rem(75);
-					margin-right: rem(127);
+					width: rem(195);
+					margin-right: rem(7);
 				}
 			}
 		}
@@ -186,14 +207,18 @@
 				width: auto;
 			}
 			.sContact__props-item {
+				.sContact__name{
+					margin-bottom: 1rem;
+				}
+				display: block;
 				@include media-breakpoint-up(lg) {
 					flex-grow: 1;
 				}
 			}
 			.sContact__name {
 				@include media-breakpoint-up(lg) {
-					width: rem(75);
-					margin-right: rem(107);
+					width: rem(175);
+					margin-right: rem(7);
 				}
 			}
 		}
@@ -201,19 +226,20 @@
 	&__props-item{
 		background-color: #fff;
 		display: flex;
-		flex-wrap: wrap;
+		// flex-wrap: wrap;
 		align-items: baseline;
 		padding: rem(12) rem(14.8);
-		word-break: break-all;
+		flex-grow: 1;
+		// word-break: break-all;
+		justify-content: space-between;
 		@include media-breakpoint-down(xl) {
-			justify-content: space-between;
 		}
 	}
 	&__name{
 		font-size: rem(14);
 		line-height: 1em;
 		color: #4E4E4E;
-		width: rem(75);
+		// width: rem(75);
 	}
 	&__info{
 		font-size: rem(16);

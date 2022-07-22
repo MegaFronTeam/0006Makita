@@ -42,6 +42,53 @@ mixin sContact()
 								+propsItem('Корр. счет', '30101810345250000745')
 							+e.column--third
 								+propsItem('Юр. адрес:', '127474, г. Москва,<br>ш. Дмитровское,<br>д.62, строение 5,<br>этаж 1, помещение<br>X, комната 1')
+						.sContact__items
+							.sContact__column.sContact__column--first
+								.sContact__props-item
+									.sContact__name
+										| Название
+									.sContact__info
+										| ООО «Стартул»
+								.sContact__props-item
+									.sContact__name
+										| ОГРН
+									.sContact__info
+										| 1177746214018
+								.sContact__props-item
+									.sContact__name
+										| ИНН
+									.sContact__info
+										| 9721043374
+								.sContact__props-item
+									.sContact__name
+										| КПП
+									.sContact__info
+										| 772101001
+							.sContact__column.sContact__column--second
+								.sContact__props-item
+									.sContact__name
+										| Адрес местонахождения
+									.sContact__info
+										| 109444, Москва,
+										br
+										| ул. Сормовский проезд, 11/7,
+										br
+										| первый подъезд,
+										br
+										| 3 этаж
+							.sContact__column.sContact__column--third
+								.sContact__props-item
+									.sContact__name
+										| Фактический адрес
+									.sContact__info
+										| 109444, Москва,
+										br
+										| ул. Сормовский проезд, 11/7,
+										br
+										| первый подъезд,
+										br
+										| 3 этаж
+
 						+e.btn(href="#").btn.btn-primary Скачать реквизиты
 			+b.section-title.light.long
 				h2 главный офис
