@@ -4,10 +4,10 @@
 .sProdCard {
 	--sTPB: 24px;
 	
-	--sPT: 12px;
+	--sPT: 0;
 	--sPB: 60px;
 	@include media-breakpoint-up(md){
-		--sPT: 24px;
+		// --sPT: 24px;
 		--sPB: 72px;
 	}
 	@include media-breakpoint-up(xl){
@@ -68,6 +68,26 @@
 			font-size: 16px;
 		}
 	}
+
+		&__head-link{
+		font-size: 12px;
+		display: inline-flex;
+		align-items: center;
+		color: #949494;
+		.icon{
+			margin-right: rem(10);
+			font-size: rem(24);
+			// &-bars{
+			// 	font-size: rem(20);
+			// }
+			&-share2{
+				stroke-width: 1.6px;
+				fill: none;
+				stroke: currentColor;
+			}
+		}
+	}
+
 	&__subtitle {
 		margin-bottom: 17px;
 		font-family: $header-font;
@@ -78,7 +98,19 @@
 	&__property {
 		margin-bottom: rem(37);
 		font-size: 14px;
+		border-bottom: 1px solid #949494;
+		padding-bottom: 10px;
+		p{
+
+			font-weight: 300;
+		}
+		strong{
+			font-weight: 700;
+		}
 		.available {
+			border-bottom: 1px solid #949494;
+			padding-bottom: rem(20);
+			margin-bottom: rem(20);
 			&::before {
 				content: '';
 				display: inline-block;
@@ -92,14 +124,17 @@
 		p {
 			margin-bottom: 11px;
 		}
+		span{
+
+		}
 		span:not(:last-child)::after {
 			content: '';
 			display: inline-block;
 			margin:0 10px;
 			width: 8px;
 			height: 8px;
-			border-radius: 50%;
-			background-color: $gray-310;
+			// border-radius: 50%;
+			background-color: currentColor;
 		}
 	}
 	&__main-row{
@@ -114,9 +149,9 @@
 			margin-bottom: -60px;
 		}
 
-		flex-direction: column-reverse;
+		// flex-direction: column-reverse;
 		@include media-breakpoint-up(lg){
-			flex-direction: row;
+			// flex-direction: row;
 		}
 	}
 
@@ -146,29 +181,15 @@
 
 	}
 	&__t-name-col{
-		background-color: $light;
-		border-right: 1px solid $secondary;
-
-		font-size: 12px;
-		padding: 8px 15px;
-		@include media-breakpoint-up(xsm){
-			font-size: 14px;
-			padding: 15px 10px 15px 20px;
-		}
-		line-height: math.div(22, 14);
+		
 	}
 	&__t-val-col{
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		text-align: center;
-
-		font-size: 12px;
-		padding: 8px 10px;
-		@include media-breakpoint-up(xsm){
-			font-size: 14px;
-			padding: 7px 20px;
-		}
+		text-align: center; 
+	
+		
 	}
 	&__t-logo{
 		img{
@@ -240,48 +261,87 @@
 	&__{}
 	&__{}
 	&__{}
+
+	&__block{
+		padding: rem(35) rem(30) 0;
+	}
+	&__block--bg {
+		padding-bottom: 0;
+		color: #FFFFFF;
+		background: #2A2D30;
+		border-radius: $border-radius $border-radius 0 0;
+	}
+	&__block--border{
+		text-align: center;
+		@include media-breakpoint-up(lg){
+
+			padding-top: rem(120);
+			border: 1px solid #D2D2D2;
+			border-top: none;
+			position: relative;
+			top: -7px;
+			border-radius: 0 0 $border-radius $border-radius;
+		}
+	}
+
 } // end.sProdCard
 
 .pc-sliders{
-	--thumbIW: 68px;
+	--thumbIW: 42px;
 	margin-bottom: 30px;
 	@include media-breakpoint-up(md){
-		--thumbIW: 101px;
+		--thumbIW: 82px;
 		margin-bottom: 71px;
 	}
-	@include media-breakpoint-up(lg){
-		--thumbIW: 68px;
-		margin-bottom: rem(124);
-	}
 
-	&__row{
-		flex-direction: column-reverse;
-		@include media-breakpoint-up(md){
-			flex-direction: row;
-			flex-wrap: nowrap;
-		}
-	}
 	&__thumb-slider{
 		width: 100%;
 		height: 100%;
-		@include media-breakpoint-up(xl){
-
-			height: calc((var(--thumbIW) + 20px) * 7);
-		}
-		
-		@include media-breakpoint-up(lg){
-
-			height: calc((var(--thumbIW) + 20px) * 6);
-		}
-
 		@include media-breakpoint-up(md){
-			height: calc((var(--thumbIW) + 20px) * 5);
-			width: var(--thumbIW);
+			padding-top: rem(82);
+			padding-bottom: rem(82);
+		}
+		padding-top: rem(60);
+		padding-bottom: rem(60);
+		position: relative;
+		@include media-breakpoint-up(md){
+		height: calc((var(--thumbIW) + 20px) * 5 + #{rem(82) * 2});
+	}
+	height: calc((var(--thumbIW) + 20px) * 4 + #{rem(82) * 2});
+		width: var(--thumbIW);
+		.swiper-next,
+		.swiper-prev{
+			left: auto;
+			transform: none;
+			width: 100%;
+			right: auto;
+			top: auto;
+			&:not(:hover){
+				color: $body-color;
+			}
+			.icon{
+				transform: rotate(90deg);
+			}
+		}
+
+		.swiper-prev{
+			@include media-breakpoint-up(md){
+				top: rem(30);
+			}
+			top: 0;
+			// box-shadow: none !important;
+		}
+		.swiper-next{
+			@include media-breakpoint-up(md){
+			bottom: rem(30); 
+		}
+		bottom: rem(0); 
 		}
 		
 		//def
 		.swiper{
 			height: 100%;
+			
 		}
 		.swiper-wrapper{
 
@@ -291,7 +351,9 @@
 			cursor: pointer;
 			width: var(--thumbIW);
 			height: var(--thumbIW);
-
+			border: 1px solid #282828;
+			border-radius: $border-radius;
+			overflow: hidden;
 			opacity: .5;
 			&:hover{
 				opacity: 1;
@@ -327,20 +389,24 @@
 	}
 	//
 	&__slider-col{
+		width: calc(100% - var(--thumbIW) - 30px);
+		max-width: calc(100% - var(--thumbIW) - 30px);
 		@include media-breakpoint-up(md){
-			width: calc(100% - var(--thumbIW) - 30px);
-			max-width: calc(100% - var(--thumbIW) - 30px);
 		}
 	}
 
 
 
 	&__slider{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
 		.swiper{
-
+			height: 100%;
+			width: 100%;
 		}
 		.swiper-wrapper{
-
+			min-height: 100%;
 		}
 		.swiper-slide{
 			width: 100%;
@@ -349,7 +415,11 @@
 	}
 	&__slide-img{
 		width: 100%;
-		height: 0;
+		@include media-breakpoint-up(md){
+			min-height: 1px;
+			height: 0;
+		}
+		min-height: 100%;
 		position: relative;
 		padding-top: math.div(649, 652) * 100%;
 
@@ -394,6 +464,11 @@
 	--inp-col-d: none;
 	--open-col-d: block;
 	--close-bar-d: none;
+	@include media-breakpoint-down(lg){
+		background-color: #fff;
+		box-shadow:  0 -1px 5px $light;
+		color: $body-color;
+	}
 	&.open{
 		--price-col-w: 100%;
 		--inp-col-d: block;
@@ -402,6 +477,12 @@
 	}
 	&__btns-col {
 		margin-bottom: 22px !important;
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(-82px) !important;
+			position: relative;
+			z-index: 4;
+
+		}
 	}
 	padding: 12px 20px;
 	@include media-breakpoint-up(md){
@@ -413,8 +494,8 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background-color: $white;
-	border-top: 1px solid $secondary;
+	// background-color: $white;
+	// border-top: 1px solid $secondary;
 	@include media-breakpoint-up(lg){
 		border: none;
 		position: static;
@@ -505,13 +586,13 @@
 	}
 	&__price{
 		display: flex;
-		align-items: flex-start;
-		@include media-breakpoint-up(xl) {
-			justify-content: flex-end;
-		}
+		// // align-items: flex-start;
+		// @include media-breakpoint-up(xl) {
+		// 	justify-content: flex-end;
+		// }
 		@include media-breakpoint-down(lg) {
 			margin-bottom: 10px;
-			align-items: center;
+			// align-items: center;
 		}
 	}
 	&__p-btn{
@@ -521,7 +602,8 @@
 		// @extend .btn-outline-secondary;
 
 		background-color: $gray-100!important;
-		border-radius: 50%;
+		box-shadow: 0px 0px 6.4px rgba(0, 0, 0, 0.15);
+		border-radius: 4px;
 		color: $primary!important;
 		cursor: pointer;
 		&:hover{
@@ -542,70 +624,63 @@
 			}
 		}
 
-		width: 50px;
-		height: 50px;
+		width: 40px;
+		height: 40px;
 		padding: 0;
-		@include media-breakpoint-down(lg) {
-			width: 35px;
-			height: 35px;
-		}
-
+		
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		&::after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			width: 12px;
+			height: 2px;
+			border-radius: 3px;
+			background-color: $body-color;
+		}
 
 		&--min{
 			margin-right: -1px;
-			&::after {
-				content: '';
-				display: inline-block;
-				position: absolute;
-				width: 18px;
-				height: 2px;
-				border-radius: 3px;
-				background-color: $primary;
-			}
 		}
 		&--plus{
-			margin-left: -1px;
-			&::after {
-				content: '';
-				display: inline-block;
-				position: absolute;
-				width: 18px;
-				height: 2px;
-				border-radius: 3px;
-				background-color: $primary;
-			}
+			margin-left: -1px; 
 			&::before {
 				content: '';
 				display: inline-block;
 				position: absolute;
 				width: 2px;
-				height: 18px;
+				height: 12px;
 				border-radius: 3px;
-				background-color: $primary;
+				background-color: $body-color;
 			}
 		}
 	}
 	&__p-input{
 		border: none;
-		color: #282828;
-		padding: 15px 10px;
+		@include media-breakpoint-up(lg){
+
+			color: #fff;
+		}
+		background: none;
+		padding: 10px 5px;
 		text-align: center;
-		width: 51px;
+		width: 40px;
 	}
 	//
 	&__btn-row{
+		--bs-gutter-y: 12px;
 		& > *{
-			margin-bottom: 12px;
+			// margin-bottom: 12px;
 		}
-		margin-bottom: -12px;
+		// margin-bottom: -12px;
 	}
 	&__buy-btn{
 		@extend .btn;
 		@extend .btn-primary;
 		width: 100%;
+		text-transform: uppercase;
 
 		@include media-breakpoint-down(md){
 			min-width: 160px;
@@ -621,8 +696,9 @@
 	}
 	&__bill-btn{
 		@extend .btn;
-		@extend .btn-outline-primary;
+		@extend .btn-outline-secondary;
 		width: 100%;
+		text-transform: uppercase;
 		@include media-breakpoint-down(lg){
 			padding-left: 5px !important;
 			padding-right: 5px !important;
@@ -655,7 +731,7 @@
 .mini-slider{
 	margin-bottom: 24px;
 	.swiper{
-
+		border-radius: $border-radius;
 	}
 	.swiper-wrapper{
 
@@ -669,31 +745,33 @@
 		top: unset!important;
 		left: unset!important;
 		&-bullet {
-			background-color: $secondary!important;
+			background-color: #D2D2D2!important;
 			// @include media-breakpoint-down(xl){
 			// 	width: 30px!important;
 			// }
 
 			&-active,
 			&:hover {
-				background-color: $red !important;
+				background-color: $body-color !important;
 			}
 		}
 	}
 
 	&__img{
-		@extend .accept-ratio-frame;
-		padding-top: math.div(170, 360) * 100%;
+		// @extend .accept-ratio-frame;
+		@include block( 360, 170);
+		// padding-top: math.div(170, 360) * 100%;
 		height: 220px;
 	}
 }
 
 .prodTabs{
 	&__caption{
-		border-bottom: 5px solid $primary;
+		border-bottom: 1px solid #E7E7E7;
 		margin-bottom: 24px;
 		.swiper{
-			@include media-breakpoint-down(xl){
+			width: 100%;
+			@include media-breakpoint-down(lg){
 				overflow: visible!important;
 			}
 		}
@@ -703,11 +781,12 @@
 		.swiper-slide{
 			width: auto;
 			height: auto;
+			margin-right: rem(30);
 		}
 	}
 	&__btn{
 		font-family: $header-font;
-		padding: 5px 10px 2px;
+		padding: rem(14) 0;
 		// @include media-breakpoint-up(xl){
 		// 	padding: 10px 19px;
 		// }
@@ -716,10 +795,30 @@
 		background-color: $white;
 		text-transform: uppercase;
 		color: #4E4E4E;
-
+		position: relative;
+		@include mt;
+		&::after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: rem(4);
+			background: $primary;
+			border-radius: 5px;
+			transform: scaleX(0);
+			@include mt;
+			transform-origin: left;
+		}
+		&:not(.active):hover{
+			color: #949494;
+		}
 		&.active{
-			color: $white;
-			background-color: $primary;
+			&:after{
+				transform: scaleX(1);
+			}
+			// color: $white;
+			// background-color: $primary;
 		}
 		&.count {
 			&::after {
@@ -748,27 +847,22 @@
 		@include roww(0);
 		&:nth-child(odd){
 			background-color: $gray-100;
+			background: #E7E7E7;
+			border-radius: $border-radius  ; 
 		}
 	}
 	&__t-name-col{
-		padding: 8px 15px;
-		font-size: 12px;
-		@include media-breakpoint-up(xsm){
-			padding: 10px 20px;
-			font-size: 14px;
-		}
-		line-height: math.div(20, 14);
-		color: rgba(51, 51, 51, 0.5);
+		color: #949494;
 	}
-	&__t-val-col{
+	&__t-val-col,
+	&__t-name-col{
+		font-size: 14px;
+		font-weight: 300;
 		padding: 8px 15px;
-		font-size: 12px;
-		@include media-breakpoint-up(xsm){
-			padding: 10px 20px;
-			font-size: 14px;
-		}
-		line-height: math.div(20, 14);
+		 
+		line-height: math.div(22, 14);
 	}
+	
 	&__wrap{
 		margin-bottom: 60px;
 	}

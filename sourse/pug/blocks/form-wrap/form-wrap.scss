@@ -27,7 +27,8 @@
 			 border-color: #D2D2D2;
 		 }
 		 &[type=checkbox] {
-			 border: 2px solid #1f839f;
+			// border-width: 2px;
+			 border: 2px solid $primary;
 		 }
 		 &:checked[type=checkbox] {
 			 background-size: 130%;

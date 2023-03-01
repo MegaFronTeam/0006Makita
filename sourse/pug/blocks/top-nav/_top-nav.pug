@@ -85,7 +85,7 @@ mixin mob-mnu()
 				//- 	a(href="mailto:info@husq.ru") info@husq.ru
 			+e.c-item
 				+e.c-icon
-					img(loading="lazy" src="img/svg/icon-clock.svg" alt="")
+					+icon("clock2")
 				+e.c-txt
 					| пн - пт: 09:00 - 20:00
 					br
@@ -103,9 +103,7 @@ mixin top-nav()
 				+e.burger-col.col-auto.d-lg-none
 					+b.burger--js
 						span
-				+e.logo-col.col-auto
-					+e.logo(href="#")
-						img(loading="lazy" src="img/logo.png" alt="")
+				
 				.col.align-self-stretch.d-none.d-lg-block
 					+e.UL.menu
 						+e.LI.item
@@ -130,6 +128,9 @@ mixin blueLine()
 	+b.blue-line--js.d-none.d-md-block
 		+e.container.container
 			+e.row.row.align-items-center
+				+e.logo-col.col-auto
+					+e.logo(href="#")
+						img(src="img/logo.png" alt="" loading="lazy")
 				.col-auto.align-self-stretch
 					+e.dd-btn--loc
 						+icon('location')
@@ -144,8 +145,7 @@ mixin blueLine()
 						+telDD()
 				.col-auto.ms-auto.me-auto.d-xl-block.d-none
 					+e.shedule
-						+e.s-img
-							img(loading='lazy' src="img/svg/clock.svg" alt="")
+						+icon("clock2")
 						+e.s-txt
 							span пн. - пт. 09:00 - 20:00
 							span сб. - вс. 09:00 - 18:00

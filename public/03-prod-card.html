@@ -8,9 +8,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
-		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
-		<link rel="stylesheet" href="libs/dropzone/min/dropzone.min.css"/>
-		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
+		<link href="libs/dropzone/min/dropzone.min.css" rel="stylesheet"/>
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="prod-card-page">
@@ -22,6 +24,8 @@
 			<div class="blue-line blue-line--js d-none d-md-block">
 				<div class="blue-line__container container">
 					<div class="blue-line__row row align-items-center">
+						<div class="blue-line__logo-col col-auto"><a class="blue-line__logo" href="#"><img src="img/logo.png" alt="" loading="lazy"/></a>
+						</div>
 						<div class="col-auto align-self-stretch">
 							<div class="blue-line__dd-btn blue-line__dd-btn--loc">
 								<svg class="icon icon-location ">
@@ -278,8 +282,9 @@
 						</div>
 						<div class="col-auto ms-auto me-auto d-xl-block d-none">
 							<div class="blue-line__shedule">
-								<div class="blue-line__s-img"><img loading="lazy" src="img/svg/clock.svg" alt=""/>
-								</div>
+								<svg class="icon icon-clock2 ">
+									<use xlink:href="img/svg/sprite.svg#clock2"></use>
+								</svg>
 								<div class="blue-line__s-txt"><span>пн. - пт. 09:00 - 20:00</span><span>сб. - вс. 09:00 - 18:00</span>
 								</div>
 							</div>
@@ -591,7 +596,10 @@
 						</div>
 					</div>
 					<div class="mob-menu__c-item">
-						<div class="mob-menu__c-icon"><img loading="lazy" src="img/svg/icon-clock.svg" alt=""/>
+						<div class="mob-menu__c-icon">
+							<svg class="icon icon-clock2 ">
+								<use xlink:href="img/svg/sprite.svg#clock2"></use>
+							</svg>
 						</div>
 						<div class="mob-menu__c-txt">пн - пт: 09:00 - 20:00<br/>сб - вс: 09:00 - 18:00
 						</div>
@@ -606,8 +614,6 @@
 						<div class="top-nav__burger-col col-auto d-lg-none">
 							<div class="burger burger--js"><span></span>
 							</div>
-						</div>
-						<div class="top-nav__logo-col col-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/logo.png" alt=""/></a>
 						</div>
 						<div class="col align-self-stretch d-none d-lg-block">
 							<ul class="top-nav__menu">
@@ -709,110 +715,154 @@
 										<div class="search-dd__items-row row">
 											<div class="col-sm-6 col-lg-3">
 												<div class="prod-item">
-													<div class="prod-item__img-wrap">
-														<div class="prod-item__links"><a class="prod-item__compare" href="#">
-															<svg class="icon icon-bars ">
-																<use xlink:href="img/svg/sprite.svg#bars"></use>
-															</svg></a><a class="prod-item__bookmarks" href="#">
-															<svg class="icon icon-heart ">
-																<use xlink:href="img/svg/sprite.svg#heart"></use>
-															</svg></a>
-														</div>
-														<div class="prod-item__badge bg-red">Новинка
-														</div><a class="prod-item__img-link" href="#">
-														<div class="img-wrap-center"><img loading="lazy" src="img/@2x/hit-1.jpg" alt=""/></div></a>
+													<div class="prod-item__links"><a class="prod-item__compare" href="#">
+														<svg class="icon icon-bars ">
+															<use xlink:href="img/svg/sprite.svg#bars"></use>
+														</svg></a><a class="prod-item__bookmarks" href="#">
+														<svg class="icon icon-icon-favorite-default ">
+															<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+														</svg></a>
 													</div>
-													<div class="prod-item__box"><a class="prod-item__title" href="#">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
-														<div class="prod-item__code">VB3616DA
+													<div class="prod-item__badge bg-red">Новинка
+													</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+													<div class="img-wrap-center"><img src="img/@2x/hit-1.png" alt="" loading="lazy"/></div></span></a>
+													<div class="prod-item__box">
+														<div class="prod-item__title">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
 														</div>
-														<div class="prod-item__price-wrap">
-															<div class="prod-item__price prod-item__price--old">18 500 ₽
+														<div class="row align-items-end">
+															<div class="col">
+																<div class="prod-item__price-wrap row">
+																	<div class="col-auto">
+																		<div class="prod-item__price prod-item__price--old">28 400 ₽
+																		</div>
+																	</div>
+																	<div class="col-auto">
+																		<div class="prod-item__price prod-item__price--new">24 600 ₽
+																		</div>
+																	</div>
+																</div>
 															</div>
-															<div class="prod-item__price prod-item__price--new">16 500 ₽
+															<div class="col-auto"><a class="prod-item__btn" href="#">
+																<svg class="icon icon-icon_bag ">
+																	<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+																</svg></a>
 															</div>
 														</div>
-													</div><a class="prod-item__btn" href="#">Купить</a>
+													</div>
 												</div>
 											</div>
 											<div class="col-sm-6 col-lg-3">
 												<div class="prod-item">
-													<div class="prod-item__img-wrap">
-														<div class="prod-item__links"><a class="prod-item__compare" href="#">
-															<svg class="icon icon-bars ">
-																<use xlink:href="img/svg/sprite.svg#bars"></use>
-															</svg></a><a class="prod-item__bookmarks" href="#">
-															<svg class="icon icon-heart ">
-																<use xlink:href="img/svg/sprite.svg#heart"></use>
-															</svg></a>
-														</div>
-														<div class="prod-item__badge bg-red">Новинка
-														</div><a class="prod-item__img-link" href="#">
-														<div class="img-wrap-center"><img loading="lazy" src="img/@2x/hit-1.jpg" alt=""/></div></a>
+													<div class="prod-item__links"><a class="prod-item__compare" href="#">
+														<svg class="icon icon-bars ">
+															<use xlink:href="img/svg/sprite.svg#bars"></use>
+														</svg></a><a class="prod-item__bookmarks" href="#">
+														<svg class="icon icon-icon-favorite-default ">
+															<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+														</svg></a>
 													</div>
-													<div class="prod-item__box"><a class="prod-item__title" href="#">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
-														<div class="prod-item__code">VB3616DA
+													<div class="prod-item__badge bg-red">Новинка
+													</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+													<div class="img-wrap-center"><img src="img/@2x/hit-1.png" alt="" loading="lazy"/></div></span></a>
+													<div class="prod-item__box">
+														<div class="prod-item__title">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
 														</div>
-														<div class="prod-item__price-wrap">
-															<div class="prod-item__price prod-item__price--old">18 500 ₽
+														<div class="row align-items-end">
+															<div class="col">
+																<div class="prod-item__price-wrap row">
+																	<div class="col-auto">
+																		<div class="prod-item__price prod-item__price--old">28 400 ₽
+																		</div>
+																	</div>
+																	<div class="col-auto">
+																		<div class="prod-item__price prod-item__price--new">24 600 ₽
+																		</div>
+																	</div>
+																</div>
 															</div>
-															<div class="prod-item__price prod-item__price--new">16 500 ₽
+															<div class="col-auto"><a class="prod-item__btn" href="#">
+																<svg class="icon icon-icon_bag ">
+																	<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+																</svg></a>
 															</div>
 														</div>
-													</div><a class="prod-item__btn" href="#">Купить</a>
+													</div>
 												</div>
 											</div>
 											<div class="col-sm-6 col-lg-3">
 												<div class="prod-item">
-													<div class="prod-item__img-wrap">
-														<div class="prod-item__links"><a class="prod-item__compare" href="#">
-															<svg class="icon icon-bars ">
-																<use xlink:href="img/svg/sprite.svg#bars"></use>
-															</svg></a><a class="prod-item__bookmarks" href="#">
-															<svg class="icon icon-heart ">
-																<use xlink:href="img/svg/sprite.svg#heart"></use>
-															</svg></a>
-														</div>
-														<div class="prod-item__badge bg-red">Новинка
-														</div><a class="prod-item__img-link" href="#">
-														<div class="img-wrap-center"><img loading="lazy" src="img/@2x/hit-1.jpg" alt=""/></div></a>
+													<div class="prod-item__links"><a class="prod-item__compare" href="#">
+														<svg class="icon icon-bars ">
+															<use xlink:href="img/svg/sprite.svg#bars"></use>
+														</svg></a><a class="prod-item__bookmarks" href="#">
+														<svg class="icon icon-icon-favorite-default ">
+															<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+														</svg></a>
 													</div>
-													<div class="prod-item__box"><a class="prod-item__title" href="#">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
-														<div class="prod-item__code">VB3616DA
+													<div class="prod-item__badge bg-red">Новинка
+													</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+													<div class="img-wrap-center"><img src="img/@2x/hit-1.png" alt="" loading="lazy"/></div></span></a>
+													<div class="prod-item__box">
+														<div class="prod-item__title">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
 														</div>
-														<div class="prod-item__price-wrap">
-															<div class="prod-item__price prod-item__price--old">18 500 ₽
+														<div class="row align-items-end">
+															<div class="col">
+																<div class="prod-item__price-wrap row">
+																	<div class="col-auto">
+																		<div class="prod-item__price prod-item__price--old">28 400 ₽
+																		</div>
+																	</div>
+																	<div class="col-auto">
+																		<div class="prod-item__price prod-item__price--new">24 600 ₽
+																		</div>
+																	</div>
+																</div>
 															</div>
-															<div class="prod-item__price prod-item__price--new">16 500 ₽
+															<div class="col-auto"><a class="prod-item__btn" href="#">
+																<svg class="icon icon-icon_bag ">
+																	<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+																</svg></a>
 															</div>
 														</div>
-													</div><a class="prod-item__btn" href="#">Купить</a>
+													</div>
 												</div>
 											</div>
 											<div class="col-sm-6 col-lg-3">
 												<div class="prod-item">
-													<div class="prod-item__img-wrap">
-														<div class="prod-item__links"><a class="prod-item__compare" href="#">
-															<svg class="icon icon-bars ">
-																<use xlink:href="img/svg/sprite.svg#bars"></use>
-															</svg></a><a class="prod-item__bookmarks" href="#">
-															<svg class="icon icon-heart ">
-																<use xlink:href="img/svg/sprite.svg#heart"></use>
-															</svg></a>
-														</div>
-														<div class="prod-item__badge bg-red">Новинка
-														</div><a class="prod-item__img-link" href="#">
-														<div class="img-wrap-center"><img loading="lazy" src="img/@2x/hit-1.jpg" alt=""/></div></a>
+													<div class="prod-item__links"><a class="prod-item__compare" href="#">
+														<svg class="icon icon-bars ">
+															<use xlink:href="img/svg/sprite.svg#bars"></use>
+														</svg></a><a class="prod-item__bookmarks" href="#">
+														<svg class="icon icon-icon-favorite-default ">
+															<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+														</svg></a>
 													</div>
-													<div class="prod-item__box"><a class="prod-item__title" href="#">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender</a>
-														<div class="prod-item__code">VB3616DA
+													<div class="prod-item__badge bg-red">Новинка
+													</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+													<div class="img-wrap-center"><img src="img/@2x/hit-1.png" alt="" loading="lazy"/></div></span></a>
+													<div class="prod-item__box">
+														<div class="prod-item__title">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
 														</div>
-														<div class="prod-item__price-wrap">
-															<div class="prod-item__price prod-item__price--old">18 500 ₽
+														<div class="row align-items-end">
+															<div class="col">
+																<div class="prod-item__price-wrap row">
+																	<div class="col-auto">
+																		<div class="prod-item__price prod-item__price--old">28 400 ₽
+																		</div>
+																	</div>
+																	<div class="col-auto">
+																		<div class="prod-item__price prod-item__price--new">24 600 ₽
+																		</div>
+																	</div>
+																</div>
 															</div>
-															<div class="prod-item__price prod-item__price--new">16 500 ₽
+															<div class="col-auto"><a class="prod-item__btn" href="#">
+																<svg class="icon icon-icon_bag ">
+																	<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+																</svg></a>
 															</div>
 														</div>
-													</div><a class="prod-item__btn" href="#">Купить</a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -824,131 +874,199 @@
 				</div>
 			</div>
 			<!-- end top-nav-->
-			<!-- start sProdCard-->
-			<section class="sProdCard section" id="sProdCard">
+			<div class="page-head">
 				<div class="container">
 					<nav>
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="/"><span>Главная</span></a></li>
-							<li class="breadcrumb-item active"><a href="#"><span>Каталог</span></a></li>
+							<li class="breadcrumb-item"><a href="/"><span></span></a></li>
+							<li class="breadcrumb-item"><a href="#"><span></span></a></li>
+							<li class="breadcrumb-item"><a href="#"><span>Главная</span></a></li>
+							<li class="breadcrumb-item"><a href="#"><span>Каталог</span></a></li>
+							<li class="breadcrumb-item"><a href="#"><span>Аккумуляторные инструменты</span></a></li>
+							<li class="breadcrumb-item"><a href="#"><span>Система 36 В</span></a></li>
+							<li class="breadcrumb-item active"><a href="#"><span>Аккумуляторная угловая шлифмашина с X-LOCK GBH 36 V-LI PLUS</span></a></li>
 						</ol>
 					</nav>
-					<div class="section-title long">
+				</div>
+			</div>
+			<!-- start sProdCard-->
+			<section class="sProdCard section" id="sProdCard">
+				<div class="container"> 
+					<div class="row">
+						<div class="col-xl-8 col-lg-7">
+							<h1>Аккумуляторная дрель-шуруповёрт Einhell PXC TE-CD 18/50 Li BL-Solo 4513887</h1>
+						</div>
+						<div class="col-xl-4 col-lg-5">
+							<div class="sProdCard__head-row row">
+								<div class="col-auto"><a class="sProdCard__head-link" href="#">
+									<svg class="icon icon-icon-favorite-default ">
+										<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+									</svg>В избранное</a>
+								</div>
+								<div class="col-auto"><a class="sProdCard__head-link" href="#">
+									<svg class="icon icon-bars ">
+										<use xlink:href="img/svg/sprite.svg#bars"></use>
+									</svg>Сравнить</a>
+								</div>
+								<div class="col-auto"><a class="sProdCard__head-link" href="#">
+									<svg class="icon icon-share2 ">
+										<use xlink:href="img/svg/sprite.svg#share2"></use>
+									</svg>Поделиться</a>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="sProdCard__main-row row">
-						<div class="col-lg-8">
-							<div class="pc-sliders pc-sliders--js d-none d-lg-block">
+						<div class="col-xl-8 col-lg-7">
+							<div class="sProdCard__head-row row">
+								<div class="col-auto">
+									<div class="sProdCard__number">Артикул: 12C1467P
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="stars-block">
+										<svg class="icon icon-star  active">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon icon-star  active">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon icon-star  active">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon icon-star  active">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+										<svg class="icon icon-star ">
+											<use xlink:href="img/svg/sprite.svg#star"></use>
+										</svg>
+										<div class="stars-block__how-much">17 отзывов
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pc-sliders pc-sliders--js">
 								<div class="pc-sliders__row row">
-									<div class="col-md-auto">
+									<div class="col-auto">
 										<div class="pc-sliders__thumb-slider">
+											<div class="swiper-prev">
+												<svg class="icon icon-chevron-left ">
+													<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+												</svg>
+											</div>
+											<div class="swiper-next">
+												<svg class="icon icon-chevron-right ">
+													<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+												</svg>
+											</div>
 											<div class="swiper sProdCard-thumb-js">
 												<div class="swiper-wrapper">
 													<div class="swiper-slide">
 														<div class="pc-sliders__th-item">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/thumb.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__th-item">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/thumb.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__th-item">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/thumb.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__th-item">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/thumb.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__th-item">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/thumb.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__th-item">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/thumb.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__th-item">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/thumb.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__th-item">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/thumb.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__th-item">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/thumb.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__th-item">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/thumb.jpg" alt=""/></div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="pc-sliders__slider-col col-md">
+									<div class="pc-sliders__slider-col col">
 										<div class="pc-sliders__slider">
 											<div class="swiper sProdCard-slider-js">
 												<div class="swiper-wrapper">
 													<div class="swiper-slide">
 														<div class="pc-sliders__slide-img">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/prod-card-img.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__slide-img">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/prod-card-img.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__slide-img">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/prod-card-img.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__slide-img">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/prod-card-img.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__slide-img">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/prod-card-img.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__slide-img">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/prod-card-img.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__slide-img">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/prod-card-img.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__slide-img">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/prod-card-img.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__slide-img">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/prod-card-img.jpg" alt=""/></div>
 														</div>
 													</div>
 													<div class="swiper-slide">
 														<div class="pc-sliders__slide-img">
-															<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
+															<div class="img-wrap-center"><img class="swiper-lazy" loading="lazy" src="img/@2x/prod-card-img.jpg" alt=""/></div>
 														</div>
 													</div>
 												</div>
@@ -1206,230 +1324,87 @@
 								</div>
 							</div>
 						</div>
-						<div class="sProdCard__side-col col-lg-4">
-							<div class="sProdCard__row row">
-								<div class="col-auto d-none d-sm-block">
-									<div class="sProdCard__icons-row row">
-										<div class="col-auto"><a class="sProdCard__icon" href="#">
-											<svg class="icon icon-heart ">
-												<use xlink:href="img/svg/sprite.svg#heart"></use>
-											</svg>В избранное</a>
-										</div>
-										<div class="col-auto"><a class="sProdCard__icon" href="#">
-											<svg class="icon icon-bars ">
-												<use xlink:href="img/svg/sprite.svg#bars"></use>
-											</svg>Сравнить</a>
-										</div>
-										<div class="col-auto"><a class="sProdCard__icon" href="#">
-											<svg class="icon icon-share ">
-												<use xlink:href="img/svg/sprite.svg#share"></use>
-											</svg>Поделиться</a>
-										</div>
-									</div>
+						<div class="sProdCard__side-col col-xl-4 col-lg-5">
+							<div class="sProdCard__block sProdCard__block--bg"> 
+								<div class="sProdCard__property">
+									<p class="available">В наличии</p>
+									<p><strong>Доставка:</strong></p>
+									<p>Курьером в пределах МКАД - при сумме заказа от 1500р (от 1500р до 4999р стоимость доставки 200руб, от 5000р - бесплатно)</p>
+									<p><strong> Самовывоз бесплатно: </strong></p>
+									<p>Москва Сормовский проезд 11/7</p>
+									<p>Отправка заказов по всей России</p>
+									<p><strong>Габариты в упаковке: </strong> 315мм x 375мм x 102мм</p>
+									<p><strong>Вес: </strong> 2.81кг</p>
+									<p> <span>12В</span><span>35 Нм</span><span>1500 об/мин</span></p>
 								</div>
-								<div class="col-12 col-lg">
-									<div class="pc-sliders pc-sliders--js d-lg-none">
-										<div class="pc-sliders__row row">
-											<div class="col-md-auto">
-												<div class="pc-sliders__thumb-slider">
-													<div class="swiper sProdCard-thumb-js">
-														<div class="swiper-wrapper">
-															<div class="swiper-slide">
-																<div class="pc-sliders__th-item">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__th-item">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__th-item">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__th-item">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__th-item">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__th-item">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__th-item">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__th-item">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__th-item">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__th-item">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/thumb.jpg" alt=""/></div>
-																</div>
-															</div>
-														</div>
+								<div class="buy-bl buy-bl--js">
+									<div class="buy-bl__close-bar d-md-none buy-bl-toggle-js">
+										<svg class="icon icon-chevron-down ">
+											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+										</svg>
+									</div>
+									<div class="buy-bl__main-row row">
+										<div class="buy-bl__price-col col col-md-6 col-lg-12">
+											<div class="buy-bl__price-row row">
+												<div class="col col-lg-12 col-xl">
+													<div class="buy-bl__price buy-bl__price--old">18 500 ₽
+													</div>
+													<div class="buy-bl__price buy-bl__price--new">16 500 ₽
 													</div>
 												</div>
-											</div>
-											<div class="pc-sliders__slider-col col-md">
-												<div class="pc-sliders__slider">
-													<div class="swiper sProdCard-slider-js">
-														<div class="swiper-wrapper">
-															<div class="swiper-slide">
-																<div class="pc-sliders__slide-img">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__slide-img">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__slide-img">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__slide-img">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__slide-img">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__slide-img">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__slide-img">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__slide-img">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__slide-img">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
-																</div>
-															</div>
-															<div class="swiper-slide">
-																<div class="pc-sliders__slide-img">
-																	<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-img.jpg" alt=""/></div>
-																</div>
-															</div>
+												<div class="buy-bl__inputs-col col col-lg-12 col-xl-auto">
+													<div class="buy-bl__price">
+														<div class="buy-bl__p-btn buy-bl__p-btn--min"> 
+														</div><input class="buy-bl__p-input form-control" type="number" value="1"/>
+														<div class="buy-bl__p-btn buy-bl__p-btn--plus">
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<h2 class="p-0">Шуруповерт с 6 положениями регулировки</h2>
-									<div class="sProdCard__subtitle">DF332DWME
-									</div>
-									<div class="sProdCard__property">
-										<p><strong>Артикул: 600080500</strong></p>
-										<p class="available">В наличии</p>
-										<p><strong>Доставка:</strong></p>
-										<p>Курьером в пределах МКАД - при сумме заказа от 1500р (от 1500р до 4999р стоимость доставки 200руб, от 5000р - бесплатно)</p>
-										<p><strong> Самовывоз бесплатно: </strong></p>
-										<p>Москва Сормовский проезд 11/7</p>
-										<p>Отправка заказов по всей России</p>
-										<p><strong>Габариты в упаковке: </strong> 315мм x 375мм x 102мм</p>
-										<p><strong>Вес: </strong> 2.81кг</p>
-										<p> <span>12В</span><span>35 Нм</span><span>1500 об/мин</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="buy-bl buy-bl--js">
-								<div class="buy-bl__close-bar d-md-none buy-bl-toggle-js">
-									<svg class="icon icon-chevron-down ">
-										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-									</svg>
-								</div>
-								<div class="buy-bl__main-row row">
-									<div class="buy-bl__price-col col col-md-6 col-lg-12">
-										<div class="buy-bl__price-row row">
-											<div class="col col-lg-12 col-xl d-flex align-items-center">
-												<div class="buy-bl__price buy-bl__price--old">18 500 ₽
+										<div class="buy-bl__btns-col col-auto col-md-6 col-lg-12">
+											<div class="buy-bl__btn-row row">
+												<div class="col-md-6 col-lg-12"><a class="buy-bl__buy-btn" href="#">в корзину</a>
 												</div>
-												<div class="buy-bl__price buy-bl__price--new">16 500 ₽
-												</div>
-											</div>
-											<div class="buy-bl__inputs-col col col-lg-12 col-xl">
-												<div class="buy-bl__price">
-													<div class="buy-bl__p-btn buy-bl__p-btn--min"> 
-													</div><input class="buy-bl__p-input form-control" type="number" value="1"/>
-													<div class="buy-bl__p-btn buy-bl__p-btn--plus">
-													</div>
+												<div class="buy-bl__bill-col col-md-6 col-lg-12"><a class="buy-bl__bill-btn" href="#">Запросить счёт</a>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="buy-bl__btns-col col-auto col-md-6 col-lg-12">
-										<div class="buy-bl__btn-row row">
-											<div class="col-md-6 col-lg-12"><a class="buy-bl__buy-btn" href="#">Купить</a>
+										<div class="buy-bl__open-col col-auto d-md-none buy-bl-toggle-js">
+											<div class="buy-bl__open"><span></span>
 											</div>
-											<div class="buy-bl__bill-col col-md-6 col-lg-12"><a class="buy-bl__bill-btn" href="#">Запросить счёт</a>
-											</div>
-										</div>
-									</div>
-									<div class="buy-bl__open-col col-auto d-md-none buy-bl-toggle-js">
-										<div class="buy-bl__open"><span></span>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="mini-slider">
-								<div class="swiper mini-slider-js">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide"><a class="mini-slider__img" href="#">
-											<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/mini-slide.jpg" alt=""/></div></a>
-										</div>
-										<div class="swiper-slide"><a class="mini-slider__img" href="#">
-											<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/mini-slide.jpg" alt=""/></div></a>
-										</div>
-										<div class="swiper-slide"><a class="mini-slider__img" href="#">
-											<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/mini-slide.jpg" alt=""/></div></a>
-										</div>
-										<div class="swiper-slide"><a class="mini-slider__img" href="#">
-											<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/mini-slide.jpg" alt=""/></div></a>
-										</div>
-										<div class="swiper-slide"><a class="mini-slider__img" href="#">
-											<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/mini-slide.jpg" alt=""/></div></a>
+							<div class="sProdCard__block sProdCard__block--border">
+								<div class="mini-slider">
+									<div class="swiper mini-slider-js">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><a class="mini-slider__img" href="#">
+												<div class="img-wrap-center"><img loading="lazy" src="img/@2x/mini-slide.jpg" alt=""/></div></a>
+											</div>
+											<div class="swiper-slide"><a class="mini-slider__img" href="#">
+												<div class="img-wrap-center"><img loading="lazy" src="img/@2x/mini-slide.jpg" alt=""/></div></a>
+											</div>
+											<div class="swiper-slide"><a class="mini-slider__img" href="#">
+												<div class="img-wrap-center"><img loading="lazy" src="img/@2x/mini-slide.jpg" alt=""/></div></a>
+											</div>
+											<div class="swiper-slide"><a class="mini-slider__img" href="#">
+												<div class="img-wrap-center"><img loading="lazy" src="img/@2x/mini-slide.jpg" alt=""/></div></a>
+											</div>
+											<div class="swiper-slide"><a class="mini-slider__img" href="#">
+												<div class="img-wrap-center"><img loading="lazy" src="img/@2x/mini-slide.jpg" alt=""/></div></a>
+											</div>
 										</div>
 									</div>
+									<div class="swiper-pagination"></div>
 								</div>
-								<div class="swiper-pagination"></div>
 							</div>
 						</div>
 					</div>
 					<!-- start sCatalog-->
-					<div class="sCatalog section" id="sCatalogHit">
+					<div class="sCatalog section" id="sCatalog">
 						<div class="container">
 							<div class="section-title">
 								<h2>с этим товаром покупают</h2>
@@ -1439,114 +1414,184 @@
 									<div class="swiper-wrapper">
 										<div class="sCatalog__slide swiper-slide">
 											<div class="prod-item">
-												<div class="prod-item__img-wrap">
-													<div class="prod-item__links"><a class="prod-item__compare" href="#">
-														<svg class="icon icon-bars ">
-															<use xlink:href="img/svg/sprite.svg#bars"></use>
-														</svg></a><a class="prod-item__bookmarks" href="#">
-														<svg class="icon icon-heart ">
-															<use xlink:href="img/svg/sprite.svg#heart"></use>
-														</svg></a>
-													</div><a class="prod-item__img-link" href="#">
-													<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/hit-1.jpg" alt=""/></div></a>
+												<div class="prod-item__links"><a class="prod-item__compare prod-item__compare--active" href="#">
+													<svg class="icon icon-bars ">
+														<use xlink:href="img/svg/sprite.svg#bars"></use>
+													</svg></a><a class="prod-item__bookmarks" href="#">
+													<svg class="icon icon-icon-favorite-default ">
+														<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+													</svg></a>
+												</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+												<div class="img-wrap-center"><img src="img/@2x/hit-1.png" alt="" loading="lazy"/></div></span></a>
+												<div class="prod-item__box">
+													<div class="prod-item__title">
+													</div>
+													<div class="row align-items-end">
+														<div class="col">
+															<div class="prod-item__price-wrap row">
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--new">24 600 ₽
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-auto"><a class="prod-item__btn" href="#">
+															<svg class="icon icon-icon_bag ">
+																<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+															</svg></a>
+														</div>
+													</div>
 												</div>
-												<div class="prod-item__box"><a class="prod-item__title" href="#">Молоток отбойный легкий</a>
-													<div class="prod-item__code">JR3050T
-													</div>
-													<div class="prod-item__price-wrap">
-														<div class="prod-item__price prod-item__price--old">18 500 ₽
-														</div>
-														<div class="prod-item__price prod-item__price--new">16 500 ₽
-														</div>
-													</div>
-												</div><a class="prod-item__btn" href="#">Купить</a>
 											</div>
 										</div>
 										<div class="sCatalog__slide swiper-slide">
 											<div class="prod-item">
-												<div class="prod-item__img-wrap">
-													<div class="prod-item__links"><a class="prod-item__compare" href="#">
-														<svg class="icon icon-bars ">
-															<use xlink:href="img/svg/sprite.svg#bars"></use>
-														</svg></a><a class="prod-item__bookmarks" href="#">
-														<svg class="icon icon-heart ">
-															<use xlink:href="img/svg/sprite.svg#heart"></use>
-														</svg></a>
+												<div class="prod-item__links"><a class="prod-item__compare prod-item__compare--active" href="#">
+													<svg class="icon icon-bars ">
+														<use xlink:href="img/svg/sprite.svg#bars"></use>
+													</svg></a><a class="prod-item__bookmarks" href="#">
+													<svg class="icon icon-icon-favorite-default ">
+														<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+													</svg></a>
+												</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+												<div class="img-wrap-center"><img src="img/@2x/hit-2.png" alt="" loading="lazy"/></div></span></a>
+												<div class="prod-item__box">
+													<div class="prod-item__title">PXC TE-CI 18 Li Brushless-PXC GE-CM 18/33 Li (1x4,0Ah)
 													</div>
-													<div class="prod-item__badge bg-red">Новинка
-													</div><a class="prod-item__img-link" href="#">
-													<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/hit-2.jpg" alt=""/></div></a>
+													<div class="row align-items-end">
+														<div class="col">
+															<div class="prod-item__price-wrap row">
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--new">24 600 ₽
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-auto"><a class="prod-item__btn" href="#">
+															<svg class="icon icon-icon_bag ">
+																<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+															</svg></a>
+														</div>
+													</div>
 												</div>
-												<div class="prod-item__box"><a class="prod-item__title" href="#">Шуруповерт с 6 положениями регулировки</a>
-													<div class="prod-item__code">FS2700
-													</div>
-													<div class="prod-item__price-wrap">
-														<div class="prod-item__price prod-item__price--old">18 500 ₽
-														</div>
-														<div class="prod-item__price prod-item__price--new">16 500 ₽
-														</div>
-													</div>
-												</div><a class="prod-item__btn" href="#">Купить</a>
 											</div>
 										</div>
 										<div class="sCatalog__slide swiper-slide">
 											<div class="prod-item">
-												<div class="prod-item__img-wrap">
-													<div class="prod-item__links"><a class="prod-item__compare" href="#">
-														<svg class="icon icon-bars ">
-															<use xlink:href="img/svg/sprite.svg#bars"></use>
-														</svg></a><a class="prod-item__bookmarks" href="#">
-														<svg class="icon icon-heart ">
-															<use xlink:href="img/svg/sprite.svg#heart"></use>
-														</svg></a>
-													</div><a class="prod-item__img-link" href="#">
-													<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/hit-3.jpg" alt=""/></div></a>
+												<div class="prod-item__links"><a class="prod-item__compare" href="#">
+													<svg class="icon icon-bars ">
+														<use xlink:href="img/svg/sprite.svg#bars"></use>
+													</svg></a><a class="prod-item__bookmarks" href="#">
+													<svg class="icon icon-icon-favorite-default ">
+														<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+													</svg></a>
+												</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+												<div class="img-wrap-center"><img src="img/@2x/hit-2.png" alt="" loading="lazy"/></div></span></a>
+												<div class="prod-item__box">
+													<div class="prod-item__title">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
+													</div>
+													<div class="row align-items-end">
+														<div class="col">
+															<div class="prod-item__price-wrap row">
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--old">28 400 ₽
+																	</div>
+																</div>
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--new">24 600 ₽
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-auto"><a class="prod-item__btn" href="#">
+															<svg class="icon icon-icon_bag ">
+																<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+															</svg></a>
+														</div>
+													</div>
 												</div>
-												<div class="prod-item__box"><a class="prod-item__title" href="#">Сабельная пила</a>
-													<div class="prod-item__code">JR3050T
-													</div>
-													<div class="prod-item__price-wrap">
-														<div class="prod-item__price prod-item__price--old">18 500 ₽
-														</div>
-														<div class="prod-item__price prod-item__price--new">16 500 ₽
-														</div>
-													</div>
-												</div><a class="prod-item__btn" href="#">Купить</a>
 											</div>
 										</div>
 										<div class="sCatalog__slide swiper-slide">
 											<div class="prod-item">
-												<div class="prod-item__img-wrap">
-													<div class="prod-item__links"><a class="prod-item__compare" href="#">
-														<svg class="icon icon-bars ">
-															<use xlink:href="img/svg/sprite.svg#bars"></use>
-														</svg></a><a class="prod-item__bookmarks" href="#">
-														<svg class="icon icon-heart ">
-															<use xlink:href="img/svg/sprite.svg#heart"></use>
-														</svg></a>
-													</div><a class="prod-item__img-link" href="#">
-													<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/hit-3.jpg" alt=""/></div></a>
+												<div class="prod-item__links"><a class="prod-item__compare" href="#">
+													<svg class="icon icon-bars ">
+														<use xlink:href="img/svg/sprite.svg#bars"></use>
+													</svg></a><a class="prod-item__bookmarks" href="#">
+													<svg class="icon icon-icon-favorite-default ">
+														<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+													</svg></a>
+												</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+												<div class="img-wrap-center"><img src="img/@2x/hit-2.png" alt="" loading="lazy"/></div></span></a>
+												<div class="prod-item__box">
+													<div class="prod-item__title">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
+													</div>
+													<div class="row align-items-end">
+														<div class="col">
+															<div class="prod-item__price-wrap row">
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--old">28 400 ₽
+																	</div>
+																</div>
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--new">24 600 ₽
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-auto"><a class="prod-item__btn" href="#">
+															<svg class="icon icon-icon_bag ">
+																<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+															</svg></a>
+														</div>
+													</div>
 												</div>
-												<div class="prod-item__box"><a class="prod-item__title" href="#">Сабельная пила</a>
-													<div class="prod-item__code">JR3050T
+											</div>
+										</div>
+										<div class="sCatalog__slide swiper-slide">
+											<div class="prod-item">
+												<div class="prod-item__links"><a class="prod-item__compare" href="#">
+													<svg class="icon icon-bars ">
+														<use xlink:href="img/svg/sprite.svg#bars"></use>
+													</svg></a><a class="prod-item__bookmarks" href="#">
+													<svg class="icon icon-icon-favorite-default ">
+														<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+													</svg></a>
+												</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+												<div class="img-wrap-center"><img src="img/@2x/hit-2.png" alt="" loading="lazy"/></div></span></a>
+												<div class="prod-item__box">
+													<div class="prod-item__title">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
 													</div>
-													<div class="prod-item__price-wrap">
-														<div class="prod-item__price prod-item__price--old">18 500 ₽
+													<div class="row align-items-end">
+														<div class="col">
+															<div class="prod-item__price-wrap row">
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--old">28 400 ₽
+																	</div>
+																</div>
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--new">24 600 ₽
+																	</div>
+																</div>
+															</div>
 														</div>
-														<div class="prod-item__price prod-item__price--new">16 500 ₽
+														<div class="col-auto"><a class="prod-item__btn" href="#">
+															<svg class="icon icon-icon_bag ">
+																<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+															</svg></a>
 														</div>
 													</div>
-												</div><a class="prod-item__btn" href="#">Купить</a>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="swiper-prev d-none d-sm-flex">
+								<div class="swiper-button-hand swiper-prev d-none d-sm-flex">
 									<svg class="icon icon-chevron-left ">
 										<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
 									</svg>
 								</div>
-								<div class="swiper-next d-none d-sm-flex">
+								<div class="swiper-button-hand swiper-next d-none d-sm-flex">
 									<svg class="icon icon-chevron-right ">
 										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
 									</svg>
@@ -1555,7 +1600,7 @@
 						</div>
 					</div>
 					<!-- start sCatalog-->
-					<div class="sCatalog section" id="sCatalogHit">
+					<div class="sCatalog section" id="sCatalog">
 						<div class="container">
 							<div class="section-title">
 								<h2>похожие товары</h2>
@@ -1565,114 +1610,184 @@
 									<div class="swiper-wrapper">
 										<div class="sCatalog__slide swiper-slide">
 											<div class="prod-item">
-												<div class="prod-item__img-wrap">
-													<div class="prod-item__links"><a class="prod-item__compare" href="#">
-														<svg class="icon icon-bars ">
-															<use xlink:href="img/svg/sprite.svg#bars"></use>
-														</svg></a><a class="prod-item__bookmarks" href="#">
-														<svg class="icon icon-heart ">
-															<use xlink:href="img/svg/sprite.svg#heart"></use>
-														</svg></a>
-													</div><a class="prod-item__img-link" href="#">
-													<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/hit-1.jpg" alt=""/></div></a>
+												<div class="prod-item__links"><a class="prod-item__compare prod-item__compare--active" href="#">
+													<svg class="icon icon-bars ">
+														<use xlink:href="img/svg/sprite.svg#bars"></use>
+													</svg></a><a class="prod-item__bookmarks" href="#">
+													<svg class="icon icon-icon-favorite-default ">
+														<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+													</svg></a>
+												</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+												<div class="img-wrap-center"><img src="img/@2x/hit-1.png" alt="" loading="lazy"/></div></span></a>
+												<div class="prod-item__box">
+													<div class="prod-item__title">
+													</div>
+													<div class="row align-items-end">
+														<div class="col">
+															<div class="prod-item__price-wrap row">
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--new">24 600 ₽
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-auto"><a class="prod-item__btn" href="#">
+															<svg class="icon icon-icon_bag ">
+																<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+															</svg></a>
+														</div>
+													</div>
 												</div>
-												<div class="prod-item__box"><a class="prod-item__title" href="#">Молоток отбойный легкий</a>
-													<div class="prod-item__code">JR3050T
-													</div>
-													<div class="prod-item__price-wrap">
-														<div class="prod-item__price prod-item__price--old">18 500 ₽
-														</div>
-														<div class="prod-item__price prod-item__price--new">16 500 ₽
-														</div>
-													</div>
-												</div><a class="prod-item__btn" href="#">Купить</a>
 											</div>
 										</div>
 										<div class="sCatalog__slide swiper-slide">
 											<div class="prod-item">
-												<div class="prod-item__img-wrap">
-													<div class="prod-item__links"><a class="prod-item__compare" href="#">
-														<svg class="icon icon-bars ">
-															<use xlink:href="img/svg/sprite.svg#bars"></use>
-														</svg></a><a class="prod-item__bookmarks" href="#">
-														<svg class="icon icon-heart ">
-															<use xlink:href="img/svg/sprite.svg#heart"></use>
-														</svg></a>
+												<div class="prod-item__links"><a class="prod-item__compare prod-item__compare--active" href="#">
+													<svg class="icon icon-bars ">
+														<use xlink:href="img/svg/sprite.svg#bars"></use>
+													</svg></a><a class="prod-item__bookmarks" href="#">
+													<svg class="icon icon-icon-favorite-default ">
+														<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+													</svg></a>
+												</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+												<div class="img-wrap-center"><img src="img/@2x/hit-2.png" alt="" loading="lazy"/></div></span></a>
+												<div class="prod-item__box">
+													<div class="prod-item__title">PXC TE-CI 18 Li Brushless-PXC GE-CM 18/33 Li (1x4,0Ah)
 													</div>
-													<div class="prod-item__badge bg-red">Новинка
-													</div><a class="prod-item__img-link" href="#">
-													<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/hit-2.jpg" alt=""/></div></a>
+													<div class="row align-items-end">
+														<div class="col">
+															<div class="prod-item__price-wrap row">
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--new">24 600 ₽
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-auto"><a class="prod-item__btn" href="#">
+															<svg class="icon icon-icon_bag ">
+																<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+															</svg></a>
+														</div>
+													</div>
 												</div>
-												<div class="prod-item__box"><a class="prod-item__title" href="#">Шуруповерт с 6 положениями регулировки</a>
-													<div class="prod-item__code">FS2700
-													</div>
-													<div class="prod-item__price-wrap">
-														<div class="prod-item__price prod-item__price--old">18 500 ₽
-														</div>
-														<div class="prod-item__price prod-item__price--new">16 500 ₽
-														</div>
-													</div>
-												</div><a class="prod-item__btn" href="#">Купить</a>
 											</div>
 										</div>
 										<div class="sCatalog__slide swiper-slide">
 											<div class="prod-item">
-												<div class="prod-item__img-wrap">
-													<div class="prod-item__links"><a class="prod-item__compare" href="#">
-														<svg class="icon icon-bars ">
-															<use xlink:href="img/svg/sprite.svg#bars"></use>
-														</svg></a><a class="prod-item__bookmarks" href="#">
-														<svg class="icon icon-heart ">
-															<use xlink:href="img/svg/sprite.svg#heart"></use>
-														</svg></a>
-													</div><a class="prod-item__img-link" href="#">
-													<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/hit-3.jpg" alt=""/></div></a>
+												<div class="prod-item__links"><a class="prod-item__compare" href="#">
+													<svg class="icon icon-bars ">
+														<use xlink:href="img/svg/sprite.svg#bars"></use>
+													</svg></a><a class="prod-item__bookmarks" href="#">
+													<svg class="icon icon-icon-favorite-default ">
+														<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+													</svg></a>
+												</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+												<div class="img-wrap-center"><img src="img/@2x/hit-2.png" alt="" loading="lazy"/></div></span></a>
+												<div class="prod-item__box">
+													<div class="prod-item__title">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
+													</div>
+													<div class="row align-items-end">
+														<div class="col">
+															<div class="prod-item__price-wrap row">
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--old">28 400 ₽
+																	</div>
+																</div>
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--new">24 600 ₽
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-auto"><a class="prod-item__btn" href="#">
+															<svg class="icon icon-icon_bag ">
+																<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+															</svg></a>
+														</div>
+													</div>
 												</div>
-												<div class="prod-item__box"><a class="prod-item__title" href="#">Сабельная пила</a>
-													<div class="prod-item__code">JR3050T
-													</div>
-													<div class="prod-item__price-wrap">
-														<div class="prod-item__price prod-item__price--old">18 500 ₽
-														</div>
-														<div class="prod-item__price prod-item__price--new">16 500 ₽
-														</div>
-													</div>
-												</div><a class="prod-item__btn" href="#">Купить</a>
 											</div>
 										</div>
 										<div class="sCatalog__slide swiper-slide">
 											<div class="prod-item">
-												<div class="prod-item__img-wrap">
-													<div class="prod-item__links"><a class="prod-item__compare" href="#">
-														<svg class="icon icon-bars ">
-															<use xlink:href="img/svg/sprite.svg#bars"></use>
-														</svg></a><a class="prod-item__bookmarks" href="#">
-														<svg class="icon icon-heart ">
-															<use xlink:href="img/svg/sprite.svg#heart"></use>
-														</svg></a>
-													</div><a class="prod-item__img-link" href="#">
-													<div class="img-wrap-center"><img class="swiper-lazy" src="#" data-src="img/@2x/hit-3.jpg" alt=""/></div></a>
+												<div class="prod-item__links"><a class="prod-item__compare" href="#">
+													<svg class="icon icon-bars ">
+														<use xlink:href="img/svg/sprite.svg#bars"></use>
+													</svg></a><a class="prod-item__bookmarks" href="#">
+													<svg class="icon icon-icon-favorite-default ">
+														<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+													</svg></a>
+												</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+												<div class="img-wrap-center"><img src="img/@2x/hit-2.png" alt="" loading="lazy"/></div></span></a>
+												<div class="prod-item__box">
+													<div class="prod-item__title">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
+													</div>
+													<div class="row align-items-end">
+														<div class="col">
+															<div class="prod-item__price-wrap row">
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--old">28 400 ₽
+																	</div>
+																</div>
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--new">24 600 ₽
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-auto"><a class="prod-item__btn" href="#">
+															<svg class="icon icon-icon_bag ">
+																<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+															</svg></a>
+														</div>
+													</div>
 												</div>
-												<div class="prod-item__box"><a class="prod-item__title" href="#">Сабельная пила</a>
-													<div class="prod-item__code">JR3050T
+											</div>
+										</div>
+										<div class="sCatalog__slide swiper-slide">
+											<div class="prod-item">
+												<div class="prod-item__links"><a class="prod-item__compare" href="#">
+													<svg class="icon icon-bars ">
+														<use xlink:href="img/svg/sprite.svg#bars"></use>
+													</svg></a><a class="prod-item__bookmarks" href="#">
+													<svg class="icon icon-icon-favorite-default ">
+														<use xlink:href="img/svg/sprite.svg#icon-favorite-default"></use>
+													</svg></a>
+												</div><a class="prod-item__img-link" href="#"><span class="prod-item__img-wrap">
+												<div class="img-wrap-center"><img src="img/@2x/hit-2.png" alt="" loading="lazy"/></div></span></a>
+												<div class="prod-item__box">
+													<div class="prod-item__title">MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
 													</div>
-													<div class="prod-item__price-wrap">
-														<div class="prod-item__price prod-item__price--old">18 500 ₽
+													<div class="row align-items-end">
+														<div class="col">
+															<div class="prod-item__price-wrap row">
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--old">28 400 ₽
+																	</div>
+																</div>
+																<div class="col-auto">
+																	<div class="prod-item__price prod-item__price--new">24 600 ₽
+																	</div>
+																</div>
+															</div>
 														</div>
-														<div class="prod-item__price prod-item__price--new">16 500 ₽
+														<div class="col-auto"><a class="prod-item__btn" href="#">
+															<svg class="icon icon-icon_bag ">
+																<use xlink:href="img/svg/sprite.svg#icon_bag"></use>
+															</svg></a>
 														</div>
 													</div>
-												</div><a class="prod-item__btn" href="#">Купить</a>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="swiper-prev d-none d-sm-flex">
+								<div class="swiper-button-hand swiper-prev d-none d-sm-flex">
 									<svg class="icon icon-chevron-left ">
 										<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
 									</svg>
 								</div>
-								<div class="swiper-next d-none d-sm-flex">
+								<div class="swiper-button-hand swiper-next d-none d-sm-flex">
 									<svg class="icon icon-chevron-right ">
 										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
 									</svg>
@@ -1694,15 +1809,22 @@
 				<div class="footer__head">
 					<div class="container">
 						<div class="footer__head-row row align-items-center">
-							<div class="col-md-4"><a class="footer__logo" href="#"><img loading="lazy" src="img/logo.png" alt=""/></a>
+							<div class="col-sm"><a class="footer__logo" href="#"><img src="img/logo.png" alt="" loading="lazy"/></a>
 							</div>
-							<div class="col-md-auto mb-md-0">
-								<div class="footer__blue-row row align-items-center">
-									<div class="col-sm-auto"><a class="footer__g-item" href="#"><span class="footer__g-icon"><img loading="lazy" src="img/svg/blue-item-1.svg" alt=""/></span><span class="footer__g-txt">Глобальная сеть</span></a>
-									</div>
-									<div class="col-sm-auto"><a class="footer__g-item" href="#"><span class="footer__g-icon"><img loading="lazy" src="img/svg/blue-item-2.svg" alt=""/></span><span class="footer__g-txt">Карта сайта </span></a>
-									</div>
-								</div>
+							<div class="col-auto"><a class="footer__head-link" href="#" target="_blank">
+								<svg class="icon icon-global ">
+									<use xlink:href="img/svg/sprite.svg#global"></use>
+								</svg>Глобальная сеть</a>
+							</div>
+							<div class="col-auto"><a class="footer__head-link" href="#" target="_blank">
+								<svg class="icon icon-site-map" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="6.5" y="0.5" width="4" height="4" rx="1.5" fill="#282828" stroke="#282828"/>
+<rect x="0.5" y="11.5" width="4" height="4" rx="1.5" fill="#282828" stroke="#282828"/>
+<rect x="7.5" y="11.5" width="4" height="4" rx="1.5" fill="#282828" stroke="#282828"/>
+<rect x="14.5" y="11.5" width="4" height="4" rx="1.5" fill="#282828" stroke="#282828"/>
+<path d="M9 4V12" stroke="#282828"/>
+<path d="M3 12V8H17V12" stroke="#282828"/>
+</svg> Карта сайта </a>
 							</div>
 						</div>
 					</div>
@@ -1771,7 +1893,7 @@
 								</div>
 							</div>
 							<div class="col-lg-auto d-none d-lg-block">
-								<div class="footer__all-rights">© Makita Co., Ltd. All rights reserved.
+								<div class="footer__all-rights">© Einhell Co., Ltd. All rights reserved.
 								</div>
 							</div>
 						</div>
@@ -1779,7 +1901,7 @@
 				</div>
 				<div class="footer__sm-all-r d-lg-none">
 					<div class="container text-center">
-						<div class="footer__all-rights">© Makita Co., Ltd. All rights reserved.
+						<div class="footer__all-rights">© Einhell Co., Ltd. All rights reserved.
 						</div>
 					</div>
 				</div>
@@ -2068,12 +2190,10 @@
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/dropzone/min/dropzone.min.js"></script>
-		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<!-- modal libs-->
-		<!-- slider libs-->
-		<script src="libs/swiper/swiper-bundle.min.js"> </script>
-		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>

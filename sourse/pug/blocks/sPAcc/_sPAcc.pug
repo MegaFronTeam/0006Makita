@@ -5,7 +5,10 @@ mixin sPAcc(data)
 			+e.row.row.tabs
 				.col-lg-3.tabs__caption
 					+e.tab-btn.tabs__btn Профиль
+						+icon("user")
 					+e.tab-btn.tabs__btn.active История заказов
+					+e.tab-btn Выход
+						+icon("logout")
 				.col-lg-9.tabs__wrap
 					+e.info-content.tabs__content
 						+e.profile-txt
@@ -69,6 +72,12 @@ mixin pAccOrdersItem(activeClasses)
 						+icon('chevron-down')
 		+e.content.dd-content-js(class=activeClasses)
 			+e.top-box
+				+e.btns.row
+					.col-auto
+						+e.btn.btn.btn-primary(href="#") оплатить заказ
+						
+					.col-auto
+						+e.btn.btn.btn-light(href="#") повторить заказ
 				+e.t-row.row
 					+e.tl-col.col-md-auto
 						+e.t-title Информация о заказе
@@ -108,15 +117,15 @@ mixin goodsItem(amount='1')
 			+e.img-col.col-auto
 				+e.img(href='#' target="_blank")
 					img(loading="lazy" src="img/@2x/category-7.png" alt="")
+			+e.txt-col.col-auto
+				+e.title(href='#' target="_blank") Шуруповерт с 6 положениями регулировки
+				+e.code FS2700
+			+e.amount-col.col-auto=`× ${amount}`
 			+e.col-with-row.col
 				+e.inner-row.row.align-items-center
-					+e.txt-col.col-md
-						+e.title(href='#' target="_blank") Шуруповерт с 6 положениями регулировки
-						+e.code FS2700
 					.col-md-auto
 						+e.price--old 18 500 ₽
 						+e.price--new 16 500 ₽
-			+e.amount-col.col-auto=`× ${amount}`
 
 mixin tInfoItem(key,val)
 	+e.ti-row.row

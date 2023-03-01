@@ -2,23 +2,68 @@
   margin-top: auto;
   background-color: #2A2D30;
   color: $white;
+
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  &::after{
+    content: url(../img/footer-logo.png);
+    @include a-cent1(x);
+    z-index: -1;
+    pointer-events: none;
+    // top: 60%;
+    bottom: -93px;
+    opacity: 0.1;
+  }
+  
   a {
     color: $white;
   }
   &__head{
-    padding: 18.5px 0 23.5px 0;
-    // background-color: #2A2D30;
-    @include media-breakpoint-up(md){
-      padding: 15px 0 25px;
-    }
-    border-bottom: 10px solid #1F839F;
+    padding: 14px 0;
+    background: #D2D2D2; 
+    border-bottom: 3px solid $primary;
   }
   &__head-row{
     justify-content: space-between;
-    & > *{
-      margin-bottom: 24px;
+    // & > *{
+    //   margin-bottom: 24px;
+    // }
+    // margin-bottom: -24px;
+    a{
+          display: inline-flex;
+    align-items: center;
+    color: $body-color;
+    .icon{
+      font-size: rem(20);
+      margin-right: rem(8);
+      &-site-map{
+        font-size: rem(19);
+        path{
+          fill: none;
+          stroke: currentColor;
+        }
+      }
     }
-    margin-bottom: -24px;
+    --bs-link-color-rgb: var(--bs-body-color-rgb);
+    }
+  }
+
+  &__head-link{
+    display: inline-flex;
+    align-items: center;
+    .icon{
+      font-size: rem(20);
+      margin-right: rem(8);
+      &-site-map{
+        font-size: rem(19);
+        path{
+          fill: none;
+          stroke: currentColor;
+        }
+      }
+    }
+    --bs-link-color-rgb: var(--bs-body-color-rgb);
   }
   &__logo{
     display: block;
@@ -218,6 +263,7 @@
   }
   //
   &__bot{
+    text-transform: uppercase;
     padding: 13px 0 5px;
     @include media-breakpoint-up(sm){
       padding: 25px 0;
@@ -272,6 +318,7 @@
   &__sm-all-r{
     border-top: 1px solid $gray-310;
     padding: 14px 0;
+    text-transform: uppercase;
   }
   &__all-rights{
     font-size: 12px;

@@ -6,7 +6,9 @@ mixin sCompare(data)
 				+e.title-col
 					//- +e.t-header
 					+e.t-slide-spacer
-						img(src="img/@2x/order-logo.png" alt="logo")
+						+e.t-slide-spacer-title товары
+
+						img(src="img/compare-img.jpg" alt="")
 					+in-c('checkbox', 'Показать только различия')
 					+e.t-header--indent.h3 Двигатель
 					+e.t-table--center
@@ -21,7 +23,6 @@ mixin sCompare(data)
 						+e.t-item Рабочий объем цилиндра
 						+e.t-item Номинальная мощность
 				+e.slider-col.col-md-8.col-lg-9.ms-auto
-					h3 Товары
 					+e.slider-wrap
 						.swiper.sCompare-slider-js
 							.swiper-wrapper
@@ -52,12 +53,15 @@ mixin sCompareSlide(active, tag=false, code='JR3050T',name='Молоток от�
 					+e.bookmarks(href="#")
 						+icon('heart')
 			+e.wrap
-				+e.name(href='#')=name
-				+e.code=code
-				+e.price-bl
-					+e.price--old 18 500 ₽
-					+e.price--new 16 500 ₽
-			+e.btn(href='#') Купить
+				+e.name(href='#')=name 
+				+e.footer-row.row
+					.col
+						+e.price-bl
+							+e.price--old 18 500 ₽
+							+e.price--new 16 500 ₽
+					.col-auto
+						+e.btn(href='#')
+							+icon("icon_bag")
 		+e.content
 			if block
 				block

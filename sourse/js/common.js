@@ -3,56 +3,65 @@ const JSCCommon = {
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 
 	modalCall() {
-		$(".link-modal").fancybox({
+		const link = '[data-fancybox="modal"], .link-modal-js';
+
+		Fancybox.bind(link, {
 			arrows: false,
-			infobar: false,
+			// infobar: false,
 			touch: false,
+			trapFocus: false,
+			placeFocusBack: false,
+			infinite: false,
+			dragToClose: false,
 			type: 'inline',
 			autoFocus: false,
-			i18n: {
-				en: {
-					CLOSE: "Закрыть",
-					NEXT: "Вперед",
-					PREV: "Назад",
-				},
-			},
-			beforeLoad: function () {
-				document.querySelector("html").classList.add("fixed")
-			},
-			afterClose: function () {
-				document.querySelector("html").classList.remove("fixed")
+			groupAll: false, 
+			groupAttr: false,
+			// showClass: "fancybox-throwOutUp",
+			// hideClass: "fancybox-throwOutDown",
+			l10n: {
+				CLOSE: "Закрыть",
+				Escape: "Закрыть",
+				NEXT: "Вперед",
+				PREV: "Назад",
+				MODAL: "Вы можете закрыть это модальное окно с помощью клавиши ESC.",
+				ERROR: "Что-то пошло не так. Пожалуйста, повторите попытку позже",
+				IMAGE_ERROR: "Изображение не найдено",
+				ELEMENT_NOT_FOUND: "HTML-элемент не найден",
+				AJAX_NOT_FOUND: "Ошибка при загрузке AJAX: не найдено",
+				AJAX_FORBIDDEN: "Ошибка при загрузке AJAX: запрещено",
+				IFRAME_ERROR: "Ошибка загрузки iframe",
 			},
 		});
-		$(".modal-close-js").click(function () {
-			$.fancybox.close();
-		})
-		$.fancybox.defaults.backFocus = false;
-		const linkModal = document.querySelectorAll('.link-modal');
-		function addData() {
-			linkModal.forEach(element => {
-				element.addEventListener('click', () => {
-					let modal = document.querySelector(element.getAttribute("href"));
-					const data = element.dataset;
-
-					function setValue(val, elem) {
-						if (elem && val) {
-							const el = modal.querySelector(elem)
-							el.tagName == "INPUT"
-								? el.value = val
-								: el.innerHTML = val;
-							// console.log(modal.querySelector(elem).tagName)
-						}
-					}
-					setValue(data.title, '.ttu');
-					setValue(data.text, '.after-headline');
-					setValue(data.btn, '.btn');
-					setValue(data.order, '.order');
-				})
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
+				Fancybox.close();
 			})
-		}
-		if (linkModal) addData();
+		})
+		Fancybox.bind('[data-fancybox]', {
+			placeFocusBack: false,
+		});
+		document.addEventListener('click', (event) => {
+			let element = event.target.closest(link)
+			if (!element) return;
+			let modal = document.querySelector("#" + element.dataset.src);
+			const data = element.dataset;
+
+			function setValue(val, elem) {
+				if (elem && val) {
+					const el = modal.querySelector(elem)
+					el.tagName == "INPUT"
+						? el.value = val
+						: el.innerHTML = val;
+					// console.log(modal.querySelector(elem).tagName)
+				}
+			}
+			setValue(data.title, '.ttu');
+			setValue(data.text, '.after-headline');
+			setValue(data.btn, '.btn');
+			setValue(data.order, '.order');
+		})
 	},
-	// /modalCall
 	// tabs  .
 	tabscostume(tab) {
 		let tabs = {
@@ -419,13 +428,12 @@ function eventHandler() {
 		const prodCardThumb = new Swiper(pcSlider.querySelector('.sProdCard-thumb-js'), {
 			slidesPerView: 'auto', 
 			slideToClickedSlide: true,
+			direction: 'vertical',
 			breakpoints: {
-				0: {
-					direction: 'horizontal',
+				0: { 
 					spaceBetween: 16,
 				},
 				768: {
-					direction: 'vertical',
 					spaceBetween: 20,
 				},
 			},
@@ -433,6 +441,10 @@ function eventHandler() {
 			lazy: {
 				loadPrevNext: true,
 				loadPrevNextAmount: 6,
+			},
+			navigation: {
+				nextEl: pcSlider.querySelector('.swiper-next'),
+				prevEl: pcSlider.querySelector('.swiper-prev'),
 			},
 		});
 		let prodCardSlider = new Swiper(pcSlider.querySelector('.sProdCard-slider-js'), {
@@ -445,6 +457,7 @@ function eventHandler() {
 				loadPrevNext: true,
 				loadPrevNextAmount: 3,
 			},
+
 			// loop: true,
 		});
 
@@ -466,14 +479,15 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+	
 	//floating bar
 	$('.buy-bl-toggle-js').click(function (){
 		$('.buy-bl--js').toggleClass('open');
 	});
-
-
+	
 	let captionSlider = new Swiper('.prodTabs-caption-slider-js', {
 		slidesPerView: 'auto',
+		spaceBetween: 30,
 		freeMode: true,
 		freeModeMomentum: true,
 		watchOverflow: true,

@@ -2,7 +2,8 @@
 
 .top-nav {
 	border-bottom: 1px solid $gray-310;
-
+	background-color: $primary;
+	
 	&__container{
 		padding-top: 14px;
 		padding-bottom: 14px;
@@ -17,7 +18,7 @@
 		position: relative;
 	}
 	&__burger-col{
-		--burger-bar-col: #{$primary};
+		--burger-bar-col: #fff;
 	}
 
 	//
@@ -55,13 +56,13 @@
 	}
 	
 	&__item{
-		margin: 0 19px;
+		// margin: 0 19px;
 		&:last-child{
 			margin-right: 0;
 		}
 		
 		--dd-scale: 0;
-		--burger-bar-col: #{$primary};
+		--burger-bar-col: #fff;
 		--link-bef-o: 0;
 		&:hover{
 			--dd-scale: 1;
@@ -73,25 +74,29 @@
 		}
 	}
 	&__link{
-		padding: 19px 0;
-		color: $black;
+		padding: 19px;
+		&.active,
+		&:hover{
+			background-color: $body-color;
+		}
+		color: #fff;
 		font-family: $header-font;
 
 		position: relative;
 		z-index: 1;
-		&:before{
-			@include mt();
-			opacity: var(--link-bef-o);
-			background-color: $primary;
-			content: '';
-			position: absolute;
-			z-index: -1;
-			top: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			width: calc(100% + 24px);
-			height: 100%;
-		}
+		// &:before{
+		// 	@include mt();
+		// 	opacity: var(--link-bef-o);
+		// 	background-color: $primary;
+		// 	content: '';
+		// 	position: absolute;
+		// 	z-index: -1;
+		// 	top: 0;
+		// 	left: 50%;
+		// 	transform: translateX(-50%);
+		// 	width: calc(100% + 24px);
+		// 	height: 100%;
+		// }
 
 
 		display: flex;
@@ -116,8 +121,8 @@
 
 		.icon{
 			@include mt();
-			font-size: 20px;
-			color: $primary;
+			font-size: 24px;
+				color: #fff;
 		}
 		@include media-breakpoint-up(md){
 			padding: 20px 0px;
@@ -141,11 +146,19 @@
 	&__search-txt{
 		font-size: 16px;
 		line-height: math.div(19, 16);
+		color: #fff;
 		margin-left: 10px;
 	}
 	&__{}
 	&__{}
 	&__{}
+	&__search{
+		.icon{
+		
+		}
+	}
+	&__search-txt{
+	}
 }
 
 .burger{
@@ -154,6 +167,7 @@
 	width: 20px;
 	height: 20px;
 	position: relative;
+	margin-right: 12px;
 
 	span,
 	span:before,
@@ -165,9 +179,11 @@
 		content: '';
 		width: 20px;
 		height: 2px;
-		background-color: var(--burger-bar-col, #{$black});
+		background-color: var(--burger-bar-col, #{#fff});
 	}
-
+	span{
+		width: 80%;
+	}
 	span{
 		top: 50%;
 		transform: translateY(-50%);
@@ -196,14 +212,18 @@
 }
 
 .blue-line{
-	background-color: $primary;
-	color: $white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	// background-color: $primary;
+	 color: $secondary;
 
 	&__container{
 		position: relative;
 	}
 	&__row{
-		@include roww(0px);
+		--bs-gutter-x: 1rem;
+		// @include roww(0px);
 	}
 	&__dd-btn{
 		min-height: 100%;
@@ -211,12 +231,14 @@
 		align-items: center;
 		padding: 14.5px 12px;
 		@include mt();
-
+			z-index: 990;
 		font-size: 12px;
 		line-height: math.div(14, 12);
-
+		
 		.tel-link {
-			color: $white;
+			z-index: 4;
+			position: relative;
+			color: $body-color;
 			&:hover {
 				color: $primary;
 			}
@@ -224,21 +246,23 @@
 
 		.icon{
 			@include mt();
+			position: relative;
+			z-index: 4;
+			color: var(--fc-icon, #949494);
 		}
 		& > .icon:first-child{
 			margin-right: 5px;
-			color: var(--fc-icon, #{$gray-310});
 			font-size: 21px;
 		}
 		.icon-chevron-down{
-			margin-left: 12px;
-			stroke: var(--lc-icon, #{$gray-310});
-			color: transparent;
+			margin-left: 6px;
+			fill:none;
+			stroke: currentColor;
 			font-size: 8px;
 		}
 
-		--fc-icon: #{$gray-310};
-		color: $white;
+		--fc-icon: #949494;
+		color: $body-color;
 		background-color: transparent;
 		--dd-scale: 0;
 		&:hover{
@@ -269,36 +293,56 @@
 		&--lc{
 			min-width: 120px;
 			padding: 8px 12px;
+
+			&> span{
+				text-transform: uppercase;
+				position: relative;
+				z-index: 4;
+			}
 			&:hover {
+				span{
+					color: #fff;
+				}
 				.icon {
-					fill: $primary;
+					color: #fff;
+					// fill: $primary;
 				}
 				.icon-exit {
-					fill: $white;
+					// fill: $white
+					// ;
+					color: #fff;
 				}
 			}
 		}
 	}
 	&__user{
 		display: flex;
-		align-items: center;
-		width: 24px;
-		height: 24px;
+		align-items: center; 
 		margin-right: 5px;
+		position: relative;
+		z-index: 2;
+
 		.icon{
 			font-size: 28px;
-			color: $white;
+			// color: $white;
 		}
 	}
 	//
-
+	&__dd-btn > span{
+		z-index: 2;
+		position: relative;
+	}
 	&__shedule{
 		display: flex;
 		align-items: center;
+		.icon{
+			font-size: rem(24);
+			margin-right: 5px;
+		}
 	}
 	&__s-img{
-		width: 18px;
-		height: 18px;
+		width: 24px;
+		height: 24px;
 		margin-right: 5px;
 
 		display: flex;
@@ -314,6 +358,8 @@
 	&__s-txt{
 		display: flex;
 		align-items: center;
+		color: $body-color;
+		text-transform: uppercase;
 		span{
 			font-size: 12px;
 			line-height: math.div(14, 12);
@@ -327,7 +373,7 @@
 				line-height: 17/14;
 
 				letter-spacing: 0.03em;
-				color: $gray-310;
+				// color: $gray-310;
 				margin: 0 12px;
 			}
 
@@ -339,22 +385,20 @@
 	}
 	//
 	&__icon-link{
-		height: 18px;
-		width: 18px;
-		margin: 0 18px;
+		// height: 18px;
+		// width: 18px;
+		// margin: 0 18px;
 
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		color: $secondary;
+		&:hover{
+			color: $primary;
+		}
 
 		.icon{
-			@include mt();
-			font-size: 18px;
-			stroke: $white;
-			&:hover{
-				fill: $red;
-				stroke: $red;
-			}
+			font-size: 24px;
 		}
 	}
 	//cart
@@ -362,10 +406,15 @@
 		//padding: 6px 0;
 		margin-right: 23px;
 		display: flex;
-		align-items: center;
-		color: $white;
+		align-items: center; 
+		color: $body-color;
+		color: $secondary;
 		&:hover{
-			color: rgba($white, .9);			
+			color: $primary;
+			.icon{
+				color: $primary;
+
+			}
 		}
 	}
 	&__cart-icon{
@@ -379,6 +428,7 @@
 		// height: 20px;
 		.icon{
 			font-size: 24px;
+			color: $secondary;
 			//color: $white;
 		}
 	}
@@ -395,7 +445,10 @@
 	}
 	&__cart-txt{
 		font-size: 12px;
+		text-transform: uppercase;
 		line-height: math.div(14, 12);
+		color: $body-color;
+		
 	}
 	&__{}
 }
@@ -462,11 +515,11 @@
 	//
 	&__cont{
 		@include media-breakpoint-up(xl) {
-			columns: 6;
+			// columns: 6;
 		}
 
 		@include media-breakpoint-up(lg) {
-			columns: 5;
+			// columns: 5;
 		}
 
 
@@ -507,11 +560,21 @@
 	@include mt();
 	transform: scaleY(var(--dd-scale));
 	transform-origin: top center;
-
-	background-color: $white;
-	box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.2);
+	&::before{
+		content: '';
+		z-index: -1;
+		background-color: $white;
+		box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.2);
+		border-radius: $border-radius;
+		width: 100%;
+		bottom: 0;
+		height: calc(100% + 50px);
+		position: absolute;
+		// left: 0;
+		right: 0;
+	}
 	position: absolute;
-	z-index: 99;
+	
 	top: 100%;
 	left: 0;
 	width: 100%;
@@ -536,12 +599,10 @@
 	}
 	&__order-btn{
 		@extend .btn;
-		@extend .btn-primary;
-		color: $white;
+		@extend .btn-sm;
+		@extend .btn-primary; 
+	
 		width: 100%;
-		font-size: 12px;
-		line-height: math.div(14, 12);
-		padding: 10px 16px;
 	}
 	
 }
@@ -549,16 +610,29 @@
 .lc-dd{
 	@include mt();
 	transform: scaleY(var(--dd-scale));
-	transform-origin: top center;
-
-	background-color: $white;
-	position: absolute;
-	z-index: 99;
+	transform-origin: top ;
+	&::before{
+		content: '';
+		z-index: -1;
+		background-color: $white;
+		box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.2);
+		border-radius: $border-radius;
+		width: 100%;
+		bottom: 0;
+		height: calc(100% + 50px);
+		position: absolute;
+		// left: 0;
+		right: 0;
+		background-color: $body-color;
+	}
+	// background-color: $white;
+	position: absolute; 
 	top: 100%;
 	left: 0;
 	width: 100%;
+	color: #fff;
 	padding: 16px 12px 12px 12px;
-	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+	// box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 
 	&__link{
 		display: block;
@@ -569,27 +643,24 @@
 		align-items: center;
 		letter-spacing: 0.03em;
 
-		color: $body-color;
+		color: #fff;
 		&:hover{
 			color: $primary;
 		}
 	}
 	&__log-btn{
 		@extend .btn;
-		@extend .btn-primary;
-		color: $white;
+		@extend .btn-sm;
+		@extend .btn-primary; 
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		// justify-content: space-between;
+		justify-content: center;
 
 		width: 100%;
-		font-size: 12px;
-		line-height: math.div(14, 12);
-		padding: 10px 16px;
-
-
 		.icon{
 			font-size: 15px;
+			margin-right: .5em;
 
 		}
 	}
@@ -606,7 +677,7 @@
 	background-color: $white;
 	top: calc(100%);
 	width: calc(100% - 30px);
-	left: 15px;
+	left: 7px;
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 	height: auto;
 	text-transform: none;
@@ -1122,10 +1193,10 @@
 			margin-right: 10px;
 		}
 	}
-}
-.icon-bars {
-	fill: $white;
-}
-.icon-heart {
-	stroke-width: 2px;
+	.icon-bars {
+		fill: $white;
+	}
+	.icon-heart {
+		stroke-width: 2px;
+	}
 }

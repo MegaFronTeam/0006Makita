@@ -37,6 +37,7 @@
 		font-size: 20px;
 		line-height: (24*0.05);
 		margin-bottom: 12px;
+		@extend .mono;
 	}
 	&__login-sm{
 		font-size: 14px;
@@ -54,6 +55,7 @@
 		font-weight: bold;
 		font-size: rem(20);
 		line-height: 1.2;
+		@extend .mono;
 
 		margin-bottom: 24px;
 	}
@@ -156,8 +158,8 @@
 			display: block;
 
 			input:checked + .form-wrap__d-item{
-				border: 1px solid $primary;
-				background-color: $primary;
+				border-color: #2A2D30;
+				background-color: #2A2D30;
 				color: $white;
 			}
 
@@ -175,8 +177,8 @@
 			color: $body-color;
 			&:hover,
 			&.active{
-				border: 1px solid $primary;
-				background-color: $primary;
+				border-color: #2A2D30;
+				background-color: #2A2D30;
 				color: $white;
 			}
 
@@ -260,14 +262,12 @@
 		&__d-btn{
 			display: inline-block;
 			@extend .btn;
-			@extend .btn-white;
+			@extend .btn-outline-primary;
 			width: 100%;
-
-			color: $primary!important;
-			font-weight: 700;
-			&:hover{
-				color: $body-color!important;
-			}
+			text-transform: uppercase; 
+			 --bs-btn-color: #{$body-color};
+			 --bs-btn-bg: #fff;
+			--bs-btn-border-color: #fff;
 
 		}
 		//ways-row
@@ -300,23 +300,25 @@
 			cursor: pointer;
 			@include mt();
 
-			border: 1px solid $secondary;
-			background-color: $white;
+			border: 1px solid #D2D2D2;
+			background-color: #D2D2D2;
+			border-radius: $border-radius;
 			--txt-col: #{$body-color};
-			color: $primary;
+			// color: $primary;
+			font-weight: 300;
 			&:hover{
-				border: 1px solid $primary;
+				border-color: $primary;
 			}
 
 			display: flex;
 			min-height: 100%;
 
-			padding: 16px 16px 11px;
+			padding: 16px 16px 21px;
 			align-items: center;
 			@include media-breakpoint-up(md){
 				flex-direction: column;
 				align-items: flex-start;
-				padding: 16px 16px 11px;
+				// padding: 16px 16px 11px;
 			}
 		}
 		&__w-icon{
@@ -419,26 +421,23 @@
 		margin-bottom: rem(33);
 	}
 	&__box{
-		border-top: 4px solid $primary;
-		background-color: $light;
-
-		border-right: 1px solid #D2D2D2;
-		border-bottom: 1px solid #D2D2D2;
-		border-left: 1px solid #D2D2D2;
-
-		padding: 30px 15px;
-		@include media-breakpoint-up(xsm){
-			padding: 30px 20px;
-		}
-		@include media-breakpoint-up(sm){
-			padding: 36px 30px;
-		}
-		@include media-breakpoint-up(lg){
-			padding: 20px 15px;
-		}
-		@include media-breakpoint-up(xl){
-			padding: 36px 30px;
-		}
+		 
+		background: #2A2D30;
+		border-radius: $border-radius;
+		color: #fff;
+		padding: 30px 30px;
+		// @include media-breakpoint-up(xsm){
+		// 	padding: 30px 20px;
+		// }
+		// @include media-breakpoint-up(sm){
+		// 	padding: 36px 30px;
+		// }
+		// @include media-breakpoint-up(lg){
+		// 	padding: 20px 15px;
+		// }
+		// @include media-breakpoint-up(xl){
+		// 	padding: 36px 30px;
+		// }
 	}
 	&__dd-item{
 		padding-bottom: 30px;
@@ -449,6 +448,9 @@
 		&.active{
 			--after-tf: rotate(180deg);
 		}
+	}
+	h2{
+		color: #fff;
 	}
 	&__dd-head{
 		display: flex;
@@ -468,7 +470,7 @@
 			height: 14px;
 			transform: var(--after-tf);
 
-			background-image: url(../img/svg/chevron-down.svg);
+			background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M33 21L25 29L17 21' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
 			background-repeat: no-repeat;
 			background-position: center;
 		}

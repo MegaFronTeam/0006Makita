@@ -54,7 +54,6 @@ mixin sCatalogPage2(data)
 					+b.cat-aside.cat-aside-dd-js
 						+e.box
 							+e.header Инструменты
-								+icon('chevron-down')
 							+e.items
 								+asideItem('Дрели-шуруповерты')
 								+asideItem('Ударные дрели-шуруповерты')
@@ -109,8 +108,7 @@ mixin sCatalogPage3(data)
 				.col-lg-3
 					+b.cat-aside.cat-aside-dd-js
 						+e.box
-							+e.header Инструменты
-								+icon('chevron-down')
+							+e.header Ручной электроинструмент
 							+e.items
 								+asideItem('Дрели-шуруповерты')
 								+asideItem('Ударные дрели-шуруповерты')
@@ -121,7 +119,7 @@ mixin sCatalogPage3(data)
 					+e.options
 						+e.o-row.row.align-items-start
 							.col
-								h2 Инструменты
+								h2 Ручной электроинструмент
 							.col-auto
 								+e.o-sub-row.row
 									.col-auto
@@ -135,9 +133,9 @@ mixin sCatalogPage3(data)
 											+icon('lines')
 					+sqprodItemsRow()
 					+pugin('pb-48 pb-md-60')
-					+b.sSeo#sSeo
-						h2 Заголовок SEO текста
-						p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+					//- +b.sSeo#sSeo
+					//- 	h2 Заголовок SEO текста
+					//- 	p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
 
 mixin sCatalogPage4(data)
 	// start sCatalogPage
@@ -296,29 +294,41 @@ mixin in-r(name='radio-btn-group', checked=false)
 			block
 
 mixin itemProdLong(title,img,tag)
-	+b.long-item.text-center.text-md-start
-		+e.row.row
-			+e.img-col.col-md-auto
-				if tag
-					+e.tag Новинка
-				else
-				+e.img(href="#")
-					.img-wrap-center
-						img(loading='lazy' src=`img/@2x/lc-img-${img}.jpg` alt="")
-			+e.content-col.col-md
-				+e.links
-					+e.compare(href="#")
-						+icon('bars')
-					+e.bookmarks(href="#")
-						+icon('heart')
+	+b.long-item
+		+e.about-col(href="#")
+			if tag
+				.prod-item__badge.bg-green Новинка
+			else
+			+e.img
+				.img-wrap-center
+					img(src=`img/@2x/lc-img-${img}.png` alt="" loading='lazy')
+			+e.content-col
+				//- +e.code VB3616DA
 				if title
-					+e.title(href="#")=title
+					+e.title=title
 				else
-					+e.title(href="#") MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
-				+e.code VB3616DA
-				//- +e.lower-row.row.align-items-center
-				+e.price-col
-					+e.price--old 18 500 ₽
-					+e.price--new 16 500 ₽
-					//- +e.btn-col.col-md-auto
-				+e.btn(href='#') Купить
+					+e.title MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
+				+e.footer
+					table
+						tr
+							td Габариты в упаковке
+							td 315мм x 375мм x 102мм
+							
+						tr
+							td Страна производства
+							td Китай
+
+		+e.price-col
+			.prod-item__discount 10%
+			+e.links
+				+e.compare(href="#")
+					+icon('bars')
+				+e.bookmarks(href="#")
+					+icon('icon-favorite-default')
+			+e.price-wrap.row
+				.col-auto
+					+e.price--old 28 400 ₽
+				.col-auto
+					+e.price--new 24 600 ₽
+			//- +e.btn-col.col-md-auto
+			+e.btn(href='#') В корзину

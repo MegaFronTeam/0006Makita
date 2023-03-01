@@ -11,9 +11,9 @@ include components/btn.pug
 
 mixin arrow(className)
 	if className
-		.swiper-prev(class=className)
+		.swiper-button-hand.swiper-prev(class=className)
 			+icon('chevron-left')
-		.swiper-next(class=className)
+		.swiper-button-hand.swiper-next(class=className)
 			+icon('chevron-right')
 	else
 		.swiper-prev
@@ -32,7 +32,7 @@ mixin page-head(title, logout, ...items)
 		.container
 			+breadcrumb(...items)
 			if title
-				+b.section-title.light.long
+				+b.section-title
 					h1!= title
 					if logout 
 						+e.log-out(href='#').btn-primary

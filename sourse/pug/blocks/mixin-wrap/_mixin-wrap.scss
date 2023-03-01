@@ -35,14 +35,12 @@
 
 .page-head {
 	padding-top: rem(23);
-	padding-bottom: rem(30);
+	margin-bottom: rem(20);
 	.section-title {
 		margin-bottom: 0 !important;
 		display: flex;
 		justify-content: space-between;
-		h1 {
-			@extend .h2;
-		}
+		 
 		&__log-out {
 			position: absolute;
 			top: 0;

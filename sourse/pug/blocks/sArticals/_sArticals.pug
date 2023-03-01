@@ -18,14 +18,14 @@ mixin itemNews(i ,t="Заголовок SEO текста",descr="Позабот�
 	+e.col(class=bootClasses)&attributes(attributes)
 		+e.wrap
 			+e.img-wrap(href="#")
-				.img-wrap-center
-					img(loading="lazy" src=`img/@2x/artical-${i}.jpg` alt="")
+				img(loading="lazy" src=`img/@2x/artical-${i}.jpg` alt="")
+				+e.date 11-04-2022
 			+e.text-wrap
 				+e.title(href="#")=t
-				+e.tag Событие
+				//- +e.tag Событие
 				+e.descr!= descr
-				+e.more(href='#') Читать дальше
-					+icon('chevron-right')
+				//- +e.more(href='#') Читать дальше
+				//- 	+icon('chevron-right')
 
 mixin sArticalsPage()
 	// start sArticals
@@ -33,7 +33,7 @@ mixin sArticalsPage()
 		.container
 			+e.image-wrap
 				+pic('news-bg.jpg', 'bg', 0)
-				+e.head-title новости
+				//- +e.head-title новости
 			+e.row.row
 				+itemNews("1")
 				+itemNews("2")
@@ -45,5 +45,4 @@ mixin sArticalsPage()
 				+itemNews("2")
 				+itemNews("3")(class="d-none d-lg-block")
 			.text-center
-				+e.BUTTON.plus-btn(type='button')
-					+icon('plus')
+				+pugin

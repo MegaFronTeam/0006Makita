@@ -3,49 +3,59 @@ mixin sProdCard(data)
 	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
 		.container
 			block
-			+b.section-title.long
+			.row
+				.col-xl-8.col-lg-7
+					h1 Аккумуляторная дрель-шуруповёрт Einhell PXC TE-CD 18/50 Li BL-Solo 4513887
+				.col-xl-4.col-lg-5
+					+e.head-row.row
+						.col-auto
+							+e.head-link(href="#")
+								+icon("icon-favorite-default")
+								| В избранное
+								
+						.col-auto
+							+e.head-link(href="#")
+								+icon("bars")
+								| Сравнить
+						.col-auto
+							+e.head-link(href="#")
+								+icon("share2")
+								| Поделиться
 			+e.main-row.row
-				.col-lg-8
-					+prodCardSliders('d-none d-lg-block')
+				.col-xl-8.col-lg-7
+					+e.head-row.row
+						.col-auto
+							+e.number Артикул: 12C1467P
+						.col-auto
+							+b.stars-block
+								+icon('star').active
+								+icon('star').active
+								+icon('star').active
+								+icon('star').active
+								+icon('star')
+								+e.how-much 17 отзывов
+					+prodCardSliders()
 					+productTabs()
-				+e.side-col.col-lg-4
-					+e.row.row
-						.col-auto.d-none.d-sm-block
-							+e.icons-row.row
-								.col-auto
-									+e.icon(href='#')
-										+icon('heart')
-										| В избранное
-								.col-auto
-									+e.icon(href='#')
-										+icon('bars')
-										| Сравнить
-								.col-auto
-									+e.icon(href='#')
-										+icon('share')
-										| Поделиться
-						.col-12.col-lg
-							+prodCardSliders('d-lg-none')
-							h2.p-0 Шуруповерт с 6 положениями регулировки
-							+e.subtitle DF332DWME
-							+e.property
-								p <strong>Артикул: 600080500</strong>
-								p.available В наличии
-								p <strong>Доставка:</strong>
-								p Курьером в пределах МКАД - при сумме заказа от 1500р (от 1500р до 4999р стоимость доставки 200руб, от 5000р - бесплатно)
-								p <strong> Самовывоз бесплатно: </strong>
-								p Москва Сормовский проезд 11/7
-								p Отправка заказов по всей России
-								p #[strong Габариты в упаковке: ] 315мм x 375мм x 102мм
-								p #[strong Вес: ] 2.81кг
-								p 
-									span 12В
-									span 35 Нм
-									span 1500 об/мин
-					+buyBlock()
-					+miniSlider()
-			+sCatalogHit('с этим товаром покупают')
-			+sCatalogHit('похожие товары')
+				+e.side-col.col-xl-4.col-lg-5
+					+e.block--bg 
+						+e.property
+							p.available В наличии
+							p <strong>Доставка:</strong>
+							p Курьером в пределах МКАД - при сумме заказа от 1500р (от 1500р до 4999р стоимость доставки 200руб, от 5000р - бесплатно)
+							p <strong> Самовывоз бесплатно: </strong>
+							p Москва Сормовский проезд 11/7
+							p Отправка заказов по всей России
+							p #[strong Габариты в упаковке: ] 315мм x 375мм x 102мм
+							p #[strong Вес: ] 2.81кг
+							p 
+								span 12В
+								span 35 Нм
+								span 1500 об/мин
+						+buyBlock()
+					+e.block--border
+						+miniSlider()
+			+sCatalogNew('с этим товаром покупают')
+			+sCatalogNew('похожие товары')
 			.text-center
 				.sCategory__btn-more.BUTTON(type="button")
 					+icon("plus")
@@ -199,7 +209,7 @@ mixin miniSlide()
 	.swiper-slide
 		+e.img(href='#')
 			.img-wrap-center
-				img.swiper-lazy(src="#" data-src="img/@2x/mini-slide.jpg" alt="")
+				img(loading="lazy" src="img/@2x/mini-slide.jpg" alt="")
 
 mixin tableDescr(title)
 	+e.table-descr&attributes(attributes)
@@ -223,10 +233,10 @@ mixin buyBlock()
 		+e.main-row.row
 			+e.price-col.col.col-md-6.col-lg-12
 				+e.price-row.row
-					.col.col-lg-12.col-xl.d-flex.align-items-center
+					.col.col-lg-12.col-xl
 						+e.price--old 18 500 ₽
 						+e.price--new 16 500 ₽
-					+e.inputs-col.col.col-lg-12.col-xl
+					+e.inputs-col.col.col-lg-12.col-xl-auto
 						+e.price
 							+e.p-btn--min 
 							+e.INPUT.p-input.form-control(type='number' value="1")
@@ -234,7 +244,7 @@ mixin buyBlock()
 			+e.btns-col.col-auto.col-md-6.col-lg-12
 				+e.btn-row.row
 					.col-md-6.col-lg-12
-						+e.buy-btn(href="#") Купить
+						+e.buy-btn(href="#") в корзину
 					+e.bill-col.col-md-6.col-lg-12
 						+e.bill-btn(href="#") Запросить счёт
 			+e.open-col.col-auto.d-md-none.buy-bl-toggle-js
@@ -245,13 +255,14 @@ mixin buyBlock()
 mixin prodCardSliders(addClasses='')
 	+b.pc-sliders--js(class=addClasses)
 		+e.row.row
-			.col-md-auto
+			.col-auto
 				+e.thumb-slider
+					+arrow
 					.swiper.sProdCard-thumb-js
 						.swiper-wrapper
 							- for (var x = 0; x < 10; x++)
 								+prodCardThumb(1) 
-			+e.slider-col.col-md
+			+e.slider-col.col
 				+e.slider
 					.swiper.sProdCard-slider-js
 						.swiper-wrapper
@@ -262,11 +273,11 @@ mixin prodCardThumb(imgNum)
 	.swiper-slide
 		+e.th-item
 			.img-wrap-center
-				img.swiper-lazy(src="#" data-src=`img/@2x/thumb.jpg` alt="")
+				img.swiper-lazy(loading="lazy" src=`img/@2x/thumb.jpg` alt="")
 
 mixin prodCardSlide(imgNum)
 	.swiper-slide
 		+e.slide-img
 			.img-wrap-center
-				img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-img.jpg` alt="")
+				img.swiper-lazy(loading="lazy" src=`img/@2x/prod-card-img.jpg` alt="")
 

@@ -4,10 +4,9 @@
 .sCart {
 	--sTPB: 24px;
 
-	--sPT: 12px;
+	--sPT: 0;
 	--sPB: 60px;
-	@include media-breakpoint-up(md){
-		--sPT: 24px;
+	@include media-breakpoint-up(md){ 
 		--sPB: 72px;
 	}
 	@include media-breakpoint-up(xl){
@@ -69,18 +68,20 @@
 	&__cross{
 		// @extend .btn;
 		// @extend .btn-outline-secondary;
+		color: $secondary;
+		.icon{
+			font-size: rem(24);
+			// opacity: .5;
+			// stroke: $primary;
+		}
 		&:hover{
 			// background-color: $danger!important;
 			// border-color: $danger!important;
-			.icon{
-				opacity: .5;
-				stroke: $primary;
-			}
 		}
 		position: absolute;
 		z-index: 1;
-		top: -1px;
-		right: -1px;
+		top: 10px;
+		right: 10px;
 
 		display: flex;
 		align-items: center;
@@ -89,15 +90,6 @@
 		width: 36px;
 		height: 36px;
 		padding: 0;
-
-		.icon{
-			@include mt;
-			font-size: rem(24);
-			stroke: $black;
-			stroke-width: 2px;
-			fill: none;
-		}
-
 	}
 	&__img{
 		width: 138px;
@@ -108,6 +100,8 @@
 		// 	height: 138px;
 		// }
 		// position: relative;
+		margin-right: 20px;
+		margin-left: 20px;
 		@include media-breakpoint-up(sm){
 			width: 120px;
 			// height: 120px;
@@ -116,7 +110,6 @@
 			// margin-right: 20px;
 		}
 		@include media-breakpoint-up(lg){
-			margin-right: 0;
 			padding: 20px;
 			min-width: 184px;
 			height: 100%;
@@ -158,6 +151,8 @@
 		}
 	}
 	&__txt-col{
+		align-self: center;
+		flex-grow: 1;
 		@include media-breakpoint-up(xl){
 			// align-self: flex-start;
 		}
@@ -259,8 +254,8 @@
 	}
 	&__i-btn{
 		flex-shrink: 0;
-		width: 36px;
-		height: 36px;
+		width: 40px;
+		height: 40px;
 		padding: 0;
 
 		display: flex;
@@ -269,8 +264,9 @@
 		text-align: center;
 
 		font-size: 18px;
-		border-radius: 50%;
-		color: $primary;
+		box-shadow: 0px 0px 6.4px rgba(0, 0, 0, 0.15);
+		border-radius: 4px;
+		color: $body-color;
 
 		@extend .btn;
 		@extend .btn-outline-secondary;
@@ -338,22 +334,21 @@
 	}
 	//box
 	//box
-	&__box{
-		border-top: 4px solid $primary;
-		background-color: $light;
-		border-right: 1px solid #D2D2D2;
-		border-bottom: 1px solid #D2D2D2;
-		border-left: 1px solid #D2D2D2;
-		padding: 18px 20px 24px;
-		@include media-breakpoint-up(md){
-			padding: 30px 30px 24px;
-		}
+	&__box-head{
+		border-radius: $border-radius  $border-radius 0 0;
+		background: #2A2D30;
+		border: 1px solid #D2D2D2;
+		padding: rem(30);
+
+	}
+	&__box{ 
+		color: #fff;
 	}
 	&__order-txt{
 		font-weight: 700;
 		font-size: rem(24);
-		line-height: 1;
-		color: $body-color;
+		line-height: 1; 
+		color: #fff;
 		margin-bottom: 12px;
 		text-transform: uppercase;
 	}
@@ -390,22 +385,18 @@
 
 		font-size: 14px;
 		line-height: math.div(24, 14);
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
 	}
 	&__p-btn{
 		@extend .btn;
-		@extend .btn-secondary;
-		background-color: $white!important;
-		color: $primary!important;
-		&:hover{
-			background-color: $primary!important;
-			color: $white!important;
-			border-color: $primary;
-		}
-
+		@extend .btn-primary;  
 		flex-shrink: 0;
 		width: 50px;
 		height: 48px;
 		padding: 0;
+		border-start-start-radius: 0;
+		border-bottom-left-radius: 0;
 
 		display: flex;
 		align-items: center;
@@ -416,30 +407,26 @@
 		}
 	}
 	&__btns-box{
+		background-color: #fff;
+		padding: rem(30);
+		// margin:0 rem(-32px) rem(-31px);
+		border-radius: 0 0 $border-radius $border-radius;
+		border: 1px solid #D2D2D2;
+		border-top: none;
 		& > *{
 			margin-bottom: 12px;
-		}
-		& > *:last-child{
-			margin-bottom: 0;
-		}
-		padding-bottom: 12px;
+		} 
 	}
 	&__bb-btn{
 		display: block;
 		&--green{
+			margin-top: rem(-55px);
 			@extend .btn;
 			@extend .btn-primary;
 		}
 		&--white{
 			@extend .btn;
-			@extend .btn-outline-primary;
-
-			background-color: $white!important;
-			color: $primary!important;
-			&:hover{
-				background-color: $primary!important;
-				color: $white!important;
-			}
+			@extend .btn-outline-secondary; 
 		}
 	}
 	&__sm{
@@ -462,13 +449,14 @@
 	}
 	&__content {
 		padding: 4px 12px 25px;
-		background: #F1F1F1;
 		display: flex;
 		align-items: center;
 		width: 100%;
 		@include media-breakpoint-up(md){
 			// margin-bottom: 20px;
+			background: #F1F1F1;
 			padding: 10px 24px 16px;
+			width: rem(324);
 		}
 		@include media-breakpoint-down(md) {
 			flex-direction: column;

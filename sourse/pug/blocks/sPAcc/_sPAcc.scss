@@ -83,17 +83,25 @@
 
 		display: flex;
 		align-items: center;
-
-		background-color: $light;
-		border: 1px solid $gray-310;
-		border-top: none;
-		&:first-child{
-			border-top: 1px solid $secondary;
+		justify-content: space-between;
+		.icon{
+			font-size: rem(24);
 		}
 
+		// background-color: $light;
+		border: 1px solid $gray-310;
+		// border-top: none;
+		margin-top: -1px;
+		&:first-child{
+			border-radius: $border-radius $border-radius 0px 0px;
+		}
+		&:last-child{
+			border-radius: 0px 0px $border-radius $border-radius;
+		}
+		&:hover,
 		&.active{
-			background-color: $primary;
-			border-color:  $primary;
+			background-color: $body-color;
+			border-color:  $body-color;
 			color: $white;
 		}
 		&:first-child {
@@ -157,7 +165,7 @@
 
 		min-width: 100%;
 		@include media-breakpoint-up(sm){
-			min-width: 262px;
+			min-width: 214px;
 		}
 	}
 	//
@@ -250,7 +258,7 @@
 			@extend .btn;
 			min-width: 100%;
 			@include media-breakpoint-up(md){
-				min-width: 262px;
+				min-width: 214px;
 			}
 
 			&--save{
@@ -281,7 +289,10 @@
 		&:last-child{
 			margin-bottom: 0;
 		}
-		border-bottom: 1px solid $secondary;
+		// border-bottom: 1px solid $secondary;
+
+		border: 1px solid #D2D2D2;
+		border-radius: $border-radius;
 
 		--side-padding: 15px;
 		@include media-breakpoint-up(xsm){
@@ -292,7 +303,8 @@
 		}
 		--head-bg: #{$white};
 		&:not(.active):hover{
-			--head-bg: #{$light};
+			--head-bg: #{#E7E7E7};
+			border-color: var(--head-bg);
 		}
 
 		--head-bord-col: #{$gray-310};
@@ -300,11 +312,14 @@
 		--head-num-col: #282828;
 		--date-col: #4E4E4E;
 		&.active{
-			--head-bg: #{$primary};
+			--head-bg: #{$body-color};
 			--head-bord-col: #{$gray-310};
 			--head-col: #{$white};
 			--head-num-col: #{$white};
 			--date-col: #F1F1F1;
+			.pa-orders__head{
+				border-radius: $border-radius $border-radius 0 0;
+			}
 			.pa-orders__chevron {
 				transform: rotate(180deg);
 			}
@@ -319,17 +334,17 @@
 		min-height: 71px;
 		@include mt();
 		cursor: pointer;
-
+		border-radius: $border-radius;
 		padding: 20px var(--side-padding, 20px);
 		@include media-breakpoint-up(md){
 			padding: 24px var(--side-padding, 30px);
 		}
+		
+		// border-top: 1px solid var(--head-bord-col, #{$secondary});
+		// border-right: 1px solid var(--head-bord-col, #{$secondary});
+		// border-left: 1px solid var(--head-bord-col, #{$secondary});
 
-		border-top: 1px solid var(--head-bord-col, #{$secondary});
-		border-right: 1px solid var(--head-bord-col, #{$secondary});
-		border-left: 1px solid var(--head-bord-col, #{$secondary});
-
-		background-color: var(--head-bg, white);
+		background-color: var(--head-bg);
 		color: var(--head-col, black);
 	}
 	&__h-main-row{
@@ -385,12 +400,21 @@
 	}
 	//
 	&__content{
-		border-left: 1px solid $secondary;
-		border-right: 1px solid $secondary;
+		// border-left: 1px solid $secondary;
+		// border-right: 1px solid $secondary;
 		display: none;
 		&.active{
 			display: block;
 		}
+	}
+	&__btns{
+		margin-bottom: rem(30);
+	}
+	&__btn{
+		text-transform: uppercase;
+		margin-bottom: rem(15);
+		width: 200px;
+		font-weight: 600;
 	}
 	//
 	&__top-box{
@@ -489,9 +513,9 @@
 	&__td-ball{
 		width: 12px;
 		height: 12px;
-		border-radius: 50%;
 		border: 1px solid;
 		margin-right: 13px;
+		border-radius: 2px;
 		border: 1px solid $primary;
 		flex: 0 0 auto;
 		&.active {
@@ -534,7 +558,7 @@
 	}
 	//foot
 	&__foot{
-		background-color: $light;
+		// background-color: $light;
 
 		padding: 20px var(--side-padding, 20px);
 		@include media-breakpoint-up(md){
@@ -572,7 +596,8 @@
 .g-item{
 	position: relative;
 	padding: 12px 0;
-	border: 1px solid #F1F1F1;
+	border: 1px solid #E7E7E7;
+	border-radius: $border-radius;
 	&:not(:last-child) {
 		margin-bottom: rem(20);
 	}
@@ -584,19 +609,22 @@
 	}
 	&:after {
 		content: '';
+		border-radius:0 $border-radius $border-radius 0;
 		position: absolute;
 		display: block;
 		height: 100%;
 		width: calc(100% - 72px);
 		right: 0;
 		top: 0;
-		background-color: $gray-100;
 		z-index: -1;
+		@include media-breakpoint-up(xl) {
+		background: #E7E7E7;
+		}
 		@include media-breakpoint-up(sm) {
 			width: calc(100% - 134px);
 		}
 		@include media-breakpoint-up(md) {
-			width: calc(100% - 120px - 30px);
+			width: calc(100% - 550px);
 		}
 	}
 	&__row{

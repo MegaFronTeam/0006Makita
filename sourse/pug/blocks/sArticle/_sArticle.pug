@@ -5,8 +5,7 @@ mixin sArticle(data)
 			+e.row.row
 				.col-lg-8
 					+e.baner
-						.img-wrap-center
-							img(loading="lazy" src="img/@2x/article-img.jpg" alt="")
+						img(loading="lazy" src="img/@2x/article-img.jpg" alt="")
 					+e.date 11 Декабря, 2019
 					+e.content
 						h2 Позаботьтесь о тепле и безопасности с принадлежностями для работы с цепной пилой
@@ -19,9 +18,6 @@ mixin sArticle(data)
 						+oAtrcBoxItem('01 Января, 2020', 'Варианты подарков на Новый Год? Конечно же инструмент и аксессуары от HiKOKI!')
 						+oAtrcBoxItem('19 Декабря, 2019', 'New power tools catalogue 2020 – 2021 now available.')
 						+oAtrcBoxItem('11 Декабря, 2019', 'New AC brushless web page now available.')
-				.col-lg-12
-					+sCatalogFromArticle()
-
 	// end sArticle
 
 mixin oAtrcBoxItem(date, txt)

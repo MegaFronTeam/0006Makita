@@ -4,8 +4,8 @@ mixin sConfirm(logo)
 		.container
 			if logo
 				+e.box.text-center
-					+e.logo.d-none.d-md-flex
-						img(loading="lazy" src="img/@2x/order-logo.png" alt="")
+					//- +e.logo.d-none.d-md-flex
+					//- 	img(loading="lazy" src="img/@2x/order-logo.png" alt="")
 					+e.title.h2 Заказ оформлен
 					+e.txt
 						+e.txt-item
@@ -14,10 +14,10 @@ mixin sConfirm(logo)
 							span № 121212
 						+e.txt-item
 							| Итоговая сумма заказа: #[span 33 294 ₽]
-					+e.btn(href='#').btn.btn-white Перейти к оплате
+					+e.btn(href='#').btn.btn-primary Перейти к оплате
 			else
 				+e.box--2.text-center
-					img.logo( src="img/@2x/order-logo-2.png" alt="")
+					//- img.logo( src="img/@2x/order-logo-2.png" alt="")
 					+e.title.h2 Заказ оформлен
 					+e.txt
 						+e.txt-item
@@ -34,9 +34,7 @@ mixin sConfirm2(logo)
 	+b.sConfirm.section#sConfirm&attributes(attributes)
 		.container
 			if logo
-				+e.box.text-center
-					+e.logo.d-none.d-md-flex
-						img(loading="lazy" src="img/@2x/order-logo.png" alt="")
+				+e.box.text-center 
 					+e.title Заказ  оплачен
 					+e.txt.mb-12
 						+e.txt-item Номер заказа: #[span № 121212]
@@ -47,8 +45,7 @@ mixin sConfirm2(logo)
 						.col-12
 							+e.btn(href='#').btn.btn-outline-white Вернуться в каталог
 			else
-				+e.box--2.text-center.mb-36
-					img.logo( src="img/@2x/order-logo-2.png" alt="")
+				+e.box--2.text-center.mb-36 
 					+e.title Заказ  оплачен
 					+e.txt.mb-12
 						+e.txt-item Номер заказа: #[span № 121212]
